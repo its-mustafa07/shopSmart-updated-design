@@ -2,17 +2,19 @@ import React, {useContext} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {ThemeContext, lightPink, lightBlue, darkPink, darkBlue} from './theme';
+import BackgroundGradient from '../../screens/background-gradient';
 
 const ThemeSwitcher = () => {
   const {theme, setTheme} = useContext(ThemeContext);
 
   return (
-    <LinearGradient
-      colors={theme.gradient.colors}
-      start={theme.gradient.start}
-      end={theme.gradient.end}
-      locations={theme.gradient.locations}
-      style={{flex: 1}}>
+    // <LinearGradient
+    //   colors={theme.gradient.colors}
+    //   start={theme.gradient.start}
+    //   end={theme.gradient.end}
+    //   locations={theme.gradient.locations}
+    //   style={{flex: 1}}>
+    <BackgroundGradient>
       <View style={{padding: 20}}>
         <Text style={{color: theme.textPrimary, marginBottom: 20}}>
           Choose a theme:
@@ -38,7 +40,8 @@ const ThemeSwitcher = () => {
           onSelect={() => setTheme(darkBlue)}
         />
       </View>
-    </LinearGradient>
+      {/* </LinearGradient> */}
+    </BackgroundGradient>
   );
 };
 
@@ -51,6 +54,7 @@ const RadioButton = ({
   isSelected: boolean;
   onSelect: () => void;
 }) => {
+  const {theme} = useContext(ThemeContext);
   return (
     <TouchableOpacity
       style={{flexDirection: 'row', alignItems: 'center', marginBottom: 10}}
@@ -66,7 +70,7 @@ const RadioButton = ({
           backgroundColor: isSelected ? 'green' : 'transparent',
         }}
       />
-      <Text>{label}</Text>
+      <Text style={{color: theme.textPrimary}}>{label}</Text>
     </TouchableOpacity>
   );
 };
