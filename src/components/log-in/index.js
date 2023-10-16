@@ -35,7 +35,7 @@ const LogIn = ({toggleAnimation}) => {
           <View style={styles.loginMainWrapper}>
             {/* <View style={styles.loginMainWrapper}> */}
             <View style={styles.container}>
-              <Text style={[styles.heading, {color: theme.textSecondary}]}>
+              <Text style={[styles.heading, {color: theme.text}]}>
                 Welcome to ShopSmart!
               </Text>
               <View style={styles.inputBox}>
@@ -120,7 +120,7 @@ const LogIn = ({toggleAnimation}) => {
                         xmlns="http://www.w3.org/2000/svg">
                         <Path
                           d="M2 6L6.12698 12L16.4444 2"
-                          stroke="#FF9F87"
+                          stroke={theme.primary}
                           stroke-width="4.01587"
                         />
                       </Svg>
@@ -163,17 +163,17 @@ const LogIn = ({toggleAnimation}) => {
                   ]}>
                   No account?
                 </Text>
-                <TouchableOpacity onPress={toggleAnimation}>
-                  <Text
-                    style={[
-                      {
-                        color: theme.primary,
-                      },
-                      styles.SemiBoldText,
-                    ]}>
-                    Register now
-                  </Text>
-                </TouchableOpacity>
+
+                <Text
+                  onPress={toggleAnimation}
+                  style={[
+                    {
+                      color: theme.primary,
+                    },
+                    styles.SemiBoldText,
+                  ]}>
+                  Register now
+                </Text>
               </View>
             </View>
             <View style={{gap: 25, position: 'absolute', bottom: 50}}>

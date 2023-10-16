@@ -41,7 +41,7 @@ const SignUp = ({toggleAnimation}) => {
         <BackgroundGradient style={{width: '100%', height: '100%'}}>
           <View style={styles.signupMainWrapper}>
             <View style={styles.container}>
-              <Text style={[styles.headings, {color: theme.accent}]}>
+              <Text style={[styles.headings, {color: theme.text}]}>
                 Sign up!
               </Text>
               <View style={styles.inputsContainer}>
@@ -249,22 +249,19 @@ const SignUp = ({toggleAnimation}) => {
                 style={[
                   styles.SemiBoldTexts,
                   {
-                    color: '#2e2e2e',
-                    justifyContent: 'center',
-                    alignItems: 'center',
+                    color: theme.textAccent,
                   },
                 ]}>
                 Already have an account?
-                <TouchableOpacity onPress={toggleAnimation}>
-                  <Text
-                    style={{
-                      color: '#FF9F87',
-                      fontFamily: 'SourceSansPro-SemiBold',
-                      fontSize: 18,
-                    }}>
-                    Sign in.
-                  </Text>
-                </TouchableOpacity>
+                <Text
+                  onPress={toggleAnimation}
+                  style={{
+                    color: theme.primary,
+                    fontFamily: 'SourceSansPro-SemiBold',
+                    fontSize: 18,
+                  }}>
+                  Sign in.
+                </Text>
               </Text>
             </View>
             <View style={{gap: 25, position: 'absolute', bottom: 50}}>
@@ -272,13 +269,17 @@ const SignUp = ({toggleAnimation}) => {
                 style={[
                   styles.SemiBoldTexts,
                   {
-                    color: '#2e2e2e',
+                    color: theme.textAccent,
                   },
                 ]}>
                 Log in with social networks
               </Text>
               <View style={{flexDirection: 'row', gap: 10}}>
-                <TouchableOpacity style={styles.socialIconss}>
+                <TouchableOpacity
+                  style={[
+                    styles.socialIconss,
+                    {backgroundColor: theme.primary},
+                  ]}>
                   <Svg
                     width="8"
                     height="14"
@@ -291,7 +292,11 @@ const SignUp = ({toggleAnimation}) => {
                     />
                   </Svg>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.socialIconss}>
+                <TouchableOpacity
+                  style={[
+                    styles.socialIconss,
+                    {backgroundColor: theme.primary},
+                  ]}>
                   <Svg
                     width="18"
                     height="14"
@@ -304,7 +309,11 @@ const SignUp = ({toggleAnimation}) => {
                     />
                   </Svg>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.socialIconss}>
+                <TouchableOpacity
+                  style={[
+                    styles.socialIconss,
+                    {backgroundColor: theme.primary},
+                  ]}>
                   <Svg
                     width="23"
                     height="14"
