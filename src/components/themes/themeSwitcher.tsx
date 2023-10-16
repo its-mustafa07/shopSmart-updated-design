@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {ThemeContext, lightPink, lightBlue, darkPink, darkBlue} from './theme';
-import BackgroundGradient from '../../screens/background-gradient';
+import BackgroundGradient from '../background-gradient';
 
 const ThemeSwitcher = () => {
   const {theme, setTheme} = useContext(ThemeContext);

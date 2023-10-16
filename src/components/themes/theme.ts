@@ -58,8 +58,8 @@ export const lightBlue: ThemeType = {
   background: 'green',
   bgcolor1: '#FFEDE3',
   bgcolor2: '#FFFFFF',
-  primary: '#FF8A71',
-  secondary: '#FFD9C3',
+  primary: '#55ACEE',
+  secondary: '#C2E2FF',
   textPrimary: '#2E2E2E',
   textSecondary: 'rgba(46, 46, 46, 0.9)', // 90% opacity
   textAccent: 'rgba(46, 46, 46, 0.7)', // 70% opacity
@@ -130,6 +130,6 @@ type ThemeContextType = {
 };
 
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: lightPink, // default value
+  theme: lightBlue, // default value
   setTheme: () => {},
 });
