@@ -1,8 +1,4 @@
-import {useContext} from 'react';
 import {StyleSheet} from 'react-native';
-import {ThemeContext} from '../themes/theme';
-
-const {theme} = useContext(ThemeContext);
 
 export const styles = StyleSheet.create({
   loginMainWrapper: {
@@ -10,11 +6,11 @@ export const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+    gap: 50,
   },
   heading: {
     fontSize: 28,
     fontFamily: 'SourceSansPro-Bold',
-    color: theme.textAccent,
   },
   inputBox: {
     flexDirection: 'row',
@@ -28,7 +24,7 @@ export const styles = StyleSheet.create({
     paddingTop: 6,
 
     borderWidth: 2,
-    borderColor: '#FFEDE2',
+    // borderColor: '#FFEDE2',
   },
   container: {
     gap: 20,
@@ -56,7 +52,6 @@ export const styles = StyleSheet.create({
     borderRadius: 4,
   },
   button: {
-    backgroundColor: theme.accent,
     width: 380,
     height: 40,
     borderRadius: 10,

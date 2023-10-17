@@ -1,5 +1,13 @@
 import React, {useRef, useState} from 'react';
-import {View, Text, TouchableOpacity, Animated, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Animated,
+  StyleSheet,
+  ScrollView,
+  SafeAreaView,
+} from 'react-native';
 import LogIn from '../../components/log-in';
 import SignUp from '../../components/sign-up';
 import {styles} from './style';
@@ -27,8 +35,12 @@ const LoginSignup = () => {
         <View style={{width: '200%', overflow: 'hidden'}}>
           <Animated.View
             style={[styles.animationContainer, {transform: [{translateX}]}]}>
+            {/* <ScrollView> */}
             <LogIn toggleAnimation={toggleAnimation} />
+            {/* </ScrollView>
+            <ScrollView> */}
             <SignUp toggleAnimation={toggleAnimation} />
+            {/* </ScrollView> */}
           </Animated.View>
         </View>
       </View>

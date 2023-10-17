@@ -7,9 +7,10 @@ import {
 } from './components/themes/theme';
 import ThemeSwitcher from './components/themes/themeSwitcher';
 import GradientComponent from './components/Gradient';
+
+import ProfileHeader from './components/profile-header';
+import HomeItem from './components/home-item';
 import LoginSignup from './screens/login-signup';
-import DoneComponent from './screens/done/index';
-import ErrorPage from './screens/error/index';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(lightPink);
@@ -17,11 +18,12 @@ const App = () => {
   return (
     <ThemeContext.Provider
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
-      {/* <ThemeSwitcher /> */}
+
+      <ThemeSwitcher />
       {/* <GradientComponent /> */}
-      <LoginSignup />
-      {/* <DoneComponent /> */}
-      {/* <ErrorPage /> */}
+      {/* <ProfileHeader />
+      <HomeItem /> */}
+      <LoginSignup/>
     </ThemeContext.Provider>
   );
 };

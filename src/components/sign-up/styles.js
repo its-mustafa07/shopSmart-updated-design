@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+    // gap: 50,
   },
   headings: {
     fontSize: 28,
