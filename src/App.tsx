@@ -10,6 +10,8 @@ import GradientComponent from './components/Gradient';
 import LoginSignup from './screens/login-signup';
 import DoneComponent from './screens/done/index';
 import ErrorPage from './screens/error/index';
+import CustomButton from './utils/button';
+import FeedBack from './screens/feedback';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(lightPink);
@@ -19,8 +21,10 @@ const App = () => {
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
       {/* <ThemeSwitcher /> */}
       {/* <GradientComponent /> */}
-      <LoginSignup />
+      {/* <LoginSignup /> */}
       {/* <DoneComponent /> */}
+      {/* <CustomButton /> */}
+      <FeedBack />
       {/* <ErrorPage /> */}
     </ThemeContext.Provider>
   );
