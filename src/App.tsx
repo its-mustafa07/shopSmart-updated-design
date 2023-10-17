@@ -28,7 +28,6 @@ const App = () => {
       {/* <CustomButton /> */}
       <FeedBack />
       {/* <ErrorPage /> */}
-
     </ThemeContext.Provider>
   );
 };
