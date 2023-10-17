@@ -12,6 +12,8 @@ import DoneComponent from './screens/done/index';
 import ErrorPage from './screens/error/index';
 import CustomButton from './utils/button';
 import FeedBack from './screens/feedback';
+import ProfileHeader from './components/profile-header';
+import HomeItem from './components/home-item';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(lightPink);
@@ -26,6 +28,7 @@ const App = () => {
       {/* <CustomButton /> */}
       <FeedBack />
       {/* <ErrorPage /> */}
+
     </ThemeContext.Provider>
   );
 };
