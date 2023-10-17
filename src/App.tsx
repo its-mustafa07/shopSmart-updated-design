@@ -11,7 +11,7 @@ const App = () => {
   return (
     <ThemeContext.Provider
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
-      {/* <ThemeSwitcher /> */}
+      <ThemeSwitcher />
       {/* <GradientComponent /> */}
       <ProfileHeader />
       <HomeItem />

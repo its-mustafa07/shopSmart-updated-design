@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import LinearGradient from 'react-native-linear-gradient';
-import {ThemeContext} from '../../components/themes/theme';
+import {ThemeContext} from '../themes/theme';
 
 const BackgroundGradient = ({children}) => {
   const {theme} = useContext(ThemeContext);
