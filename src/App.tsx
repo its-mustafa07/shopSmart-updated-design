@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {
   ThemeContext,
   darkBlue,
+  darkPink,
   lightBlue,
   lightPink,
 } from './components/themes/theme';
@@ -16,7 +17,7 @@ import ProfileHeader from './components/profile-header';
 import HomeItem from './components/home-item';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(lightPink);
+  const [currentTheme, setCurrentTheme] = useState(darkPink);
 
   return (
     <ThemeContext.Provider

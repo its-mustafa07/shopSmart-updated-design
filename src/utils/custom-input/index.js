@@ -9,14 +9,22 @@ const CustomInput = ({
   keyboardType,
   secureTextEntry,
   style,
+  placeholderStyle,
+  multiline,
+  numberOfLines,
+  placeholderTextColor,
 }) => {
   return (
     <TextInput
       placeholder={placeholder}
       onChangeText={onChangeText}
       value={value}
+      multiline={multiline}
+      placeholderTextColor={placeholderTextColor}
+      numberOfLines={numberOfLines}
       // style={inputStyle}
       keyboardType={keyboardType}
+      placeholderStyle={placeholderStyle}
       secureTextEntry={secureTextEntry}
       style={style}
     />

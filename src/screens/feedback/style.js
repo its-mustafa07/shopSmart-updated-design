@@ -6,10 +6,11 @@ export const UseStyles = () => {
 
   return StyleSheet.create({
     wrapper: {
-      width: '100%',
-      height: '100%',
-      justifyContent: 'center',
-      alignItems: 'center',
+      padding: 26,
+      flex: 1,
+      // justifyContent: 'center',
+      // alignItems: 'center',
+      // padding: 26,
     },
     heading: {
       fontSize: 25,
@@ -18,17 +19,39 @@ export const UseStyles = () => {
       fontWeight: 'bold',
       padding: 48,
     },
+    inputStyle: {
+      height: 50,
+      width: 300,
+      color: theme.textAccent,
+    },
+    // placeholderStyle: {
+    //   color: theme.textAccent,
+    //   // color: theme.textAccent,
+    //   // color: 'white',
+    //   fontSize: 27,
+    // },
+    messageInput: {
+      height: 209,
+      width: 376,
+      padding: 20,
+      backgroundColor: theme.input,
+      borderRadius: 10,
+      textAlignVertical: 'top',
+      color: theme.textAccent,
+    },
     text: {
       fontSize: 18,
       color: theme.textAccent,
       fontWeight: 'normal',
     },
+    userFeedbackWrapper: {
+      marginBottom: 30,
+    },
     inputMain: {
       gap: 14,
       fontWeight: 400,
       paddingLeft: 12,
-      color: theme.textAccent,
-
+      color: theme.text,
       width: 376,
       height: 50,
       borderRadius: 10,
@@ -37,10 +60,12 @@ export const UseStyles = () => {
       flexDirection: 'row',
       alignItems: 'center',
     },
+
     input: {
       width: 305,
       height: 50,
       opacity: 0.7,
+      color: '#fff',
       fontSize: 18,
       fontFamily: 'SourceSansPro-Regular',
       borderRadius: 10,
@@ -56,6 +81,21 @@ export const UseStyles = () => {
       alignItems: 'center',
       backgroundColor: theme.secondary,
       justifyContent: 'center',
+    },
+    button: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: theme.accent,
+      height: 45,
+      width: 376,
+      borderRadius: 10,
+    },
+    buttonWrapper: {
+      alignItems: 'center',
+      flex: 1,
+      justifyContent: 'flex-end',
+      // position: 'absolute',
+      bottom: 49,
     },
   });
 };
