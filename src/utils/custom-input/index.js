@@ -8,6 +8,7 @@ const CustomInput = ({
   inputStyle,
   keyboardType,
   secureTextEntry,
+  placeholderTextColor,
   style,
 }) => {
   return (
@@ -18,6 +19,7 @@ const CustomInput = ({
       style={inputStyle}
       keyboardType={keyboardType}
       secureTextEntry={secureTextEntry}
+      placeholderTextColor={placeholderTextColor}
       style={style}
     />
   );

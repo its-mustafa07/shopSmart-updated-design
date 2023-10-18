@@ -17,6 +17,7 @@ type ThemeType = {
   gradientEnd: string;
   gradient: GradientType;
   boxShadow: string;
+  errorPrimary: string;
 };
 
 type GradientType = {
@@ -41,6 +42,7 @@ export const lightPink: ThemeType = {
   list: '#FFFFFF',
   input: '#FFFFFF',
   text: '#000',
+  errorPrimary: '#FF4C4C',
   boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)', // This was your original text color; adjust if necessary
   gradient: {
     start: {x: 0.5, y: 0},
@@ -67,6 +69,7 @@ export const lightBlue: ThemeType = {
   list: '#FFFFFF',
   input: '#FFFFFF',
   text: '#000',
+  errorPrimary: '#FF4C4C',
   boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)', //
   gradient: {
     start: {x: 0.5, y: 0},
@@ -90,6 +93,7 @@ export const darkPink: ThemeType = {
   accent: '#040325',
   list: 'rgba(0, 0, 0, 0.4)', // 40% opacity
   input: '#000000',
+  errorPrimary: '#FF4C4C',
   text: '#FFFFFF', // Adjusted to white for better visibility
   boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.8730)', // adjusted the opacity value to a valid range (0-1)
   gradient: {
@@ -114,6 +118,7 @@ export const darkBlue: ThemeType = {
   accent: '#040325',
   list: 'rgba(0, 0, 0, 0.4)', // 40% opacity
   input: '#000000',
+  errorPrimary: '#FF4C4C',
   text: '#FFF', // Adjusted to white based on your text color specifications
   boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)', // Note: This won't directly work in React Native
   gradient: {

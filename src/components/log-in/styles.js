@@ -6,6 +6,28 @@ const useStyle = () => {
   const {theme} = useContext(ThemeContext);
 
   return StyleSheet.create({
+    errorMassage: {
+      color: theme.errorPrimary,
+      fontSize: 10,
+      textAlign: 'center',
+    },
+    errorbox: {
+      width: 'auto',
+      height: 15,
+      borderColor: theme.primary,
+      backgroundColor: theme.input,
+      borderWidth: 2,
+      textAlign: 'center',
+      borderRadius: 5,
+      position: 'absolute',
+      top: -8,
+      left: 20,
+      paddingLeft: 12,
+      paddingRight: 12,
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: theme.errorPrimary,
+    },
     loginMainWrapper: {
       flex: 1,
       height: '100%',
@@ -17,14 +39,14 @@ const useStyle = () => {
     heading: {
       fontSize: 28,
       fontFamily: 'SourceSansPro-Bold',
-      color: theme.accent,
+      color: theme.text,
     },
     inputBox: {
       flexDirection: 'row',
       width: 380,
       height: 55,
       alignItems: 'center',
-      backgroundColor: '#fff',
+      backgroundColor: theme.input,
       borderRadius: 10,
       paddingLeft: 10,
       paddingBottom: 6,
@@ -43,12 +65,13 @@ const useStyle = () => {
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: theme.secondary,
+      color: theme.text,
       borderRadius: 7,
     },
     input: {
       paddingLeft: 10,
-      width: 330,
-      color: theme.textSecondary,
+      width: 300,
+      color: theme.text,
       fontSize: 16,
       fontFamily: 'SourceSansPro-Regular',
     },
@@ -57,6 +80,7 @@ const useStyle = () => {
       height: 20,
       borderWidth: 2,
       borderRadius: 4,
+      backgroundColor: theme.input,
     },
     button: {
       width: 380,

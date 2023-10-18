@@ -47,6 +47,7 @@ export const lightPink = {
   list: '#FFFFFF',
   input: '#FFFFFF',
   text: '#000',
+  errorPrimary: '#FF3333',
   boxShadow: {
     ...Platform.select({
       ios: {
@@ -80,6 +81,7 @@ export const lightBlue = {
   list: '#FFFFFF',
   input: '#FFFFFF',
   text: '#000',
+  errorPrimary: '#FF3333',
   boxShadow: {
     ...Platform.select({
       ios: {
@@ -113,6 +115,7 @@ export const darkPink = {
   list: 'rgba(0, 0, 0, 0.4)',
   input: '#000000',
   text: '#FFFFFF',
+  errorPrimary: '#FF3333',
   boxShadow: {
     ...Platform.select({
       ios: {
@@ -146,6 +149,7 @@ export const darkBlue = {
   list: 'rgba(0, 0, 0, 0.4)',
   input: '#000000',
   text: '#FFF',
+  errorPrimary: '#FF3333',
   boxShadow: {
     ...Platform.select({
       ios: {

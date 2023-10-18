@@ -14,7 +14,7 @@ import HomeItem from './components/home-item';
 import LoginSignup from './screens/login-signup';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(lightBlue);
+  const [currentTheme, setCurrentTheme] = useState(darkBlue);
 
   return (
     <ThemeContext.Provider

@@ -5,6 +5,30 @@ import {ThemeContext} from '../themes/theme';
 const useStyle = () => {
   const {theme} = useContext(ThemeContext);
   return StyleSheet.create({
+    colorss: {
+      borderColor: 'red',
+    },
+    errorMassage: {
+      color: theme.errorPrimary,
+      fontSize: 8,
+    },
+    errorbox: {
+      width: 'auto',
+      height: 15,
+      borderColor: theme.primary,
+      backgroundColor: theme.input,
+      borderWidth: 1,
+      borderRadius: 5,
+      position: 'absolute',
+      top: -8,
+      left: 20,
+      paddingVertical: 2,
+      paddingLeft: 12,
+      paddingRight: 12,
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: theme.errorPrimary,
+    },
     signupMainWrapper: {
       height: '100%',
       width: '100%',
@@ -15,12 +39,12 @@ const useStyle = () => {
       paddingTop: 50,
     },
     inputText: {
-      color: theme.textSecondary,
+      color: theme.text,
     },
     headings: {
       fontSize: 28,
       fontFamily: 'SourceSansPro-Bold',
-      color: theme.accent,
+      color: theme.text,
     },
     inputsContainer: {
       gap: 15,
@@ -30,7 +54,7 @@ const useStyle = () => {
       width: 380,
       height: 55,
       alignItems: 'center',
-      backgroundColor: '#fff',
+      backgroundColor: theme.input,
       borderRadius: 10,
       paddingLeft: 10,
       paddingBottom: 6,
@@ -53,10 +77,11 @@ const useStyle = () => {
     inputs: {
       paddingLeft: 10,
       width: 300,
-      color: theme.textSecondary,
+      color: theme.text,
       opacity: 0.7,
       fontSize: 16,
       fontFamily: 'SourceSansPro-Regular',
+      backgroundColor: theme.input,
     },
     buttons: {
       backgroundColor: theme.accent,

@@ -28,18 +28,25 @@ import {
 const SignUp = ({toggleAnimation}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyle();
-
   const [showPassword, setShowPassword] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState(false);
 
   const signupSchema = object({
-    fullName: string().required('Please enter your name'),
+    fullName: string()
+      .required('Please enter your name')
+      .min(3, 'please enter your name min 3 characters'),
     email: string()
+      .trim()
       .email('email must hav @ and .')
       .required('Please enter your email'),
     password: string()
+      .trim()
       .required('Password must be required')
-      .min(8, 'At least one Uppercase, at least 8 characters'),
+      .min(8, 'at least 8 characters')
+      .matches(
+        /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#\$%\^&\*])[a-zA-Z\d!@#\$%\^&\*]+$/,
+        'Password is too simple!',
+      ),
     confirmPassword: string().required('password must be same.').matches(),
   });
 
@@ -64,78 +71,64 @@ const SignUp = ({toggleAnimation}) => {
               <Text style={styles.headings}>Sign up!</Text>
               <View style={styles.inputsContainer}>
                 <View style={styles.inputBoxx}>
+                  {errors.fullName && touched.fullName && (
+                    <View style={styles.errorbox}>
+                      <Text style={styles.errorMassage}>{errors.fullName}</Text>
+                    </View>
+                  )}
                   <View style={styles.iconBoxx}>
                     <PersonIcon />
                   </View>
                   <CustomInput
                     placeholder={'Enter your name'}
                     style={styles.inputs}
+                    placeholderTextColor={theme.text}
                     // keyboardType="text"
                     onChangeText={handleChange('fullName')}
                     onBlur={handleBlur('fullName')}
                     value={values.fullName}
                   />
-                  {errors.fullName && touched.fullName && (
-                    <Text
-                      style={{
-                        color: theme.primary,
-                        position: 'absolute',
-                        bottom: 0,
-                        left: '25%',
-                      }}>
-                      {errors.fullName}
-                    </Text>
-                  )}
                 </View>
 
                 <View style={styles.inputBoxx}>
+                  {errors.email && touched.email && (
+                    <View style={styles.errorbox}>
+                      <Text style={styles.errorMassage}>{errors.email}</Text>
+                    </View>
+                  )}
                   <View style={styles.iconBoxx}>
                     <MailIcon />
                   </View>
                   <CustomInput
                     placeholder={'Enter your email'}
                     style={styles.inputs}
+                    placeholderTextColor={theme.text}
                     // keyboardType="email"
                     onChangeText={handleChange('email')}
                     onBlur={handleBlur('email')}
                     value={values.email}
                   />
-                  {errors.email && touched.email && (
-                    <Text
-                      style={{
-                        color: theme.primary,
-                        position: 'absolute',
-                        bottom: 0,
-                        left: '25%',
-                      }}>
-                      {errors.email}
-                    </Text>
-                  )}
                 </View>
 
                 <View style={styles.inputBoxx}>
+                  {errors.password && touched.password && (
+                    <View style={styles.errorbox}>
+                      <Text style={styles.errorMassage}>{errors.password}</Text>
+                    </View>
+                  )}
                   <View style={styles.iconBoxx}>
                     <KeyIcon />
                   </View>
                   <CustomInput
                     placeholder={'Enter your password'}
                     style={styles.inputs}
+                    placeholderTextColor={theme.text}
                     secureTextEntry={!showPassword ? true : false}
                     onChangeText={handleChange('password')}
                     onBlur={handleBlur('password')}
                     value={values.password}
                   />
-                  {errors.password && touched.password && (
-                    <Text
-                      style={{
-                        color: theme.primary,
-                        position: 'absolute',
-                        bottom: 0,
-                        left: '25%',
-                      }}>
-                      {errors.password}
-                    </Text>
-                  )}
+
                   {showPassword ? (
                     <View>
                       <Svg
@@ -177,6 +170,13 @@ const SignUp = ({toggleAnimation}) => {
                 </View>
 
                 <View style={styles.inputBoxx}>
+                  {errors.confirmPassword && touched.confirmPassword && (
+                    <View style={styles.errorbox}>
+                      <Text style={styles.errorMassage}>
+                        {errors.confirmPassword}
+                      </Text>
+                    </View>
+                  )}
                   <View style={styles.iconBoxx}>
                     <Svg
                       width="17"
@@ -196,22 +196,12 @@ const SignUp = ({toggleAnimation}) => {
                   <CustomInput
                     placeholder={'Enter your confirm password'}
                     style={styles.inputs}
+                    placeholderTextColor={theme.text}
                     secureTextEntry={!confirmPassword ? true : false}
                     onChangeText={handleChange('confirmPassword')}
                     onBlur={handleBlur('confirmPassword')}
                     value={values.confirmPassword}
                   />
-                  {errors.confirmPassword && touched.confirmPassword && (
-                    <Text
-                      style={{
-                        color: theme.primary,
-                        position: 'absolute',
-                        bottom: 0,
-                        left: '25%',
-                      }}>
-                      {errors.confirmPassword}
-                    </Text>
-                  )}
                   {confirmPassword ? (
                     <View>
                       <Svg
