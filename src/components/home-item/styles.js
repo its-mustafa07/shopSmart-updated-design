@@ -13,6 +13,7 @@ const useStyles = () => {
       rowGap: 15,
       alignItems: 'center',
       justifyContent: 'center',
+      marginTop: 30,
     },
     itemText: {
       fontWeight: 'bold',

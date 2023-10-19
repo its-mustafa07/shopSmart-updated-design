@@ -4,17 +4,20 @@ import {useContext} from 'react';
 
 const useStyles = () => {
   const {theme} = useContext(ThemeContext);
-  return StyleSheet.create({
-    profileHeader: {
-      paddingVertical: 35,
+  return (styles = StyleSheet.create({
+    cartHeader: {
+      marginTop: 30,
     },
-    homeText: {
-      fontWeight: 'bold',
-      color: theme.textPrimary,
-      fontSize: 28,
+    cartTitleBar: {
+      marginTop: 14,
+    },
+    pageTitle: {
+      fontSize: 30,
+      marginTop: 16,
       marginLeft: 30,
+      color: theme.textSecondary,
     },
-  });
+  }));
 };
 
 export default useStyles;
