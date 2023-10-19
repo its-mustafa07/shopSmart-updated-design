@@ -108,7 +108,7 @@ export const PersonIcon = () => {
   );
 };
 
-export const HidePassword = () => {
+export const HidePasswordIcon = () => {
   const {theme} = useContext(ThemeContext);
   return (
     <Svg
@@ -162,7 +162,7 @@ export const ScanItemsIcon = () => {
 
 export const MyStoresIcon = () => {
   return (
-    <Path
+    <Svg
       xmlns="http://www.w3.org/2000/svg"
       width="51"
       height="51"
@@ -172,7 +172,7 @@ export const MyStoresIcon = () => {
         d="M40.8 40.8C37.9695 40.8 35.7 43.0695 35.7 45.9C35.7 47.2526 36.2373 48.5498 37.1938 49.5062C38.1502 50.4627 39.4474 51 40.8 51C42.1526 51 43.4498 50.4627 44.4062 49.5062C45.3627 48.5498 45.9 47.2526 45.9 45.9C45.9 44.5474 45.3627 43.2502 44.4062 42.2938C43.4498 41.3373 42.1526 40.8 40.8 40.8ZM0 0V5.1H5.1L14.28 24.4545L10.812 30.702C10.4295 31.416 10.2 32.2575 10.2 33.15C10.2 34.5026 10.7373 35.7998 11.6938 36.7562C12.6502 37.7127 13.9474 38.25 15.3 38.25H45.9V33.15H16.371C16.2019 33.15 16.0398 33.0828 15.9202 32.9633C15.8007 32.8437 15.7335 32.6816 15.7335 32.5125C15.7335 32.385 15.759 32.283 15.81 32.2065L18.105 28.05H37.1025C39.015 28.05 40.698 26.979 41.565 25.4235L50.694 8.925C50.8725 8.517 51 8.0835 51 7.65C51 6.9737 50.7313 6.3251 50.2531 5.84688C49.7749 5.36866 49.1263 5.1 48.45 5.1H10.7355L8.3385 0M15.3 40.8C12.4695 40.8 10.2 43.0695 10.2 45.9C10.2 47.2526 10.7373 48.5498 11.6938 49.5062C12.6502 50.4627 13.9474 51 15.3 51C16.6526 51 17.9498 50.4627 18.9062 49.5062C19.8627 48.5498 20.4 47.2526 20.4 45.9C20.4 44.5474 19.8627 43.2502 18.9062 42.2938C17.9498 41.3373 16.6526 40.8 15.3 40.8Z"
         fill="#55ACEE"
       />
-    </Path>
+    </Svg>
   );
 };
 
@@ -433,6 +433,7 @@ export const ThemeTemporaryIcon = () => {
 };
 
 export const WarnIcon = () => {
+export const UpIcon = () => {
   const {theme} = useContext(ThemeContext);
   return (
     <Svg
@@ -446,11 +447,17 @@ export const WarnIcon = () => {
         fill="black"
         fill-opacity="0.7"
       />
+      width="15"
+      height="8"
+      viewBox="0 0 15 8"
+      fill="none">
+      <Path d="M7.5 0L15 8H0L7.5 0Z" fill={theme.textPrimary} />
     </Svg>
   );
 };
 
 export const SettingsEmailIcon = () => {
+export const DownIcon = () => {
   const {theme} = useContext(ThemeContext);
   return (
     <Svg
@@ -621,6 +628,7 @@ export const SettingsNotifyIcon = () => {
         fill-opacity="0.9"
       />
       <Circle cx="21" cy="4" r="4" fill="#FF8C71" />
+      <Path d="M7.5 8L0 0H15L7.5 8Z" fill={theme.textPrimary} />
     </Svg>
-  );
-};
+  )
+}
