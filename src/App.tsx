@@ -15,6 +15,7 @@ import CustomButton from './utils/button';
 import FeedBack from './screens/feedback';
 import ProfileHeader from './components/profile-header';
 import HomeItem from './components/home-item';
+import Setting from './screens/setting';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(darkPink);
@@ -27,7 +28,8 @@ const App = () => {
       {/* <LoginSignup /> */}
       {/* <DoneComponent /> */}
       {/* <CustomButton /> */}
-      <FeedBack />
+      {/* <FeedBack /> */}
+      <Setting />
       {/* <ErrorPage /> */}
     </ThemeContext.Provider>
   );

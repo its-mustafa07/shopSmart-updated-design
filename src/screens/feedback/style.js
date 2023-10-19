@@ -94,7 +94,6 @@ export const UseStyles = () => {
       alignItems: 'center',
       flex: 1,
       justifyContent: 'flex-end',
-      // position: 'absolute',
       bottom: 49,
     },
   });
