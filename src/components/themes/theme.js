@@ -40,13 +40,15 @@ export const lightPink = {
   bgcolor2: '#FFFFFF',
   primary: '#FF8A71',
   secondary: '#FFD9C3',
-  textPrimary: '#000000',
+  textPrimary: '#2E2E2E',
   textSecondary: 'rgba(46, 46, 46, 0.9)',
   textAccent: 'rgba(46, 46, 46, 0.7)',
   accent: '#040325',
   list: '#FFFFFF',
   input: '#FFFFFF',
   text: '#000',
+  white: '#FFFFFF',
+  listSecondary: '#FFF1EA',
   boxShadow: {
     ...Platform.select({
       ios: {
@@ -73,13 +75,15 @@ export const lightBlue = {
   bgcolor2: '#FFFFFF',
   primary: '#55ACEE',
   secondary: '#C2E2FF',
-  textPrimary: '#000000',
+  textPrimary: '#2E2E2E',
   textSecondary: 'rgba(46, 46, 46, 0.9)',
   textAccent: 'rgba(46, 46, 46, 0.7)',
   accent: '#040325',
   list: '#FFFFFF',
   input: '#FFFFFF',
   text: '#000',
+  white: '#FFFFFF',
+  listSecondary: '#C8E4FF',
   boxShadow: {
     ...Platform.select({
       ios: {
@@ -113,6 +117,8 @@ export const darkPink = {
   list: 'rgba(0, 0, 0, 0.4)',
   input: '#000000',
   text: '#FFFFFF',
+  white: '#FFFFFF',
+  listSecondary: '#333333',
   boxShadow: {
     ...Platform.select({
       ios: {
@@ -146,6 +152,8 @@ export const darkBlue = {
   list: 'rgba(0, 0, 0, 0.4)',
   input: '#000000',
   text: '#FFF',
+  white: '#FFFFFF',
+  listSecondary: '#26303A',
   boxShadow: {
     ...Platform.select({
       ios: {

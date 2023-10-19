@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, Text} from 'react-native';
+import {View, Image, Text, TouchableOpacity} from 'react-native';
 import useStyles from './styles';
 import {Svg, Path} from 'react-native-svg';
 import {
@@ -7,10 +7,10 @@ import {
   HeaderCartIcon,
 } from '../../../assets/svg-icons/svgIcons';
 
-const ProfileHeader = () => {
+const ProfileHeader = ({style}) => {
   const styles = useStyles();
   return (
-    <View style={styles.mainContainer}>
+    <View style={[styles.mainContainer, style]}>
       <View style={styles.userInfo}>
         <Image
           style={styles.image}
@@ -19,8 +19,12 @@ const ProfileHeader = () => {
         <Text style={styles.userName}>John Doe</Text>
       </View>
       <View style={styles.svgsContainer}>
-        <HeaderQRScanIcon />
-        <HeaderCartIcon />
+        <TouchableOpacity>
+          <HeaderQRScanIcon />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <HeaderCartIcon />
+        </TouchableOpacity>
       </View>
     </View>
   );
