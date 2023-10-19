@@ -12,6 +12,8 @@ import GradientComponent from './components/Gradient';
 import ProfileHeader from './components/profile-header';
 import HomeItem from './components/home-item';
 import LoginSignup from './screens/login-signup';
+import GridItem from './utils/grid-item';
+import GridViewItems from './components/grid-view-items';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(darkBlue);
@@ -23,7 +25,9 @@ const App = () => {
       {/* <GradientComponent /> */}
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
-      <LoginSignup />
+      {/* <LoginSignup /> */}
+      {/* <GridItem /> */}
+      <GridViewItems />
     </ThemeContext.Provider>
   );
 };
