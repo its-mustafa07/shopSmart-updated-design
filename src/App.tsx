@@ -1,14 +1,24 @@
 import React, {useState} from 'react';
-import {ThemeContext, lightPink} from './components/themes/theme';
+import {
+  ThemeContext,
+  darkBlue,
+  darkPink,
+  lightBlue,
+  lightPink,
+} from './components/themes/theme';
 import ThemeSwitcher from './components/themes/themeSwitcher';
 import GradientComponent from './components/Gradient';
+
 import ProfileHeader from './components/profile-header';
 import HomeItem from './components/home-item';
+
 import LogoStyles from './components/logo-loader/styles';
 import LogoLoader from './components/logo-loader';
+import LoginSignup from './screens/login-signup';
+
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(lightPink);
+  const [currentTheme, setCurrentTheme] = useState(darkBlue);
 
   return (
     <ThemeContext.Provider
@@ -18,6 +28,11 @@ const App = () => {
       <ProfileHeader />
       {/* <HomeItem /> */}
       <LogoLoader/>
+
+      {/* <ProfileHeader /> */}
+      {/* <HomeItem /> */}
+      <LoginSignup />
+
     </ThemeContext.Provider>
   );
 };

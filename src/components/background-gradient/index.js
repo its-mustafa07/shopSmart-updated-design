@@ -10,7 +10,7 @@ const BackgroundGradient = ({children}) => {
       start={theme.gradient.start}
       end={theme.gradient.end}
       locations={theme.gradient.locations}
-      style={{flex: 1}}>
+      style={{width: '100%', height: '100%'}}>
       {children}
     </LinearGradient>
   );

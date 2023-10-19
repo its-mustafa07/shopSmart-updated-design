@@ -2,8 +2,10 @@ import React, {useContext, useState} from 'react';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
 import {ThemeContext, lightPink, lightBlue, darkPink, darkBlue} from './theme';
 import BackgroundGradient from '../background-gradient';
+
 import ReactNativeModal from 'react-native-modal';
 import {ThemeTemporaryIcon} from '../../../assets/svg-icons/svgIcons';
+
 
 const ThemeSwitcher = () => {
   const {theme, setTheme} = useContext(ThemeContext);
