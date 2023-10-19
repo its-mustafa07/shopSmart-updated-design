@@ -1,21 +1,24 @@
 import {createContext} from 'react';
 import {Platform} from 'react-native';
 
-// type ThemeType = {
-//   bgcolor1: string;
-//   bgcolor2: string;
-//   primary: string;
-//   secondary: string;
-//   textPrimary: string;
-//   textSecondary: string;
-//   textAccent: string;
-//   accent: string;
-//   list: string;
-//   input: string;
-//   text: string;
-//   gradient: GradientType;
-//   boxShadow: boxShadowType;
-// };
+type ThemeType = {
+  bgcolor1: string;
+  bgcolor2: string;
+  primary: string;
+  secondary: string;
+  textPrimary: string;
+  textSecondary: string;
+  textAccent: string;
+  accent: string;
+  list: string;
+  input: string;
+  text: string;
+  gradient: GradientType;
+  white: string;
+  listSecondary: string;
+  // boxShadow: boxShadowType;
+};
+
 // type boxShadowType = {
 //   ios: {
 //     shadowColor: string;
@@ -28,14 +31,14 @@ import {Platform} from 'react-native';
 //   };
 // };
 
-// type GradientType = {
-//   start: {x: number; y: number};
-//   end: {x: number; y: number};
-//   locations: number[];
-//   colors: string[];
-// };
+type GradientType = {
+  start: {x: number; y: number};
+  end: {x: number; y: number};
+  locations: number[];
+  colors: string[];
+};
 
-export const lightPink = {
+export const lightPink: ThemeType = {
   bgcolor1: '#FFEDE3',
   bgcolor2: '#FFFFFF',
   primary: '#FF8A71',
@@ -49,19 +52,20 @@ export const lightPink = {
   text: '#000',
   white: '#FFFFFF',
   listSecondary: '#FFF1EA',
-  boxShadow: {
-    ...Platform.select({
-      ios: {
-        shadowColor: 'rgba(0, 0, 0, 0.30)',
-        shadowOffset: {width: 0, height: 4},
-        shadowOpacity: 1,
-        shadowRadius: 25,
-      },
-      android: {
-        elevation: 5,
-      },
-    }),
-  },
+  // boxShadow: {
+  //   ...Platform.select({
+  //     ios: {
+  //       shadowColor: 'rgba(0, 0, 0, 0.30)',
+  //       shadowOffset: {width: 0, height: 4},
+  //       shadowOpacity: 1,
+  //       shadowRadius: 25,
+  //     },
+  //     android: {
+  //       elevation: 5,
+  //     },
+  //   }),
+  // },
+
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
@@ -70,7 +74,7 @@ export const lightPink = {
   },
 };
 
-export const lightBlue = {
+export const lightBlue: ThemeType = {
   bgcolor1: '#C2E2FF',
   bgcolor2: '#FFFFFF',
   primary: '#55ACEE',
@@ -84,19 +88,19 @@ export const lightBlue = {
   text: '#000',
   white: '#FFFFFF',
   listSecondary: '#C8E4FF',
-  boxShadow: {
-    ...Platform.select({
-      ios: {
-        shadowColor: 'rgba(0, 0, 0, 0.30)',
-        shadowOffset: {width: 0, height: 4},
-        shadowOpacity: 1,
-        shadowRadius: 25,
-      },
-      android: {
-        elevation: 5,
-      },
-    }),
-  },
+  // boxShadow: {
+  //   ...Platform.select({
+  //     ios: {
+  //       shadowColor: 'rgba(0, 0, 0, 0.30)',
+  //       shadowOffset: {width: 0, height: 4},
+  //       shadowOpacity: 1,
+  //       shadowRadius: 25,
+  //     },
+  //     android: {
+  //       elevation: 5,
+  //     },
+  //   }),
+  // },
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
@@ -105,7 +109,7 @@ export const lightBlue = {
   },
 };
 
-export const darkPink = {
+export const darkPink: ThemeType = {
   bgcolor1: '#401800',
   bgcolor2: '#333333',
   primary: '#FF9F87',
@@ -119,19 +123,19 @@ export const darkPink = {
   text: '#FFFFFF',
   white: '#FFFFFF',
   listSecondary: '#333333',
-  boxShadow: {
-    ...Platform.select({
-      ios: {
-        shadowColor: 'rgba(87, 87, 87, 0.30)',
-        shadowOffset: {width: 0, height: 4},
-        shadowOpacity: 1,
-        shadowRadius: 25,
-      },
-      android: {
-        elevation: 5,
-      },
-    }),
-  },
+  // boxShadow: {
+  //   ...Platform.select({
+  //     ios: {
+  //       shadowColor: 'rgba(87, 87, 87, 0.30)',
+  //       shadowOffset: {width: 0, height: 4},
+  //       shadowOpacity: 1,
+  //       shadowRadius: 25,
+  //     },
+  //     android: {
+  //       elevation: 5,
+  //     },
+  //   }),
+  // },
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
@@ -140,7 +144,7 @@ export const darkPink = {
   },
 };
 
-export const darkBlue = {
+export const darkBlue: ThemeType = {
   bgcolor1: '#00294F',
   bgcolor2: '#333333',
   primary: '#55ACEE',
@@ -154,19 +158,19 @@ export const darkBlue = {
   text: '#FFF',
   white: '#FFFFFF',
   listSecondary: '#26303A',
-  boxShadow: {
-    ...Platform.select({
-      ios: {
-        shadowColor: 'rgba(87, 87, 87, 0.30)',
-        shadowOffset: {width: 0, height: 4},
-        shadowOpacity: 1,
-        shadowRadius: 25,
-      },
-      android: {
-        elevation: 5,
-      },
-    }),
-  },
+  // boxShadow: {
+  //   ...Platform.select({
+  //     ios: {
+  //       shadowColor: 'rgba(87, 87, 87, 0.30)',
+  //       shadowOffset: {width: 0, height: 4},
+  //       shadowOpacity: 1,
+  //       shadowRadius: 25,
+  //     },
+  //     android: {
+  //       elevation: 5,
+  //     },
+  //   }),
+  // },
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
@@ -175,16 +179,12 @@ export const darkBlue = {
   },
 };
 
-// type ThemeContextType = {
-//   theme: ThemeType,
-//   setTheme: (theme: ThemeType) => void,
-// };
+type ThemeContextType = {
+  theme: ThemeType;
+  setTheme: (theme: ThemeType) => void;
+};
 
-export const ThemeContext = createContext(
-  // <
-  // ThemeContextType >
-  {
-    theme: lightPink,
-    setTheme: () => {},
-  },
-);
+export const ThemeContext = createContext(<ThemeContextType>{
+  theme: lightPink,
+  setTheme: () => {},
+});

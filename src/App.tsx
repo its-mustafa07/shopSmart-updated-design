@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {
   ThemeContext,
+  darkBlue,
   darkPink,
   lightBlue,
   lightPink,
