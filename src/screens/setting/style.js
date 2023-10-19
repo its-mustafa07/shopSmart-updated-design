@@ -13,14 +13,26 @@ export const UseStyles = () => {
       paddingTop: 48,
     },
     profileWrapper: {
-      padding: 32,
+      paddingBottom: 40,
       alignItems: 'center',
       flexDirection: 'row',
       justifyContent: 'space-between',
     },
-    warnIconWrapper: {
-      width: 44,
+    contentWrapper: {
+      gap: 20,
+    },
+    iconWrapper: {
       height: 44,
+      width: 44,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 25,
+    },
+    textstyle: {
+      color: theme.textSecondary,
+      fontSize: 18,
+      fontWeight: 'bold',
     },
   });
 };

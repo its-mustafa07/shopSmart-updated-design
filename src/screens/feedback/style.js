@@ -42,14 +42,14 @@ export const UseStyles = () => {
     text: {
       fontSize: 18,
       color: theme.textAccent,
-      fontWeight: 'normal',
+      fontWeight: 'bold',
     },
     userFeedbackWrapper: {
       marginBottom: 30,
     },
     inputMain: {
       gap: 14,
-      fontWeight: 400,
+      fontWeight: 'bold',
       paddingLeft: 12,
       color: theme.text,
       width: 376,

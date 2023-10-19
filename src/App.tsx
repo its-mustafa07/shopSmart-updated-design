@@ -15,10 +15,11 @@ import CustomButton from './utils/button';
 import FeedBack from './screens/feedback';
 import ProfileHeader from './components/profile-header';
 import HomeItem from './components/home-item';
-import Setting from './screens/setting';
+import Settings from './screens/setting';
+import {Text} from 'react-native';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(darkPink);
+  const [currentTheme, setCurrentTheme] = useState(darkBlue);
 
   return (
     <ThemeContext.Provider
@@ -29,7 +30,7 @@ const App = () => {
       {/* <DoneComponent /> */}
       {/* <CustomButton /> */}
       {/* <FeedBack /> */}
-      <Setting />
+      <Settings />
       {/* <ErrorPage /> */}
       {/* <HomeScreen /> */}
       {/* <ListTitleBar /> */}

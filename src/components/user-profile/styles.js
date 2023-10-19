@@ -19,6 +19,7 @@ export const UseStyles = () => {
       color: theme.textPrimary,
       fontWeight: 'bold',
       fontSize: 18,
+      fontfamily: 'Source Sans Pro',
     },
   });
 };

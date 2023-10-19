@@ -15,7 +15,7 @@ const useStyles = () => {
     },
     title: {
       color: theme.textPrimary,
-      fontWeight: '500',
+      fontWeight: 'bold',
       fontSize: 16,
     },
     iconsContainer: {
