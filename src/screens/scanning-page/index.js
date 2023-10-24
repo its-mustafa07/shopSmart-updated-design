@@ -1,0 +1,88 @@
+import {Image, SafeAreaView, ScrollView, Text, View} from 'react-native';
+import ProfileHeader from '../../components/profile-header';
+import CustomButton from '../../utils/button';
+import {styles, useStyles} from './style';
+import {HeaderQRScanIcon} from '../../../assets/svg-icons/svgIcons';
+import CustomInput from '../../utils/custom-input';
+import {useContext, useState} from 'react';
+import {ThemeContext} from '../../components/themes/theme';
+import ListItem from '../../components/list-item';
+import ErrorPage from '../error';
+import BackgroundGradient from '../../components/background-gradient';
+
+const ScanningPage = () => {
+  const {theme} = useContext(ThemeContext);
+  const styles = useStyles();
+  const [objectDeduction, setObjectDeduction] = useState(false);
+
+  const handleToggle = () => setObjectDeduction(false);
+  return (
+    <BackgroundGradient style={{flex: 1}}>
+      {objectDeduction ? (
+        <ErrorPage handleToggle={handleToggle} />
+      ) : (
+        <SafeAreaView style={styles.ScanningPageWrapper}>
+          {/* <ScrollView > */}
+          <ProfileHeader />
+          <View>
+            <Text style={styles.Heading}>Scanning Page</Text>
+          </View>
+          <View style={styles.tabButtons}>
+            <CustomButton
+              buttonStyle={[
+                objectDeduction ? styles.conditionalButton : styles.button,
+              ]}
+              onPress={() => setObjectDeduction(false)}
+              textStyle={styles.buttonTexts}>
+              QR Scan
+            </CustomButton>
+            <CustomButton
+              buttonStyle={[
+                !objectDeduction ? styles.conditionalButton : styles.button,
+              ]}
+              onPress={() => setObjectDeduction(true)}
+              textStyle={styles.buttonText}>
+              Object Detection
+            </CustomButton>
+          </View>
+          <Image
+            source={require('../../../assets/images/QRCode.jpg')}
+            style={styles.scanner}
+          />
+          <View style={styles.searchBox}>
+            <CustomInput
+              placeholder="Search items"
+              style={styles.input}
+              placeholderTextColor={theme.text}
+            />
+            <CustomButton
+              buttonStyle={styles.addButton}
+              textStyle={{color: theme.text}}>
+              Add
+            </CustomButton>
+          </View>
+          <ScrollView>
+            <View style={styles.ScrollViewList}>
+              <ListItem />
+              <ListItem />
+              <ListItem />
+              {/* <ListItem />
+        <ListItem /> */}
+            </View>
+            <View style={styles.mainButton}>
+              <CustomButton
+                textStyle={{color: theme.text}}
+                buttonStyle={styles.editButton}>
+                Edit
+              </CustomButton>
+              <CustomButton buttonStyle={styles.saveButton}>Save</CustomButton>
+            </View>
+          </ScrollView>
+          {/* </ScrollView> */}
+        </SafeAreaView>
+      )}
+    </BackgroundGradient>
+  );
+};
+
+export default ScanningPage;

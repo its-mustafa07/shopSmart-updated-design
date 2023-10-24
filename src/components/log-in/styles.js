@@ -59,6 +59,9 @@ const useStyle = () => {
       marginTop: 100,
       gap: 20,
     },
+    Border: {
+      borderColor: 'red',
+    },
     iconBox: {
       width: 35,
       height: 35,

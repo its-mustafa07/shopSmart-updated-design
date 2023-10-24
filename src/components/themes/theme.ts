@@ -128,7 +128,7 @@ export const darkBlue: ThemeType = {
   list: 'rgba(0, 0, 0, 0.4)', // 40% opacity
   input: '#000000',
   errorPrimary: '#FF4C4C',
-  text: '#FFF', // Adjusted to white based on your text color specifications
+  text: '#FFFFFF', // Adjusted to white based on your text color specifications
   boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)', // Note: This won't directly work in React Native
 
   gradient: {

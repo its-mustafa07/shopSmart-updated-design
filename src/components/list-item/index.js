@@ -9,9 +9,10 @@ import {
 import useStyles from './styles';
 import {ThemeContext} from '../themes/theme';
 
-const ListItem = () => {
+const ListItem = ({item}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyles();
+
   return (
     <View style={[styles.mainContainer, theme.boxShadow]}>
       <View style={styles.contentContainer}>
@@ -21,7 +22,7 @@ const ListItem = () => {
           </View>
           <View style={styles.textContainer}>
             <View style={styles.titleWithQuantity}>
-              <Text style={styles.itemTitle}>Cart Item</Text>
+              <Text style={styles.itemTitle}>{item}</Text>
               <View style={[styles.quantityContainer, theme.boxShadow]}>
                 <Text style={styles.quantity}>7</Text>
               </View>
@@ -49,7 +50,7 @@ const ListItem = () => {
         </View>
       </View>
       <View style={styles.tagContainer}>
-        <Text style={styles.tagTitle}>Home stock</Text>
+        <Text style={styles.tagTitle}>Home Stock</Text>
       </View>
     </View>
   );

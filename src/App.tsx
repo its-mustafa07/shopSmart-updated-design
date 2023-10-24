@@ -14,22 +14,27 @@ import HomeItem from './components/home-item';
 import LoginSignup from './screens/login-signup';
 import GridItem from './utils/grid-item';
 import GridViewItems from './components/grid-view-items';
+import ScanningPage from './screens/scanning-page';
+import ErrorPage from './screens/error';
+import ListItem from './components/list-item';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(darkBlue);
+  const [currentTheme, setCurrentTheme] = useState(lightBlue);
 
   return (
     <ThemeContext.Provider
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
       {/* <HomeScreen /> */}
       {/* <ListTitleBar /> */}
-      <ThemeSwitcher />
+      {/* <ThemeSwitcher /> */}
       {/* <GradientComponent /> */}
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
       {/* <LoginSignup /> */}
-      {/* <GridItem /> */}
-      <GridViewItems />
+      {/* <GridViewItems /> */}
+      {/* <ScanningPage /> */}
+      {/* <ErrorPage /> */}
+      {/* <ListItem item={'Atta'} /> */}
     </ThemeContext.Provider>
   );
 };

@@ -66,7 +66,7 @@ const LogIn = ({toggleAnimation}) => {
             </View>
             <View style={styles.container}>
               <Text style={styles.heading}>Welcome to ShopSmart!</Text>
-              <View style={styles.inputBox}>
+              <View style={[styles.inputBox]}>
                 {errors.email && touched.email && (
                   <View style={styles.errorbox}>
                     <Text style={styles.errorMassage}>{errors.email}</Text>

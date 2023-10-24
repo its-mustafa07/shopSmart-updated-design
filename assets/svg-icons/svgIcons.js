@@ -1,5 +1,5 @@
 import React from 'react';
-import {Svg, Path, G} from 'react-native-svg';
+import {Svg, Path, G, Rect, Defs, Pattern, Use, Image} from 'react-native-svg';
 import {ThemeContext} from '../../src/components/themes/theme';
 import {useContext} from 'react';
 
