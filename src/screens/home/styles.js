@@ -9,7 +9,7 @@ const useStyles = () => {
       paddingVertical: 35,
     },
     homeText: {
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       color: theme.textPrimary,
       fontSize: 28,
       marginLeft: 30,

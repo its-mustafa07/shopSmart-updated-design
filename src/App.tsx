@@ -14,6 +14,9 @@ import HomeScreen from './screens/home';
 import ListTitleBar from './components/list-title-bar';
 import ListItem from './components/list-item';
 import CartScreen from './screens/cart';
+import HomeStockScreen from './screens/home-stock';
+import HomeStockListScreen from './screens/home-stock-list-screen';
+import ToFillStockListScreen from './screens/toFill-stock-list-screen';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(lightBlue);
@@ -23,9 +26,13 @@ const App = () => {
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
       {/* <HomeScreen /> */}
       {/* <ListTitleBar /> */}
-      <ThemeSwitcher />
+      {/* <ThemeSwitcher /> */}
       {/* <ListItem /> */}
-      <CartScreen />
+      {/* <CartScreen /> */}
+      {/* <HomeStockScreen /> */}
+      {/* <HomeStockListScreen /> */}
+      <ToFillStockListScreen />
+      {/* <ListItem /> */}
     </ThemeContext.Provider>
   );
 };

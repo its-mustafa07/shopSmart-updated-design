@@ -16,6 +16,7 @@ type ThemeType = {
   gradient: GradientType;
   white: string;
   listSecondary: string;
+  disabledButton: string;
   // boxShadow: boxShadowType;
 };
 
@@ -52,6 +53,7 @@ export const lightPink: ThemeType = {
   text: '#000',
   white: '#FFFFFF',
   listSecondary: '#FFF1EA',
+  disabledButton: '#C8D5E0',
   // boxShadow: {
   //   ...Platform.select({
   //     ios: {
@@ -88,6 +90,7 @@ export const lightBlue: ThemeType = {
   text: '#000',
   white: '#FFFFFF',
   listSecondary: '#C8E4FF',
+  disabledButton: '#C8D5E0',
   // boxShadow: {
   //   ...Platform.select({
   //     ios: {
@@ -123,6 +126,7 @@ export const darkPink: ThemeType = {
   text: '#FFFFFF',
   white: '#FFFFFF',
   listSecondary: '#333333',
+  disabledButton: '#3C3C3C',
   // boxShadow: {
   //   ...Platform.select({
   //     ios: {
@@ -158,6 +162,7 @@ export const darkBlue: ThemeType = {
   text: '#FFF',
   white: '#FFFFFF',
   listSecondary: '#26303A',
+  disabledButton: '#3C3C3C',
   // boxShadow: {
   //   ...Platform.select({
   //     ios: {
