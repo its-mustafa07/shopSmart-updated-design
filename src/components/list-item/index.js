@@ -9,12 +9,16 @@ import {
 import useStyles from './styles';
 import {ThemeContext} from '../themes/theme';
 
+<<<<<<< HEAD
 const ListItem = ({item}) => {
+=======
+const ListItem = ({style, title}) => {
+>>>>>>> f4f77d67288f410fb19468a178d21ce46c1f3134
   const {theme} = useContext(ThemeContext);
   const styles = useStyles();
 
   return (
-    <View style={[styles.mainContainer, theme.boxShadow]}>
+    <View style={[styles.mainContainer, theme.boxShadow, style]}>
       <View style={styles.contentContainer}>
         <View style={{flexDirection: 'row'}}>
           <View style={styles.iconContainer}>
@@ -22,7 +26,11 @@ const ListItem = ({item}) => {
           </View>
           <View style={styles.textContainer}>
             <View style={styles.titleWithQuantity}>
+<<<<<<< HEAD
               <Text style={styles.itemTitle}>{item}</Text>
+=======
+              <Text style={styles.itemTitle}>{title}</Text>
+>>>>>>> f4f77d67288f410fb19468a178d21ce46c1f3134
               <View style={[styles.quantityContainer, theme.boxShadow]}>
                 <Text style={styles.quantity}>7</Text>
               </View>

@@ -17,6 +17,10 @@ import GridViewItems from './components/grid-view-items';
 import ScanningPage from './screens/scanning-page';
 import ErrorPage from './screens/error';
 import ListItem from './components/list-item';
+import CartScreen from './screens/cart';
+import HomeStockScreen from './screens/home-stock';
+import HomeStockListScreen from './screens/home-stock-list-screen';
+import ToFillStockListScreen from './screens/toFill-stock-list-screen';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(lightBlue);
@@ -27,6 +31,7 @@ const App = () => {
       {/* <HomeScreen /> */}
       {/* <ListTitleBar /> */}
       {/* <ThemeSwitcher /> */}
+
       {/* <GradientComponent /> */}
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
@@ -35,6 +40,12 @@ const App = () => {
       {/* <ScanningPage /> */}
       {/* <ErrorPage /> */}
       {/* <ListItem item={'Atta'} /> */}
+
+      {/* <ListItem /> */}
+      {/* <CartScreen /> */}
+      {/* <HomeStockScreen /> */}
+      {/* <HomeStockListScreen /> */}
+      {/* <ToFillStockListScreen /> */}
     </ThemeContext.Provider>
   );
 };

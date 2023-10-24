@@ -1,0 +1,32 @@
+import React from 'react';
+import {SafeAreaView, Text, FlatList} from 'react-native';
+import BackgroundGradient from '../../components/background-gradient';
+import ProfileHeader from '../../components/profile-header';
+import useStyles from './styles';
+import homeStockData from '../../data/HOME_STOCK-DATA';
+import ListItem from '../../components/list-item';
+import ListTitleBar from '../../components/list-title-bar';
+
+const HomeStockListScreen = () => {
+  const styles = useStyles();
+
+  return (
+    <BackgroundGradient>
+      <SafeAreaView style={{flex: 1}}>
+        <ProfileHeader style={styles.stockHeader} />
+        <Text style={styles.stockTitle}>Home stock</Text>
+        <ListTitleBar title={'Your home stock'} style={{marginTop: 10}} />
+        <FlatList
+          data={homeStockData}
+          renderItem={({item}) => (
+            <ListItem title={item.title} style={{marginBottom: 20}} />
+          )}
+          keyExtractor={item => item.key}
+          contentContainerStyle={{paddingTop: 10}}
+        />
+      </SafeAreaView>
+    </BackgroundGradient>
+  );
+};
+
+export default HomeStockListScreen;
