@@ -17,9 +17,10 @@ import ProfileHeader from './components/profile-header';
 import HomeItem from './components/home-item';
 import Settings from './screens/setting';
 import {Text} from 'react-native';
+import PrivacyPolicy from './screens/privacy-policy';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(darkBlue);
+  const [currentTheme, setCurrentTheme] = useState(lightBlue);
 
   return (
     <ThemeContext.Provider
@@ -29,8 +30,9 @@ const App = () => {
       {/* <LoginSignup /> */}
       {/* <DoneComponent /> */}
       {/* <CustomButton /> */}
-      {/* <FeedBack /> */}
-      <Settings />
+      <FeedBack />
+      {/* <Settings /> */}
+      {/* <PrivacyPolicy /> */}
       {/* <ErrorPage /> */}
       {/* <HomeScreen /> */}
       {/* <ListTitleBar /> */}

@@ -44,7 +44,6 @@ const ErrorPage = () => {
           </Svg>
         </View>
         <View style={styles.errorText}>
-          {/* <ThemeSwitcher /> */}
           <Text style={[styles.errorHeading, {color: theme.primary}]}>
             Oops! Something went wrong
           </Text>

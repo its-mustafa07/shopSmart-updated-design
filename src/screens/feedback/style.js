@@ -8,13 +8,10 @@ export const UseStyles = () => {
     wrapper: {
       padding: 26,
       flex: 1,
-      // justifyContent: 'center',
-      // alignItems: 'center',
-      // padding: 26,
     },
     heading: {
       fontSize: 25,
-      fontFamily: 'SourceSansPro',
+      // fontFamily: 'SourceSansPro',
       color: theme.textAccent,
       fontWeight: 'bold',
       padding: 48,
@@ -24,12 +21,7 @@ export const UseStyles = () => {
       width: 300,
       color: theme.textAccent,
     },
-    // placeholderStyle: {
-    //   color: theme.textAccent,
-    //   // color: theme.textAccent,
-    //   // color: 'white',
-    //   fontSize: 27,
-    // },
+
     messageInput: {
       height: 209,
       width: 376,
@@ -38,11 +30,12 @@ export const UseStyles = () => {
       borderRadius: 10,
       textAlignVertical: 'top',
       color: theme.textAccent,
+      borderWidth: 2,
+      borderColor: 'transparent',
     },
     text: {
       fontSize: 18,
       color: theme.textAccent,
-      fontWeight: 'bold',
     },
     userFeedbackWrapper: {
       marginBottom: 30,
@@ -59,15 +52,21 @@ export const UseStyles = () => {
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
+      borderWidth: 2,
+      borderColor: 'transparent',
     },
-
+    inputMainFocused: {
+      borderColor: theme.primary,
+    },
+    textAreaFocused: {
+      borderColor: theme.primary,
+    },
     input: {
       width: 305,
       height: 50,
-      opacity: 0.7,
       color: '#fff',
       fontSize: 18,
-      fontFamily: 'SourceSansPro-Regular',
+      // fontFamily: 'SourceSansPro-Regular',
       borderRadius: 10,
     },
     userProfileWrapper: {
@@ -91,6 +90,7 @@ export const UseStyles = () => {
       borderRadius: 10,
     },
     buttonWrapper: {
+      paddingTop: 120,
       alignItems: 'center',
       flex: 1,
       justifyContent: 'flex-end',
