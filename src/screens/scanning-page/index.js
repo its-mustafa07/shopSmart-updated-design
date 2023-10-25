@@ -52,30 +52,32 @@ const ScanningPage = () => {
           <View style={styles.searchBox}>
             <CustomInput
               placeholder="Search items"
-              style={styles.input}
+              style={[styles.input, theme.boxShadow]}
               placeholderTextColor={theme.text}
             />
             <CustomButton
-              buttonStyle={styles.addButton}
+              buttonStyle={[styles.addButton, theme.boxShadow]}
               textStyle={{color: theme.text}}>
               Add
             </CustomButton>
           </View>
           <ScrollView>
             <View style={styles.ScrollViewList}>
-              <ListItem />
-              <ListItem />
-              <ListItem />
+              {/* <ListItem title={'atta'} /> */}
+              <ListItem title={'umer'} />
+              <ListItem title={'Faisal'} />
               {/* <ListItem />
         <ListItem /> */}
             </View>
             <View style={styles.mainButton}>
               <CustomButton
                 textStyle={{color: theme.text}}
-                buttonStyle={styles.editButton}>
+                buttonStyle={[styles.editButton, theme.boxShadow]}>
                 Edit
               </CustomButton>
-              <CustomButton buttonStyle={styles.saveButton}>Save</CustomButton>
+              <CustomButton buttonStyle={[styles.saveButton, theme.boxShadow]}>
+                Save
+              </CustomButton>
             </View>
           </ScrollView>
           {/* </ScrollView> */}

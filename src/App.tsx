@@ -37,7 +37,7 @@ const App = () => {
       {/* <HomeItem /> */}
       {/* <LoginSignup /> */}
       {/* <GridViewItems /> */}
-      {/* <ScanningPage /> */}
+      <ScanningPage />
       {/* <ErrorPage /> */}
       {/* <ListItem item={'Atta'} /> */}
 

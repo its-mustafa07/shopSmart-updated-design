@@ -6,7 +6,6 @@ import BackgroundGradient from '../background-gradient';
 import ReactNativeModal from 'react-native-modal';
 import {ThemeTemporaryIcon} from '../../../assets/svg-icons/svgIcons';
 
-
 const ThemeSwitcher = () => {
   const {theme, setTheme} = useContext(ThemeContext);
   const [modalShown, setModalShown] = useState(false);

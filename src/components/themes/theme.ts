@@ -17,15 +17,14 @@ type ThemeType = {
   gradientStart: string;
   gradientEnd: string;
   gradient: GradientType;
-<<<<<<< HEAD
+
   boxShadow: string;
   errorPrimary: string;
-=======
+
   white: string;
   listSecondary: string;
   disabledButton: string;
   // boxShadow: boxShadowType;
->>>>>>> f4f77d67288f410fb19468a178d21ce46c1f3134
 };
 
 type GradientType = {
@@ -52,10 +51,10 @@ export const lightPink: ThemeType = {
   list: '#FFFFFF',
   input: '#FFFFFF',
   text: '#000',
-<<<<<<< HEAD
+
   errorPrimary: '#FF4C4C',
   boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)', // This was your original text color; adjust if necessary
-=======
+
   white: '#FFFFFF',
   listSecondary: '#FFF1EA',
   disabledButton: '#C8D5E0',
@@ -72,7 +71,6 @@ export const lightPink: ThemeType = {
   //     },
   //   }),
   // },
->>>>>>> f4f77d67288f410fb19468a178d21ce46c1f3134
 
   gradient: {
     start: {x: 0.5, y: 0},
@@ -100,11 +98,9 @@ export const lightBlue: ThemeType = {
   list: '#FFFFFF',
   input: '#FFFFFF',
   text: '#000',
-<<<<<<< HEAD
   errorPrimary: '#FF4C4C',
-  boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)', //
+  boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)',
 
-=======
   white: '#FFFFFF',
   listSecondary: '#C8E4FF',
   disabledButton: '#C8D5E0',
@@ -121,7 +117,6 @@ export const lightBlue: ThemeType = {
   //     },
   //   }),
   // },
->>>>>>> f4f77d67288f410fb19468a178d21ce46c1f3134
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
@@ -145,13 +140,10 @@ export const darkPink: ThemeType = {
   accent: '#040325',
   list: 'rgba(0, 0, 0, 0.4)', // 40% opacity
   input: '#000000',
-<<<<<<< HEAD
   errorPrimary: '#FF4C4C',
   text: '#FFFFFF', // Adjusted to white for better visibility
   boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.8730)', // adjusted the opacity value to a valid range (0-1)
 
-=======
-  text: '#FFFFFF',
   white: '#FFFFFF',
   listSecondary: '#333333',
   disabledButton: '#3C3C3C',
@@ -168,7 +160,6 @@ export const darkPink: ThemeType = {
   //     },
   //   }),
   // },
->>>>>>> f4f77d67288f410fb19468a178d21ce46c1f3134
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
@@ -192,15 +183,13 @@ export const darkBlue: ThemeType = {
   accent: '#040325',
   list: 'rgba(0, 0, 0, 0.4)', // 40% opacity
   input: '#000000',
-<<<<<<< HEAD
+
   errorPrimary: '#FF4C4C',
   text: '#FFFFFF', // Adjusted to white based on your text color specifications
   boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)', // Note: This won't directly work in React Native
 
-=======
-  text: '#FFF',
   white: '#FFFFFF',
-  listSecondary: '#26303A',
+  listSecondary: '#2C3742',
   disabledButton: '#3C3C3C',
   // boxShadow: {
   //   ...Platform.select({
@@ -215,7 +204,6 @@ export const darkBlue: ThemeType = {
   //     },
   //   }),
   // },
->>>>>>> f4f77d67288f410fb19468a178d21ce46c1f3134
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},

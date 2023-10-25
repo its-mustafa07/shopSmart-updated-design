@@ -61,7 +61,9 @@ export const useStyles = () => {
       gap: 20,
     },
     input: {
-      borderWidth: 1,
+      borderWidth: 2,
+      borderColor: theme.primary,
+
       color: theme.text,
       width: 234,
       height: 42,
@@ -83,6 +85,7 @@ export const useStyles = () => {
       justifyContent: 'center',
       gap: 70,
       paddingTop: 20,
+      paddingBottom: 20,
     },
     editButton: {
       width: 122,
