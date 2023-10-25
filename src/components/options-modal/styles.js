@@ -7,11 +7,18 @@ const useStyles = () => {
   const {theme} = useContext(ThemeContext);
   return StyleSheet.create({
     modalContainer: {
-      paddingVertical: 20,
-      paddingHorizontal: 25,
+      //   paddingVertical: 20,
+      //   paddingHorizontal: 25,
       width: screenWidth * 0.9,
       marginBottom: 30,
-      borderRadius: 10,
+      //   borderRadius: 10,
+      justifyContent: 'flex-end',
+      //   backgroundColor: 'white',
+      height: 300,
+    },
+    modalContentContainer: {
+      paddingVertical: 20,
+      paddingHorizontal: 25,
     },
     modalHeading: {
       fontSize: 16,
