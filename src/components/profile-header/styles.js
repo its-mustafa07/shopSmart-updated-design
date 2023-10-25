@@ -24,7 +24,7 @@ const useStyles = () => {
     },
     userName: {
       color: theme.textPrimary,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
     },
     svgsContainer: {
       flexDirection: 'row',

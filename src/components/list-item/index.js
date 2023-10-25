@@ -9,11 +9,11 @@ import {
 import useStyles from './styles';
 import {ThemeContext} from '../themes/theme';
 
-const ListItem = () => {
+const ListItem = ({style, title}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyles();
   return (
-    <View style={[styles.mainContainer, theme.boxShadow]}>
+    <View style={[styles.mainContainer, theme.boxShadow, style]}>
       <View style={styles.contentContainer}>
         <View style={{flexDirection: 'row'}}>
           <View style={styles.iconContainer}>
@@ -21,7 +21,7 @@ const ListItem = () => {
           </View>
           <View style={styles.textContainer}>
             <View style={styles.titleWithQuantity}>
-              <Text style={styles.itemTitle}>Cart Item</Text>
+              <Text style={styles.itemTitle}>{title}</Text>
               <View style={[styles.quantityContainer, theme.boxShadow]}>
                 <Text style={styles.quantity}>7</Text>
               </View>
