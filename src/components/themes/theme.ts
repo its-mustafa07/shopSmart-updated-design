@@ -1,4 +1,5 @@
 import {createContext} from 'react';
+import {Platform} from 'react-native';
 
 type ThemeType = {
   background: string;
@@ -18,13 +19,21 @@ type ThemeType = {
   gradientEnd: string;
   gradient: GradientType;
 
-  boxShadow: string;
+  // boxShadow: string;
   errorPrimary: string;
 
   white: string;
   listSecondary: string;
   disabledButton: string;
-  // boxShadow: boxShadowType;
+  boxShadow: boxShadowType;
+};
+
+type boxShadowType = {
+  shadowColor?: string;
+  shadowOffset?: {width: number; height: number};
+  shadowOpacity?: number;
+  shadowRadius?: number;
+  elevation?: number;
 };
 
 type GradientType = {
@@ -53,24 +62,24 @@ export const lightPink: ThemeType = {
   text: '#000',
 
   errorPrimary: '#FF4C4C',
-  boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)', // This was your original text color; adjust if necessary
+  // boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)', // This was your original text color; adjust if necessary
 
   white: '#FFFFFF',
   listSecondary: '#FFF1EA',
   disabledButton: '#C8D5E0',
-  // boxShadow: {
-  //   ...Platform.select({
-  //     ios: {
-  //       shadowColor: 'rgba(0, 0, 0, 0.30)',
-  //       shadowOffset: {width: 0, height: 4},
-  //       shadowOpacity: 1,
-  //       shadowRadius: 25,
-  //     },
-  //     android: {
-  //       elevation: 5,
-  //     },
-  //   }),
-  // },
+  boxShadow: {
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(0, 0, 0, 0.30)',
+        shadowOffset: {width: 0, height: 4},
+        shadowOpacity: 1,
+        shadowRadius: 25,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
+  },
 
   gradient: {
     start: {x: 0.5, y: 0},
@@ -99,24 +108,24 @@ export const lightBlue: ThemeType = {
   input: '#FFFFFF',
   text: '#000',
   errorPrimary: '#FF4C4C',
-  boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)',
+  // boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)',
 
   white: '#FFFFFF',
   listSecondary: '#C8E4FF',
   disabledButton: '#C8D5E0',
-  // boxShadow: {
-  //   ...Platform.select({
-  //     ios: {
-  //       shadowColor: 'rgba(0, 0, 0, 0.30)',
-  //       shadowOffset: {width: 0, height: 4},
-  //       shadowOpacity: 1,
-  //       shadowRadius: 25,
-  //     },
-  //     android: {
-  //       elevation: 5,
-  //     },
-  //   }),
-  // },
+  boxShadow: {
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(0, 0, 0, 0.30)',
+        shadowOffset: {width: 0, height: 4},
+        shadowOpacity: 1,
+        shadowRadius: 25,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
+  },
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
@@ -142,24 +151,24 @@ export const darkPink: ThemeType = {
   input: '#000000',
   errorPrimary: '#FF4C4C',
   text: '#FFFFFF', // Adjusted to white for better visibility
-  boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.8730)', // adjusted the opacity value to a valid range (0-1)
+  // boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.8730)', // adjusted the opacity value to a valid range (0-1)
 
   white: '#FFFFFF',
   listSecondary: '#333333',
   disabledButton: '#3C3C3C',
-  // boxShadow: {
-  //   ...Platform.select({
-  //     ios: {
-  //       shadowColor: 'rgba(87, 87, 87, 0.30)',
-  //       shadowOffset: {width: 0, height: 4},
-  //       shadowOpacity: 1,
-  //       shadowRadius: 25,
-  //     },
-  //     android: {
-  //       elevation: 5,
-  //     },
-  //   }),
-  // },
+  boxShadow: {
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(87, 87, 87, 0.30)',
+        shadowOffset: {width: 0, height: 4},
+        shadowOpacity: 1,
+        shadowRadius: 25,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
+  },
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
@@ -186,24 +195,24 @@ export const darkBlue: ThemeType = {
 
   errorPrimary: '#FF4C4C',
   text: '#FFFFFF', // Adjusted to white based on your text color specifications
-  boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)', // Note: This won't directly work in React Native
+  // boxShadow: '0 4px 25px 0 rgba(87, 87, 87, 0.30)', // Note: This won't directly work in React Native
 
   white: '#FFFFFF',
   listSecondary: '#2C3742',
   disabledButton: '#3C3C3C',
-  // boxShadow: {
-  //   ...Platform.select({
-  //     ios: {
-  //       shadowColor: 'rgba(87, 87, 87, 0.30)',
-  //       shadowOffset: {width: 0, height: 4},
-  //       shadowOpacity: 1,
-  //       shadowRadius: 25,
-  //     },
-  //     android: {
-  //       elevation: 5,
-  //     },
-  //   }),
-  // },
+  boxShadow: {
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(87, 87, 87, 0.30)',
+        shadowOffset: {width: 0, height: 4},
+        shadowOpacity: 1,
+        shadowRadius: 25,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
+  },
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
