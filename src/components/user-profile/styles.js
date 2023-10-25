@@ -2,25 +2,24 @@ import {useContext} from 'react';
 import {ThemeContext} from '../themes/theme';
 import {StyleSheet} from 'react-native';
 
-const useStyles = () => {
+export const UseStyles = () => {
   const {theme} = useContext(ThemeContext);
   return StyleSheet.create({
-    itemContainer: {
-      backgroundColor: theme.list,
-      height: 143,
-      width: 166,
-      borderRadius: 15,
-      rowGap: 15,
+    userProfile: {
+      flexDirection: 'row',
+      gap: 20,
       alignItems: 'center',
-      justifyContent: 'center',
-      marginTop: 30,
     },
-    itemText: {
+    image: {
+      height: 45,
+      width: 45,
+      borderRadius: 50,
+    },
+    userName: {
+      color: theme.textPrimary,
       fontWeight: 'bold',
       fontSize: 18,
-      color: theme.textPrimary,
+      fontfamily: 'SourceSansPro',
     },
   });
 };
-
-export default useStyles;
