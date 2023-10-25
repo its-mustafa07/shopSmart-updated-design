@@ -8,11 +8,10 @@ export const useStyles = () => {
   const {theme} = useContext(ThemeContext);
   return StyleSheet.create({
     errorWrapper: {
-      // height: 'auto',
-      // width: '100%',
       flex: 1,
-      justifyContent: 'flex-end',
-      padding: 20,
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: '5%',
       gap: 30,
     },
     errorText: {
@@ -20,6 +19,7 @@ export const useStyles = () => {
       textAlign: 'justify',
       color: theme.text,
     },
+    errorIcon: {},
     errorHeading: {
       fontSize: 30,
       fontFamily: 'SourceSansPro-SemiBold',
@@ -36,13 +36,15 @@ export const useStyles = () => {
     },
     buttons: {
       flexDirection: 'row',
-      gap: 20,
-      // position: 'absolute',
-      // bottom: '10%',
-      padding: 20,
+      // gap: 20,
+      justifyContent: 'space-between',
+      alignItems: 'center',
+
+      padding: '5%',
+      paddingBottom: 50,
     },
     button: {
-      width: 170,
+      width: '40%',
       height: 50,
       borderRadius: 10,
     },
