@@ -12,6 +12,7 @@ import {ThemeContext} from '../themes/theme';
 const ListItem = ({style, title}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyles();
+
   return (
     <View style={[styles.mainContainer, theme.boxShadow, style]}>
       <View style={styles.contentContainer}>
@@ -49,7 +50,7 @@ const ListItem = ({style, title}) => {
         </View>
       </View>
       <View style={styles.tagContainer}>
-        <Text style={styles.tagTitle}>Home stock</Text>
+        <Text style={styles.tagTitle}>Home Stock</Text>
       </View>
     </View>
   );
