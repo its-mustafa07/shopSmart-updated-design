@@ -2,11 +2,9 @@ import {NavigationContainer, TabActions} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Ionicns from 'react-native-vector-icons/Ionicons';
-import HomeScreen from './Screens/home-screen';
-import FavouriteScreen from './Screens/favourite-screen';
-import DetailScreen from './Screens/detail-screen';
-import SettingScreen from './Screens/setting-screeen';
-import ColorScreen from './Screens/color-screen';
+import HomeScreen from '../../screens/home';
+import Settings from '../../screens/setting';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -37,7 +35,7 @@ const Navigation = () => {
           }}
         />
 
-        <Tab.Screen
+        {/* <Tab.Screen
           name="Favourite"
           component={FavouriteScreen}
           options={{
@@ -45,9 +43,9 @@ const Navigation = () => {
               <FontAwesome name="heart" size={size} color={color} />
             ),
           }}
-        />
+        /> */}
 
-        <Tab.Screen
+        {/* <Tab.Screen
           name="Notification"
           component={DetailScreen}
           options={{
@@ -55,11 +53,11 @@ const Navigation = () => {
               <Ionicns name="notifications" size={size} color={color} />
             ),
           }}
-        />
+        /> */}
 
         <Tab.Screen
           name="Settings"
-          component={SettingScreen}
+          component={Settings}
           options={{
             tabBarIcon: ({color, size}) => (
               <Ionicns name="settings" size={size} color={color} />
@@ -67,7 +65,7 @@ const Navigation = () => {
           }}
         />
 
-        <Tab.Screen
+        {/* <Tab.Screen
           name="ColorScreen"
           component={ColorScreen}
           options={{
@@ -75,7 +73,7 @@ const Navigation = () => {
               <Ionicns name="color-palette-sharp" size={size} color={color} />
             ),
           }}
-        />
+        /> */}
       </Tab.Navigator>
     </NavigationContainer>
   );

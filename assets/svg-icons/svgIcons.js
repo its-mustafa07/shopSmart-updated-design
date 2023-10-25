@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import {Svg, Path, G} from 'react-native-svg';
-=======
 import {Svg, Path, Circle} from 'react-native-svg';
->>>>>>> 9ababadfa10205fc58cad049ebbf4f5ca054e63a
+
 import {ThemeContext} from '../../src/components/themes/theme';
 import {useContext} from 'react';
 

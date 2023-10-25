@@ -29,12 +29,8 @@ const CustomInput = ({
       keyboardType={keyboardType}
       placeholderStyle={placeholderStyle}
       secureTextEntry={secureTextEntry}
-<<<<<<< HEAD
-      placeholderTextColor={placeholderTextColor}
-=======
       onBlur={onBlur}
       onFocus={onFocus}
->>>>>>> 9ababadfa10205fc58cad049ebbf4f5ca054e63a
       style={style}
     />
   );
