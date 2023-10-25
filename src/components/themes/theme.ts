@@ -17,20 +17,16 @@ type ThemeType = {
   white: string;
   listSecondary: string;
   disabledButton: string;
-  // boxShadow: boxShadowType;
+  boxShadow: boxShadowType;
 };
 
-// type boxShadowType = {
-//   ios: {
-//     shadowColor: string;
-//     shadowOffset: {width: number; height: number};
-//     shadowOpacity: number;
-//     shadowRadius: number;
-//   };
-//   android: {
-//     elevation: number;
-//   };
-// };
+type boxShadowType = {
+  shadowColor?: string;
+  shadowOffset?: {width: number; height: number};
+  shadowOpacity?: number;
+  shadowRadius?: number;
+  elevation?: number;
+};
 
 type GradientType = {
   start: {x: number; y: number};
@@ -54,19 +50,19 @@ export const lightPink: ThemeType = {
   white: '#FFFFFF',
   listSecondary: '#FFF1EA',
   disabledButton: '#C8D5E0',
-  // boxShadow: {
-  //   ...Platform.select({
-  //     ios: {
-  //       shadowColor: 'rgba(0, 0, 0, 0.30)',
-  //       shadowOffset: {width: 0, height: 4},
-  //       shadowOpacity: 1,
-  //       shadowRadius: 25,
-  //     },
-  //     android: {
-  //       elevation: 5,
-  //     },
-  //   }),
-  // },
+  boxShadow: {
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(0, 0, 0, 0.30)',
+        shadowOffset: {width: 0, height: 4},
+        shadowOpacity: 1,
+        shadowRadius: 25,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
+  },
 
   gradient: {
     start: {x: 0.5, y: 0},
@@ -91,19 +87,19 @@ export const lightBlue: ThemeType = {
   white: '#FFFFFF',
   listSecondary: '#C8E4FF',
   disabledButton: '#C8D5E0',
-  // boxShadow: {
-  //   ...Platform.select({
-  //     ios: {
-  //       shadowColor: 'rgba(0, 0, 0, 0.30)',
-  //       shadowOffset: {width: 0, height: 4},
-  //       shadowOpacity: 1,
-  //       shadowRadius: 25,
-  //     },
-  //     android: {
-  //       elevation: 5,
-  //     },
-  //   }),
-  // },
+  boxShadow: {
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(0, 0, 0, 0.30)',
+        shadowOffset: {width: 0, height: 4},
+        shadowOpacity: 1,
+        shadowRadius: 25,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
+  },
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
@@ -127,19 +123,19 @@ export const darkPink: ThemeType = {
   white: '#FFFFFF',
   listSecondary: '#333333',
   disabledButton: '#3C3C3C',
-  // boxShadow: {
-  //   ...Platform.select({
-  //     ios: {
-  //       shadowColor: 'rgba(87, 87, 87, 0.30)',
-  //       shadowOffset: {width: 0, height: 4},
-  //       shadowOpacity: 1,
-  //       shadowRadius: 25,
-  //     },
-  //     android: {
-  //       elevation: 5,
-  //     },
-  //   }),
-  // },
+  boxShadow: {
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(87, 87, 87, 0.30)',
+        shadowOffset: {width: 0, height: 4},
+        shadowOpacity: 1,
+        shadowRadius: 25,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
+  },
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
@@ -163,19 +159,19 @@ export const darkBlue: ThemeType = {
   white: '#FFFFFF',
   listSecondary: '#26303A',
   disabledButton: '#3C3C3C',
-  // boxShadow: {
-  //   ...Platform.select({
-  //     ios: {
-  //       shadowColor: 'rgba(87, 87, 87, 0.30)',
-  //       shadowOffset: {width: 0, height: 4},
-  //       shadowOpacity: 1,
-  //       shadowRadius: 25,
-  //     },
-  //     android: {
-  //       elevation: 5,
-  //     },
-  //   }),
-  // },
+  boxShadow: {
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(87, 87, 87, 0.30)',
+        shadowOffset: {width: 0, height: 4},
+        shadowOpacity: 1,
+        shadowRadius: 25,
+      },
+      android: {
+        elevation: 5,
+      },
+    }),
+  },
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},

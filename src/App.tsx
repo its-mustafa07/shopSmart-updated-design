@@ -17,6 +17,7 @@ import CartScreen from './screens/cart';
 import HomeStockScreen from './screens/home-stock';
 import HomeStockListScreen from './screens/home-stock-list-screen';
 import ToFillStockListScreen from './screens/toFill-stock-list-screen';
+import OptionsModal from './components/options-modal';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(lightBlue);
@@ -31,8 +32,9 @@ const App = () => {
       {/* <CartScreen /> */}
       {/* <HomeStockScreen /> */}
       {/* <HomeStockListScreen /> */}
-      <ToFillStockListScreen />
+      {/* <ToFillStockListScreen /> */}
       {/* <ListItem /> */}
+      <OptionsModal />
     </ThemeContext.Provider>
   );
 };
