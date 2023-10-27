@@ -23,8 +23,8 @@ const useStyles = () => {
       borderRadius: 50,
     },
     userName: {
+      fontFamily: 'SourceSansPro-SemiBold',
       color: theme.textPrimary,
-      // fontWeight: 'bold',
     },
     svgsContainer: {
       flexDirection: 'row',

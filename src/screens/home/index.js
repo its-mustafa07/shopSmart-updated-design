@@ -25,7 +25,7 @@ const HomeScreen = () => {
   ];
   const styles = useStyles();
   return (
-    <BackgroundGradient>
+    <BackgroundGradient style={{flex: 1}}>
       <SafeAreaView style={{flex: 1}}>
         <ProfileHeader style={styles.profileHeader} />
         <Text style={styles.homeText}>Home</Text>

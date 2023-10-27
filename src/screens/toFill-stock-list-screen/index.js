@@ -19,7 +19,7 @@ const ToFillStockListScreen = () => {
   };
 
   return (
-    <BackgroundGradient>
+    <BackgroundGradient style={{flex: 1}}>
       <SafeAreaView style={{flex: 1}}>
         <ProfileHeader style={styles.stockHeader} />
         <Text style={styles.stockTitle}>Home stock</Text>
@@ -30,7 +30,11 @@ const ToFillStockListScreen = () => {
         <FlatList
           data={toRefillData}
           renderItem={({item}) => (
-            <ListItem title={item.title} style={{marginBottom: 20}} />
+            <ListItem
+              title={item.title}
+              style={{marginBottom: 20}}
+              quantity={true}
+            />
           )}
           keyExtractor={item => item.key}
           contentContainerStyle={{paddingTop: 10}}

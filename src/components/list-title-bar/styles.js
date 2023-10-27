@@ -14,8 +14,9 @@ const useStyles = () => {
       alignItems: 'center',
     },
     title: {
+      fontFamily: 'SourceSansPro-SemiBold',
       color: theme.textPrimary,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       fontSize: 16,
     },
     iconsContainer: {

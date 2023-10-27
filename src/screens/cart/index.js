@@ -12,8 +12,12 @@ const CartScreen = () => {
   const numberOfItems = 20;
 
   const itemsArray = Array.from({length: numberOfItems}, (v, i) => i);
+  const randomIndex = Math.floor(Math.random() * itemsArray.length);
+
+  const randomElement = itemsArray[randomIndex];
+
   return (
-    <BackgroundGradient>
+    <BackgroundGradient style={{flex: 1}}>
       <SafeAreaView style={{flex: 1}}>
         <ProfileHeader style={styles.cartHeader} />
         <Text style={styles.pageTitle}>Cart</Text>
@@ -21,13 +25,7 @@ const CartScreen = () => {
           title="Items added to cart:"
           style={styles.cartTitleBar}
         />
-        {/* <ListView>
-          <ScrollView style={{flex: 1}}>
-            {itemsArray.map(index => (
-              <ListItem key={index} />
-            ))}
-          </ScrollView>
-        </ListView> */}
+
         <FlatList
           contentContainerStyle={{
             rowGap: 20,
@@ -36,7 +34,13 @@ const CartScreen = () => {
           }}
           data={itemsArray}
           keyExtractor={item => item.toString()}
-          renderItem={({item}) => <ListItem key={item} />}
+          renderItem={({item, index}) => (
+            <ListItem
+              counter={true}
+              tag={index % 2 !== 0 ? true : false}
+              key={item}
+            />
+          )}
         />
       </SafeAreaView>
     </BackgroundGradient>

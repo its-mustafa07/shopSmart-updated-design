@@ -11,7 +11,7 @@ const ErrorPage = ({handleToggle}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyles();
   return (
-    <BackgroundGradient>
+    <BackgroundGradient style={{flex: 1}}>
       <View style={styles.errorWrapper}>
         <View>
           <View style={styles.errorIcon}>

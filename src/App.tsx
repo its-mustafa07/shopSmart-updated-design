@@ -22,9 +22,10 @@ import HomeStockScreen from './screens/home-stock';
 import HomeStockListScreen from './screens/home-stock-list-screen';
 import ToFillStockListScreen from './screens/toFill-stock-list-screen';
 import OptionsModal from './components/options-modal';
+import ConfirmationModal from './components/confirmation-modal';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(lightBlue);
+  const [currentTheme, setCurrentTheme] = useState(lightPink);
 
   return (
     <ThemeContext.Provider
@@ -38,7 +39,7 @@ const App = () => {
       {/* <HomeItem /> */}
       {/* <LoginSignup /> */}
       {/* <GridViewItems /> */}
-      <ScanningPage />
+      {/* <ScanningPage /> */}
       {/* <ErrorPage /> */}
       {/* <ListItem item={'Atta'} /> */}
 
@@ -46,7 +47,9 @@ const App = () => {
       {/* <CartScreen /> */}
       {/* <HomeStockScreen /> */}
       {/* <HomeStockListScreen /> */}
-      {/* <ToFillStockListScreen /> */}
+      {/* <OptionsModal /> */}
+      {/* <ConfirmationModal /> */}
+      <ToFillStockListScreen />
     </ThemeContext.Provider>
   );
 };
