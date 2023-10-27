@@ -6,9 +6,9 @@ const useStyle = () => {
   const {theme} = useContext(ThemeContext);
   return StyleSheet.create({
     GridItem: {
-      width: '40%',
+      width: '45%',
       height: 150,
-      backgroundColor: theme.secondary,
+      backgroundColor: theme.list,
       borderRadius: 10,
       justifyContent: 'center',
       alignItems: 'center',
@@ -28,7 +28,7 @@ const useStyle = () => {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: 3,
+      gap: 10,
     },
     counterNo: {
       width: 20,
@@ -59,7 +59,7 @@ const useStyle = () => {
       width: 50,
       height: 50,
       borderRadius: 50,
-      backgroundColor: theme.bgcolor2,
+      backgroundColor: theme.listSecondary,
       justifyContent: 'center',
       alignItems: 'center',
     },
