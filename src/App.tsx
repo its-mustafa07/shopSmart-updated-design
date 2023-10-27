@@ -27,7 +27,7 @@ import FAQList from './components/faq-component';
 import FAQ from './screens/faq';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(darkPink);
+  const [currentTheme, setCurrentTheme] = useState(lightPink);
 
   return (
     <ThemeContext.Provider
