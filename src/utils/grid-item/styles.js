@@ -36,7 +36,7 @@ const useStyle = () => {
       borderRadius: 50,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: theme.secondary,
+      backgroundColor: theme.listSecondary,
     },
     counterText: {
       fontSize: 14,
