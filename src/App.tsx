@@ -22,9 +22,12 @@ import HomeStockScreen from './screens/home-stock';
 import HomeStockListScreen from './screens/home-stock-list-screen';
 import ToFillStockListScreen from './screens/toFill-stock-list-screen';
 import OptionsModal from './components/options-modal';
+import DoneComponent from './screens/done';
+import FAQList from './components/faq-component';
+import FAQ from './screens/faq';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(lightBlue);
+  const [currentTheme, setCurrentTheme] = useState(darkPink);
 
   return (
     <ThemeContext.Provider
@@ -37,11 +40,13 @@ const App = () => {
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
       {/* <LoginSignup /> */}
-      {/* <GridViewItems /> */}
-      <ScanningPage />
+      <GridViewItems />
+      {/* <FAQList /> */}
+      {/* <FAQ /> */}
+      {/* <ScanningPage /> */}
       {/* <ErrorPage /> */}
       {/* <ListItem item={'Atta'} /> */}
-
+      {/* <DoneComponent /> */}
       {/* <ListItem /> */}
       {/* <CartScreen /> */}
       {/* <HomeStockScreen /> */}

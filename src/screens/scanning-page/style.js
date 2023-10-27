@@ -46,8 +46,9 @@ export const useStyles = () => {
       backgroundColor: theme.secondary,
       borderRadius: 8,
     },
+
     buttonText: {
-      color: theme.text,
+      color: theme.textPrimary,
     },
     scanner: {
       width: 150,

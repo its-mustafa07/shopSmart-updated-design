@@ -35,6 +35,7 @@ export const useStyles = () => {
       color: theme.text,
     },
     buttons: {
+      width: '100%',
       flexDirection: 'row',
       // gap: 20,
       justifyContent: 'space-between',
