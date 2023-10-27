@@ -53,7 +53,7 @@ const App = () => {
       {/* <HomeStockListScreen /> */}
       {/* <OptionsModal /> */}
       {/* <ConfirmationModal /> */}
-      <ToFillStockListScreen />
+      {/* <ToFillStockListScreen /> */}
     </ThemeContext.Provider>
   );
 };
