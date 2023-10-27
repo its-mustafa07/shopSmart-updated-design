@@ -5,13 +5,12 @@ import {
   LeftIcon,
   NextIcon,
   PlusIcon,
-  PreviousIcon,
   RightIcon,
 } from '../../../assets/svg-icons/svgIcons';
 import useStyle from './styles';
 import {ThemeContext} from '../../components/themes/theme';
 import {SafeAreaView} from 'react-native-safe-area-context';
-const GridItem = ({id, imageURL, title, catogary}) => {
+const GridItem = ({id, title}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyle();
 
@@ -32,7 +31,9 @@ const GridItem = ({id, imageURL, title, catogary}) => {
       </View>
       <View>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.catogary}>{catogary}</Text>
+        <Text style={styles.catogary}>
+          Added: {new Date().toLocaleDateString()}
+        </Text>
       </View>
       <View style={styles.counterContainer}>
         <TouchableOpacity>
