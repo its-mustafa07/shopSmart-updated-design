@@ -11,7 +11,12 @@ const ErrorPage = ({handleToggle}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyles();
   return (
+<<<<<<< HEAD
     <BackgroundGradient style={{flex: 1}}>
+=======
+    <>
+      {/* <BackgroundGradient style={{flex: 1}}> */}
+>>>>>>> e6ef94b2c8221208b952ead9e11c6ae36438605c
       <View style={styles.errorWrapper}>
         <View>
           <View style={styles.errorIcon}>
@@ -69,7 +74,8 @@ const ErrorPage = ({handleToggle}) => {
           Try Again
         </CustomButton>
       </View>
-    </BackgroundGradient>
+      {/* </BackgroundGradient> */}
+    </>
   );
 };
 

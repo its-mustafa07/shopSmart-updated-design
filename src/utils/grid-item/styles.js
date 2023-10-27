@@ -6,13 +6,42 @@ const useStyle = () => {
   const {theme} = useContext(ThemeContext);
   return StyleSheet.create({
     GridItem: {
-      width: 137,
-      height: 137,
+      width: '40%',
+      height: 150,
       backgroundColor: theme.secondary,
       borderRadius: 10,
       justifyContent: 'center',
       alignItems: 'center',
-      gap: 13,
+      paddingTop: 10,
+      // paddingBottom: 20,
+      gap: 10,
+    },
+    tagContainer: {
+      paddingHorizontal: 5,
+      backgroundColor: theme.listSecondary,
+      borderRadius: 5,
+      position: 'absolute',
+      top: -10,
+      left: 15,
+    },
+    counterContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 3,
+    },
+    counterNo: {
+      width: 20,
+      height: 20,
+      borderRadius: 50,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: theme.secondary,
+    },
+    counterText: {
+      fontSize: 14,
+      fontFamily: 'SourceSansPro-SemiBold',
+      color: theme.primary,
     },
     title: {
       textAlign: 'center',

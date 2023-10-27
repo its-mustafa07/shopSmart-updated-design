@@ -1,19 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Path, Svg} from 'react-native-svg';
 import CustomButton from '../../utils/button';
-import {styles} from './styles';
+import {styles, useStyle} from './styles';
+import BackgroundGradient from '../../components/background-gradient';
+import {ThemeContext} from '../../components/themes/theme';
 
 const DoneComponent = () => {
+  const {theme} = useContext(ThemeContext);
+  const styles = useStyle();
   return (
-    <LinearGradient
-      start={{x: 0.5, y: 0}}
-      end={{x: 0.5, y: 1}}
-      locations={[0, 0.5, 1]}
-      colors={['#FFF', '#FFEDE2', '#FFF']}
-      style={styles.mainDoneWrapper}>
-      <View style={{marginBottom: -300, gap: 24}}>
+    <BackgroundGradient style={{flex: 1}}>
+      <View style={styles.DoneComponent}>
         <View>
           <Svg
             width="87"
@@ -37,7 +36,7 @@ const DoneComponent = () => {
           style={{
             fontSize: 32,
             fontFamily: 'SourceSansPro-SemiBold',
-            color: '#0c0c0c',
+            color: theme.text,
           }}>
           Account created!
         </Text>
@@ -45,14 +44,14 @@ const DoneComponent = () => {
           style={{
             fontSize: 18,
             fontFamily: 'SourceSansPro-Regular',
-            color: '#040325',
+            color: theme.text,
           }}>
           {' '}
           Your account has been created successfully.
         </Text>
         <CustomButton buttonStyle={styles.button}>Done</CustomButton>
       </View>
-    </LinearGradient>
+    </BackgroundGradient>
   );
 };
 

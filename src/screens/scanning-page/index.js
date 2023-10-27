@@ -30,71 +30,74 @@ const ScanningPage = () => {
 
   return (
     <BackgroundGradient style={{flex: 1}}>
-      {objectDeduction ? (
-        <ErrorPage handleToggle={handleToggle} />
-      ) : (
-        <SafeAreaView style={styles.ScanningPageWrapper}>
-          <ProfileHeader />
-          <View>
-            <Text style={styles.Heading}>Scanning Page</Text>
-          </View>
-          <View style={styles.tabButtons}>
-            <CustomButton
-              buttonStyle={[
-                objectDeduction ? styles.conditionalButton : styles.button,
-              ]}
-              onPress={() => setObjectDeduction(false)}
-              textStyle={styles.buttonTexts}>
-              QR Scan
-            </CustomButton>
-            <CustomButton
-              buttonStyle={[
-                !objectDeduction ? styles.conditionalButton : styles.button,
-              ]}
-              onPress={() => setObjectDeduction(true)}
-              textStyle={styles.buttonText}>
-              Object Detection
-            </CustomButton>
-          </View>
-          <Image
-            source={require('../../../assets/images/QRCode.jpg')}
-            style={styles.scanner}
-          />
-
-          <View style={styles.searchBox}>
-            <CustomInput
-              placeholder="Search items"
-              style={[styles.input, theme.boxShadow]}
-              placeholderTextColor={theme.text}
+      <SafeAreaView style={styles.ScanningPageWrapper}>
+        <ProfileHeader />
+        <View>
+          <Text style={styles.Heading}>Scanning Page</Text>
+        </View>
+        <View style={styles.tabButtons}>
+          <CustomButton
+            buttonStyle={[
+              objectDeduction ? styles.conditionalButton : styles.button,
+            ]}
+            onPress={() => setObjectDeduction(false)}
+            textStyle={styles.buttonTexts}>
+            QR Scan
+          </CustomButton>
+          <CustomButton
+            buttonStyle={[
+              !objectDeduction ? styles.conditionalButton : styles.button,
+            ]}
+            onPress={() => setObjectDeduction(true)}
+            textStyle={styles.buttonText}>
+            Object Detection
+          </CustomButton>
+        </View>
+        {objectDeduction ? (
+          <ErrorPage handleToggle={handleToggle} />
+        ) : (
+          <>
+            <Image
+              source={require('../../../assets/images/QRCode.jpg')}
+              style={styles.scanner}
             />
-            <CustomButton
-              buttonStyle={[styles.addButton, theme.boxShadow]}
-              textStyle={{color: theme.text}}>
-              Add
-            </CustomButton>
-          </View>
-          <ScrollView>
-            <View style={styles.ScrollViewList}>
-              {/* <ListItem title={'atta'} /> */}
-              <ListItem title={'umer'} />
-              <ListItem title={'Faisal'} />
-              {/* <ListItem />
-        <ListItem /> */}
-            </View>
-            <View style={styles.mainButton}>
+
+            <View style={styles.searchBox}>
+              <CustomInput
+                placeholder="Search items"
+                style={[styles.input, theme.boxShadow]}
+                placeholderTextColor={theme.text}
+              />
               <CustomButton
-                textStyle={{color: theme.text}}
-                buttonStyle={[styles.editButton, theme.boxShadow]}>
-                Edit
-              </CustomButton>
-              <CustomButton buttonStyle={[styles.saveButton, theme.boxShadow]}>
-                Save
+                buttonStyle={[styles.addButton, theme.boxShadow]}
+                textStyle={{color: theme.text}}>
+                Add
               </CustomButton>
             </View>
-          </ScrollView>
-          {/* </ScrollView> */}
-        </SafeAreaView>
-      )}
+            <ScrollView>
+              <View style={styles.ScrollViewList}>
+                {/* <ListItem title={'atta'} /> */}
+                <ListItem title={'umer'} />
+                <ListItem title={'Faisal'} />
+                {/* <ListItem />
+        <ListItem /> */}
+              </View>
+              <View style={styles.mainButton}>
+                <CustomButton
+                  textStyle={{color: theme.text}}
+                  buttonStyle={[styles.editButton, theme.boxShadow]}>
+                  Edit
+                </CustomButton>
+                <CustomButton
+                  buttonStyle={[styles.saveButton, theme.boxShadow]}>
+                  Save
+                </CustomButton>
+              </View>
+            </ScrollView>
+            {/* </ScrollView> */}
+          </>
+        )}
+      </SafeAreaView>
     </BackgroundGradient>
   );
 };
