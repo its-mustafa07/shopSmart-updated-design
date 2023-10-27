@@ -16,7 +16,7 @@ const GridItem = ({id, imageURL, title, catogary}) => {
   const styles = useStyle();
 
   return (
-    <SafeAreaView style={styles.GridItem} key={id}>
+    <SafeAreaView style={[styles.GridItem, theme.boxShadow]} key={id}>
       <View style={[styles.tagContainer, theme.boxShadow]}>
         <Text
           style={{
@@ -38,7 +38,7 @@ const GridItem = ({id, imageURL, title, catogary}) => {
         <TouchableOpacity>
           <RightIcon />
         </TouchableOpacity>
-        <View style={[styles.counterNo, theme.boxShadow]}>
+        <View style={styles.counterNo}>
           <Text style={styles.counterText}>3</Text>
         </View>
         <TouchableOpacity>
