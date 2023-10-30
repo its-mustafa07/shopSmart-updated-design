@@ -1,12 +1,12 @@
 import {useContext} from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import {ThemeContext} from '../../components/themes/theme';
 export const UseStyles = () => {
   const {theme} = useContext(ThemeContext);
+  const screenWidth = Dimensions.get('window').width;
 
   return StyleSheet.create({
     wrapper: {
-      padding: 26,
       flex: 1,
     },
     heading: {
@@ -18,13 +18,13 @@ export const UseStyles = () => {
     },
     inputStyle: {
       height: 50,
-      width: 300,
+      width: screenWidth * 0.9,
       color: theme.textAccent,
     },
 
     messageInput: {
       height: 209,
-      width: 376,
+      width: screenWidth * 0.9,
       padding: 20,
       backgroundColor: theme.input,
       borderRadius: 10,

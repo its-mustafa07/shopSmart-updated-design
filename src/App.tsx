@@ -31,6 +31,7 @@ import OptionsModal from './components/options-modal';
 import DoneComponent from './screens/done';
 import FAQList from './components/faq-component';
 import FAQ from './screens/faq';
+import ConfirmationModal from './components/confirmation-modal';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(lightBlue);
@@ -46,7 +47,7 @@ const App = () => {
       {/* <FeedBack /> */}
       {/* <Settings /> */}
       {/* <PrivacyPolicy /> */}
-      <ErrorPage />
+      {/* <ErrorPage /> */}
       {/* <HomeScreen /> */}
       {/* <ListTitleBar /> */}
       {/* <ThemeSwitcher /> */}
@@ -71,7 +72,7 @@ const App = () => {
       {/* <HomeStockScreen /> */}
       {/* <HomeStockListScreen /> */}
       {/* <OptionsModal /> */}
-      {/* <ConfirmationModal /> */}
+      <ConfirmationModal />
       {/* <ToFillStockListScreen /> */}
     </ThemeContext.Provider>
   );

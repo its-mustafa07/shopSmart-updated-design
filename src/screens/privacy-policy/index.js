@@ -6,7 +6,7 @@ import {UseStyles} from './style';
 const PrivacyPolicy = () => {
   const styles = UseStyles();
   return (
-    <BackgroundGradient>
+    <BackgroundGradient style={{flex: 1}}>
       <View style={{padding: 26}}>
         <Text style={styles.heading}>Privacy policy</Text>
         <View style={styles.termsWrapper}>

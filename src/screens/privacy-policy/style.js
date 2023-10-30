@@ -8,7 +8,7 @@ export const UseStyles = () => {
     heading: {
       fontSize: 25,
       fontFamily: 'SourceSansPro',
-      color: theme.textSecondary,
+      color: theme.textPrimary,
       fontWeight: 'bold',
       paddingTop: 48,
     },
@@ -23,7 +23,7 @@ export const UseStyles = () => {
       color: theme.textSecondary,
     },
     termstext: {
-      color: theme.textSecondary,
+      color: theme.textAccent,
       fontFamily: 'SourceSansPro',
       fontSize: 19,
       paddingTop: 5,
@@ -34,7 +34,7 @@ export const UseStyles = () => {
       gap: 8,
     },
     listtext: {
-      color: theme.textSecondary,
+      color: theme.textAccent,
       fontFamily: 'SourceSansPro',
       fontSize: 19,
       fontWeight: 'normal',
