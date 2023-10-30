@@ -48,7 +48,7 @@ const App = () => {
       {/* <FeedBack /> */}
       {/* <Settings /> */}
       {/* <PrivacyPolicy /> */}
-      {/* <ErrorPage /> */}
+      <ErrorPage />
       {/* <HomeScreen /> */}
       {/* <ListTitleBar /> */}
       {/* <ThemeSwitcher /> */}
@@ -60,7 +60,7 @@ const App = () => {
       {/* <GradientComponent /> */}
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
-      <LoginSignup />
+      {/* <LoginSignup /> */}
       {/* <GridViewItems /> */}
       {/* <FAQList /> */}
       {/* <FAQ /> */}
