@@ -107,5 +107,8 @@ export const useStyles = () => {
       backgroundColor: theme.accent,
       borderRadius: 10,
     },
+    saveButtonText: {
+      color: theme.white,
+    },
   });
 };

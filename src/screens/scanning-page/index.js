@@ -94,7 +94,7 @@ const ScanningPage = () => {
                 </CustomButton>
                 <CustomButton
                   buttonStyle={[styles.saveButton, theme.boxShadow]}>
-                  Save
+                  <Text style={styles.saveButtonText}>Save</Text>
                 </CustomButton>
               </View>
             </ScrollView>
