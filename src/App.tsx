@@ -65,7 +65,6 @@ const App = () => {
       {/* <FAQList /> */}
       {/* <FAQ /> */}
       {/* <ScanningPage /> */}
-
       {/* <ErrorPage /> */}
       {/* </BackgroundGradient> */}
       {/* <DoneComponent /> */}
