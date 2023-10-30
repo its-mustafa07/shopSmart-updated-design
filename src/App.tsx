@@ -28,9 +28,10 @@ import FAQ from './screens/faq';
 import BasicInfo from './screens/basic-info';
 import BackgroundGradient from './components/background-gradient';
 import HomeScreen from './screens/home';
+import DraggableFlatList from 'react-native-draggable-flatlist';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(darkBlue);
+  const [currentTheme, setCurrentTheme] = useState(lightBlue);
 
   return (
     <ThemeContext.Provider
@@ -46,10 +47,10 @@ const App = () => {
       {/* <GridViewItems /> */}
       {/* <FAQList /> */}
       {/* <FAQ /> */}
-      {/* <ScanningPage /> */}
+      <ScanningPage />
       {/* <BasicInfo /> */}
       {/* <BackgroundGradient style={{flex: 1}}> */}
-      <ErrorPage />
+      {/* <ErrorPage /> */}
       {/* </BackgroundGradient> */}
       {/* <DoneComponent /> */}
       {/* <ListItem item={'Atta'} /> */}

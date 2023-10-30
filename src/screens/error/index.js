@@ -8,7 +8,7 @@ import {ThemeContext} from '../../components/themes/theme';
 import ThemeSwitcher from '../../components/themes/themeSwitcher';
 import {ErrorPageIcon} from '../../../assets/svg-icons/svgIcons';
 
-const ErrorPage = ({handleToggle}) => {
+const ErrorPage = () => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyles();
   return (
@@ -34,8 +34,7 @@ const ErrorPage = ({handleToggle}) => {
         <View style={styles.buttons}>
           <CustomButton
             buttonStyle={[{backgroundColor: theme.secondary}, styles.button]}
-            textStyle={{color: theme.accent}}
-            onPress={handleToggle}>
+            textStyle={{color: theme.accent}}>
             Cancel
           </CustomButton>
           <CustomButton
