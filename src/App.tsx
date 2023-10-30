@@ -8,7 +8,13 @@ import {
 } from './components/themes/theme';
 import ThemeSwitcher from './components/themes/themeSwitcher';
 import GradientComponent from './components/Gradient';
-
+import ErrorPage from './screens/error/index';
+import CustomButton from './utils/button';
+import FeedBack from './screens/feedback';
+import Settings from './screens/setting';
+import {Text} from 'react-native';
+import PrivacyPolicy from './screens/privacy-policy';
+import HomeScreen from './screens/home';
 import ProfileHeader from './components/profile-header';
 import HomeItem from './components/home-item';
 import LoginSignup from './screens/login-signup';
@@ -25,8 +31,6 @@ import OptionsModal from './components/options-modal';
 import DoneComponent from './screens/done';
 import FAQList from './components/faq-component';
 import FAQ from './screens/faq';
-import HomeScreen from './screens/home';
-import ErrorPage from './screens/error';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(lightBlue);
@@ -34,6 +38,19 @@ const App = () => {
   return (
     <ThemeContext.Provider
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
+      {/* <ThemeSwitcher /> */}
+      {/* <GradientComponent /> */}
+      {/* <LoginSignup /> */}
+      {/* <DoneComponent /> */}
+      {/* <CustomButton /> */}
+      {/* <FeedBack /> */}
+      {/* <Settings /> */}
+      {/* <PrivacyPolicy /> */}
+      <ErrorPage />
+      {/* <HomeScreen /> */}
+      {/* <ListTitleBar /> */}
+      {/* <ThemeSwitcher /> */}
+      {/* <ListItem /> */}
       {/* <HomeScreen /> */}
       {/* <ListTitleBar /> */}
       {/* <ThemeSwitcher /> */}
@@ -55,7 +72,7 @@ const App = () => {
       {/* <HomeStockListScreen /> */}
       {/* <OptionsModal /> */}
       {/* <ConfirmationModal /> */}
-      <ToFillStockListScreen />
+      {/* <ToFillStockListScreen /> */}
     </ThemeContext.Provider>
   );
 };

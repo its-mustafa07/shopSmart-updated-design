@@ -21,33 +21,33 @@ const ThemeSwitcher = () => {
         onBackButtonPress={() => setModalShown(false)}
         isVisible={modalShown}
         onBackdropPress={() => setModalShown(false)}>
-        <BackgroundGradient>
-          <View style={{padding: 20}}>
-            <Text style={{color: theme.textPrimary, marginBottom: 20}}>
-              Choose a theme:
-            </Text>
-            <RadioButton
-              label="Light Pink"
-              isSelected={theme === lightPink}
-              onSelect={() => setTheme(lightPink)}
-            />
-            <RadioButton
-              label="Light Blue"
-              isSelected={theme === lightBlue}
-              onSelect={() => setTheme(lightBlue)}
-            />
-            <RadioButton
-              label="Dark Pink"
-              isSelected={theme === darkPink}
-              onSelect={() => setTheme(darkPink)}
-            />
-            <RadioButton
-              label="Dark Blue"
-              isSelected={theme === darkBlue}
-              onSelect={() => setTheme(darkBlue)}
-            />
-          </View>
-        </BackgroundGradient>
+        {/* <BackgroundGradient> */}
+        <View style={{padding: 20}}>
+          <Text style={{color: theme.textPrimary, marginBottom: 20}}>
+            Choose a theme:
+          </Text>
+          <RadioButton
+            label="Light Pink"
+            isSelected={theme === lightPink}
+            onSelect={() => setTheme(lightPink)}
+          />
+          <RadioButton
+            label="Light Blue"
+            isSelected={theme === lightBlue}
+            onSelect={() => setTheme(lightBlue)}
+          />
+          <RadioButton
+            label="Dark Pink"
+            isSelected={theme === darkPink}
+            onSelect={() => setTheme(darkPink)}
+          />
+          <RadioButton
+            label="Dark Blue"
+            isSelected={theme === darkBlue}
+            onSelect={() => setTheme(darkBlue)}
+          />
+        </View>
+        {/* </BackgroundGradient> */}
       </ReactNativeModal>
     </View>
   );

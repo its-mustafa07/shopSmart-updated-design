@@ -2,6 +2,8 @@ import React from 'react';
 import {TextInput} from 'react-native';
 
 const CustomInput = ({
+  onFocus,
+  onBlur,
   placeholder,
   onChangeText,
   value,
@@ -10,16 +12,26 @@ const CustomInput = ({
   secureTextEntry,
   placeholderTextColor,
   style,
+  placeholderStyle,
+  multiline,
+  numberOfLines,
+  // placeholderTextColor,
 }) => {
   return (
     <TextInput
       placeholder={placeholder}
       onChangeText={onChangeText}
       value={value}
-      style={inputStyle}
-      keyboardType={keyboardType}
-      secureTextEntry={secureTextEntry}
+      multiline={multiline}
       placeholderTextColor={placeholderTextColor}
+      numberOfLines={numberOfLines}
+      keyboardType={keyboardType}
+      placeholderStyle={placeholderStyle}
+      secureTextEntry={secureTextEntry}
+      onBlur={onBlur}
+      onFocus={onFocus}
+      // style={inputStyle}
+      // placeholderTextColor={placeholderTextColor}
       style={style}
     />
   );

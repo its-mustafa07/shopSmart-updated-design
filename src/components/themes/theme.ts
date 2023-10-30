@@ -97,10 +97,10 @@ export const lightBlue: ThemeType = {
   bgcolor2: '#FFFFFF',
   primary: '#55ACEE',
   secondary: '#C2E2FF',
-  accent: '#040325',
   textPrimary: '#2E2E2E',
-  textSecondary: 'rgba(46, 46, 46, 0.9)',
-  textAccent: 'rgba(46, 46, 46, 0.7)',
+  textSecondary: 'rgba(46, 46, 46, 0.9)', // 90% opacity
+  textAccent: 'rgba(46, 46, 46, 0.7)', // 70% opacity
+  accent: '#040325',
   textPrimaryReverse: 'rgba(255,255,255,1)',
   textSecondaryReverse: 'rgba(255,255,255,0.9)',
   textAccentReverse: 'rgba(255,255,255,0.8)',
@@ -225,7 +225,7 @@ type ThemeContextType = {
 };
 
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: lightBlue,
+  theme: lightBlue, // default value
 
   setTheme: () => {},
 });
