@@ -27,12 +27,12 @@ import FAQList from './components/faq-component';
 import FAQ from './screens/faq';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(lightPink);
+  const [currentTheme, setCurrentTheme] = useState(lightBlue);
 
   return (
     <ThemeContext.Provider
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
-      {/* <HomeScreen /> */}
+      <HomeScreen />
       {/* <ListTitleBar /> */}
       {/* <ThemeSwitcher /> */}
 
@@ -48,7 +48,7 @@ const App = () => {
       {/* <ListItem item={'Atta'} /> */}
       {/* <DoneComponent /> */}
       {/* <ListItem /> */}
-      <CartScreen />
+      {/* <CartScreen /> */}
       {/* <HomeStockScreen /> */}
       {/* <HomeStockListScreen /> */}
       {/* <OptionsModal /> */}
