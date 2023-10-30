@@ -19,7 +19,7 @@ import LogoLoader from '../../components/logo-loader';
 const Settings = () => {
   const styles = UseStyles();
   return (
-    <BackgroundGradient>
+    <BackgroundGradient style={{flex: 1}}>
       <View style={{alignItems: 'center'}}>
         <Text style={styles.heading}>Settings</Text>
       </View>

@@ -2,6 +2,8 @@ import {createContext} from 'react';
 import {Platform} from 'react-native';
 
 type ThemeType = {
+  background: string;
+
   bgcolor1: string;
   bgcolor2: string;
   primary: string;
@@ -9,6 +11,9 @@ type ThemeType = {
   textPrimary: string;
   textSecondary: string;
   textAccent: string;
+  textPrimaryReverse: string;
+  textSecondaryReverse: string;
+  textAccentReverse: string;
   accent: string;
   list: string;
   input: string;
@@ -39,16 +44,21 @@ type GradientType = {
 };
 
 export const lightPink: ThemeType = {
+  background: 'radial-gradient(50% 139.77% at 100% 50%, #FFEDE3 0%, #FFF 100%)',
   gradientStart: '#FFEDE3',
   gradientEnd: '#FFFFFF',
+
   bgcolor1: '#FFEDE3',
   bgcolor2: '#FFFFFF',
   primary: '#FF8A71',
   secondary: '#FFD9C3',
-  textPrimary: '#2E2E2E',
-  textSecondary: 'rgba(46, 46, 46, 0.9)', // 90% opacity
-  textAccent: 'rgba(46, 46, 46, 0.7)', // 70% opacity
   accent: '#040325',
+  textPrimary: '#2E2E2E',
+  textSecondary: 'rgba(46, 46, 46, 0.9)',
+  textAccent: 'rgba(46, 46, 46, 0.7)',
+  textPrimaryReverse: 'rgba(255,255,255,1)',
+  textSecondaryReverse: 'rgba(255,255,255,0.9)',
+  textAccentReverse: 'rgba(255,255,255,0.8)',
   list: '#FFFFFF',
   input: '#FFFFFF',
   text: '#000',
@@ -79,9 +89,11 @@ export const lightPink: ThemeType = {
 };
 
 export const lightBlue: ThemeType = {
+  background: 'radial-gradient(50% 139.77% at 100% 50%, #FFEDE3 0%, #FFF 100%)',
   gradientStart: '#FFEDE3',
   gradientEnd: '#FFFFFF',
   bgcolor1: '#FFEDE3',
+
   bgcolor2: '#FFFFFF',
   primary: '#55ACEE',
   secondary: '#C2E2FF',
@@ -89,6 +101,9 @@ export const lightBlue: ThemeType = {
   textSecondary: 'rgba(46, 46, 46, 0.9)',
   textAccent: 'rgba(46, 46, 46, 0.7)',
   accent: '#040325',
+  textPrimaryReverse: 'rgba(255,255,255,1)',
+  textSecondaryReverse: 'rgba(255,255,255,0.9)',
+  textAccentReverse: 'rgba(255,255,255,0.8)',
   list: '#FFFFFF',
   input: '#FFFFFF',
   text: '#000',
@@ -118,6 +133,8 @@ export const lightBlue: ThemeType = {
 };
 
 export const darkPink: ThemeType = {
+  background: 'radial-gradient(50% 139.77% at 100% 50%, #FFEDE3 0%, #FFF 100%)',
+
   gradientStart: '#00294F',
   gradientEnd: '#333333',
   bgcolor1: '#401800',
@@ -127,11 +144,14 @@ export const darkPink: ThemeType = {
   textPrimary: '#FFFFFF',
   textSecondary: 'rgba(255, 255, 255, 0.9)', // 90% opacity
   textAccent: 'rgba(255, 255, 255, 0.7)', // 70% opacity
-  accent: '#040325',
   list: 'rgba(0, 0, 0, 0.4)', // 40% opacity
   input: '#000000',
-  errorPrimary: '#FF4C4C',
   text: '#FFFFFF', // Adjusted to white for better visibility
+  accent: '#040325',
+  textPrimaryReverse: '#2E2E2E',
+  textSecondaryReverse: 'rgba(46, 46, 46, 0.9)',
+  textAccentReverse: 'rgba(46, 46, 46, 0.7)',
+  errorPrimary: '#FF4C4C',
   white: '#FFFFFF',
   listSecondary: '#333333',
   disabledButton: '#3C3C3C',
@@ -148,7 +168,6 @@ export const darkPink: ThemeType = {
       },
     }),
   },
-
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
@@ -160,6 +179,8 @@ export const darkPink: ThemeType = {
 export const darkBlue: ThemeType = {
   gradientStart: '#00294F',
   gradientEnd: '#333333',
+  background: 'radial-gradient(circle, #00294F, #333333)',
+
   bgcolor1: '#00294F',
   bgcolor2: '#333333',
   primary: '#55ACEE',
@@ -174,6 +195,9 @@ export const darkBlue: ThemeType = {
   text: '#FFF',
   white: '#FFFFFF',
   listSecondary: '#26303A',
+  textPrimaryReverse: '#2E2E2E',
+  textSecondaryReverse: 'rgba(46, 46, 46, 0.9)',
+  textAccentReverse: 'rgba(46, 46, 46, 0.7)',
   disabledButton: '#3C3C3C',
   boxShadow: {
     ...Platform.select({
@@ -201,7 +225,8 @@ type ThemeContextType = {
   setTheme: (theme: ThemeType) => void;
 };
 
-export const ThemeContext = createContext(<ThemeContextType>{
-  theme: lightPink,
+export const ThemeContext = createContext<ThemeContextType>({
+  theme: lightBlue, // default value
+
   setTheme: () => {},
 });

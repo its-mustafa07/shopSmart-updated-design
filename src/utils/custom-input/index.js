@@ -15,7 +15,7 @@ const CustomInput = ({
   placeholderStyle,
   multiline,
   numberOfLines,
-  placeholderTextColor,
+  // placeholderTextColor,
 }) => {
   return (
     <TextInput
@@ -25,7 +25,6 @@ const CustomInput = ({
       multiline={multiline}
       placeholderTextColor={placeholderTextColor}
       numberOfLines={numberOfLines}
-      // style={inputStyle}
       keyboardType={keyboardType}
       placeholderStyle={placeholderStyle}
       secureTextEntry={secureTextEntry}

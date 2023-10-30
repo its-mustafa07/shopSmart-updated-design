@@ -14,7 +14,7 @@ import {styles} from './style';
 
 const LoginSignup = () => {
   const [isSignUpVisible, setIsSignUpVisible] = useState(false);
-  console.log(isSignUpVisible);
+  // console.log(isSignUpVisible);
   const translateX = useRef(new Animated.Value(0)).current;
 
   const toggleAnimation = () => {
@@ -22,7 +22,7 @@ const LoginSignup = () => {
 
     Animated.timing(translateX, {
       toValue,
-      duration: 500,
+      duration: 300,
       useNativeDriver: true,
     }).start();
 
@@ -35,12 +35,8 @@ const LoginSignup = () => {
         <View style={{width: '200%', overflow: 'hidden'}}>
           <Animated.View
             style={[styles.animationContainer, {transform: [{translateX}]}]}>
-            {/* <ScrollView> */}
             <LogIn toggleAnimation={toggleAnimation} />
-            {/* </ScrollView>
-            <ScrollView> */}
             <SignUp toggleAnimation={toggleAnimation} />
-            {/* </ScrollView> */}
           </Animated.View>
         </View>
       </View>

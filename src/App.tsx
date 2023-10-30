@@ -8,12 +8,6 @@ import {
 } from './components/themes/theme';
 import ThemeSwitcher from './components/themes/themeSwitcher';
 import GradientComponent from './components/Gradient';
-import ProfileHeader from './components/profile-header';
-import HomeItem from './components/home-item';
-import LogoStyles from './components/logo-loader/styles';
-import LogoLoader from './components/logo-loader';
-import LoginSignup from './screens/login-signup';
-import Navigation from './components/Navigation';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(darkBlue);
@@ -21,16 +15,44 @@ const App = () => {
   return (
     <ThemeContext.Provider
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
-      <ThemeSwitcher />
-      <Navigation />
+
+      {/* <ThemeSwitcher /> */}
       {/* <GradientComponent /> */}
+      {/* <LoginSignup /> */}
+      {/* <DoneComponent /> */}
+      {/* <CustomButton /> */}
+      {/* <FeedBack /> */}
+      {/* <Settings /> */}
+      {/* <PrivacyPolicy /> */}
+      {/* <ErrorPage /> */}
+      {/* <HomeScreen /> */}
+      {/* <ListTitleBar /> */}
+      {/* <ThemeSwitcher /> */}
+      {/* <ListItem /> */}
+      {/* <HomeScreen /> */}
+      {/* <ListTitleBar /> */}
+      {/* <ThemeSwitcher /> */}
 
-      {/* <HomeItem /> */}
-      {/* <LogoLoader/> */}
-
+      {/* <GradientComponent /> */}
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
       {/* <LoginSignup /> */}
+      {/* <GridViewItems /> */}
+      {/* <FAQList /> */}
+      {/* <FAQ /> */}
+      {/* <ScanningPage /> */}
+      {/* <ErrorPage /> */}
+      {/* </BackgroundGradient> */}
+      {/* <DoneComponent /> */}
+      {/* <ListItem item={'Atta'} /> */}
+      {/* <DoneComponent /> */}
+      {/* <ListItem /> */}
+      {/* <CartScreen /> */}
+      {/* <HomeStockScreen /> */}
+      {/* <HomeStockListScreen /> */}
+      {/* <OptionsModal /> */}
+      {/* <ConfirmationModal /> */}
+      {/* <ToFillStockListScreen /> */}
     </ThemeContext.Provider>
   );
 };

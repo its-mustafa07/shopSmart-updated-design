@@ -6,6 +6,8 @@ import useStyles from './styles';
 import toRefillData from '../../data/TO_REFILL_DATA';
 import ListItem from '../../components/list-item';
 import ListTitleBar from '../../components/list-title-bar';
+import GridView from '../../components/grid-view';
+import GridItem from '../../utils/grid-item';
 
 const ToFillStockListScreen = () => {
   const styles = useStyles();
@@ -19,7 +21,7 @@ const ToFillStockListScreen = () => {
   };
 
   return (
-    <BackgroundGradient>
+    <BackgroundGradient style={{flex: 1}}>
       <SafeAreaView style={{flex: 1}}>
         <ProfileHeader style={styles.stockHeader} />
         <Text style={styles.stockTitle}>Home stock</Text>
@@ -27,14 +29,23 @@ const ToFillStockListScreen = () => {
           title={'Stock that needs refilling'}
           style={{marginTop: 10}}
         />
-        <FlatList
+        {/* <FlatList
           data={toRefillData}
           renderItem={({item}) => (
-            <ListItem title={item.title} style={{marginBottom: 20}} />
+            <ListItem
+              title={item.title}
+              style={{marginBottom: 20}}
+              quantity={true}
+            />
           )}
           keyExtractor={item => item.key}
           contentContainerStyle={{paddingTop: 10}}
-        />
+        /> */}
+        <GridView>
+          {toRefillData.map(item => (
+            <GridItem title={item.title} key={item.key} />
+          ))}
+        </GridView>
       </SafeAreaView>
     </BackgroundGradient>
   );

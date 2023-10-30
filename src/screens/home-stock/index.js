@@ -83,7 +83,7 @@ const HomeStockScreen = () => {
   };
 
   return (
-    <BackgroundGradient>
+    <BackgroundGradient style={{flex: 1}}>
       <SafeAreaView style={{flex: 1}}>
         <ProfileHeader style={styles.stockHeader} />
         <Text style={styles.stockTitle}>Home stock</Text>
@@ -102,6 +102,7 @@ const HomeStockScreen = () => {
                 key={index}
                 title={item.title}
                 style={{marginBottom: 15}}
+                quantity={true}
               />
             ))}
 
@@ -169,6 +170,7 @@ const HomeStockScreen = () => {
                 key={index}
                 title={item.title}
                 style={{marginBottom: 15}}
+                quantity={true}
               />
             ))}
 
@@ -226,49 +228,5 @@ const HomeStockScreen = () => {
     </BackgroundGradient>
   );
 };
-
-// const HomeStockScreen = () => {
-//   const [isSticky, setIsSticky] = useState(true);
-//   const styles = useStyles();
-
-//   const renderItem = ({item}) => (
-//     <ListItem style={{marginBottom: 20}} title={item.title} />
-//   );
-
-//   const renderSectionHeader = ({section}) => (
-//     <View style={[styles.sectionHeader, isSticky ? styles.stickyHeader : null]}>
-//       <Text style={styles.sectionHeaderText}>{section.title}</Text>
-//       <TouchableOpacity>
-//         <Text style={styles.seeAllText}>See all...</Text>
-//       </TouchableOpacity>
-//     </View>
-//   );
-
-//   const onScroll = event => {
-//     const offsetY = event.nativeEvent.contentOffset.y;
-//     const isHeaderSticky = offsetY > 20; // Check if the scroll offset is greater than 0
-//     setIsSticky(isHeaderSticky);
-//   };
-
-//   return (
-//     <BackgroundGradient>
-//       <SafeAreaView style={{flex: 1}}>
-//         <ProfileHeader style={styles.stockHeader} />
-//         <Text style={styles.stockTitle}>Home stock</Text>
-//         <View style={styles.listsContainer}>
-//           <SectionList
-//             sections={data1}
-//             renderItem={renderItem}
-//             renderSectionHeader={renderSectionHeader}
-//             keyExtractor={(item, index) => item + index}
-//             stickySectionHeadersEnabled={true}
-//             // onViewableItemsChanged={onViewableItemsChanged}
-//             onScroll={onScroll}
-//           />
-//         </View>
-//       </SafeAreaView>
-//     </BackgroundGradient>
-//   );
-// };
 
 export default HomeStockScreen;

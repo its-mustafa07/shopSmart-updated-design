@@ -10,6 +10,7 @@ export const UseStyles = () => {
       fontFamily: 'SourceSansPro',
       color: theme.textSecondary,
       // fontWeight: 'bold',
+
       paddingTop: 48,
     },
     termsWrapper: {
@@ -23,7 +24,7 @@ export const UseStyles = () => {
       color: theme.textSecondary,
     },
     termstext: {
-      color: theme.textSecondary,
+      color: theme.textAccent,
       fontFamily: 'SourceSansPro',
       fontSize: 19,
       paddingTop: 5,
@@ -34,7 +35,7 @@ export const UseStyles = () => {
       gap: 8,
     },
     listtext: {
-      color: theme.textSecondary,
+      color: theme.textAccent,
       fontFamily: 'SourceSansPro',
       fontSize: 19,
       // fontWeight: 'normal',

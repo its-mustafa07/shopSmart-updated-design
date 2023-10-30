@@ -24,6 +24,11 @@ export default function FeedBack() {
       .required('message must be required')
       .min(8, 'At least 8 characters'),
   });
+
+  const handleBlur = () => {
+    handleBlur('title');
+    setInputFocus(false);
+  };
   return (
     <Formik
       initialValues={{title: '', message: ''}}
@@ -59,11 +64,8 @@ export default function FeedBack() {
                       onFocus={() => setInputFocus(true)}
                       onChangeText={handleChange('title')}
                       // onBlur={() => setInputFocus(false)}
-                      onBlur={handleBlur('title')}
-                      // onBlur={() => {
-                      //   handleBlur('title');
-                      //   setInputFocus(false);
-                      // }}
+                      // onBlur={handleBlur('title')}
+                      onBlur={handleBlur}
                       value={values.title}
                     />
                   </View>
