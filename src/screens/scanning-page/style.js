@@ -6,13 +6,11 @@ export const useStyles = () => {
   const {theme} = useContext(ThemeContext);
   return StyleSheet.create({
     ScanningPageWrapper: {
-      // flex: 1,
-      width: '100%',
-      height: '100%',
+      flex: 1,
       flexDirection: 'column',
       alignItems: 'center',
       gap: 15,
-      paddingTop: '3%',
+      paddingTop: 20,
     },
     ScrollViewList: {
       flexDirection: 'column',
@@ -109,6 +107,28 @@ export const useStyles = () => {
     },
     saveButtonText: {
       color: theme.white,
+    },
+    cameraView: {
+      position: 'absolute',
+      top: -150,
+      left: 0,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    permissionMessage: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    permissionButton: {
+      marginTop: 20,
+      padding: 10,
+      backgroundColor: 'blue',
+      borderRadius: 5,
+    },
+    bottomContent: {
+      marginTop: 200,
+      flex: 1,
     },
   });
 };

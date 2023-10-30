@@ -35,7 +35,7 @@ import BasicInfo from './screens/basic-info';
 import BackgroundGradient from './components/background-gradient';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(darkBlue);
+  const [currentTheme, setCurrentTheme] = useState(lightBlue);
 
   return (
     <ThemeContext.Provider
@@ -64,11 +64,11 @@ const App = () => {
       {/* <GridViewItems /> */}
       {/* <FAQList /> */}
       {/* <FAQ /> */}
-      {/* <ScanningPage /> */}
+      <ScanningPage />
 
       {/* <BasicInfo /> */}
       {/* <BackgroundGradient style={{flex: 1}}> */}
-      <ErrorPage />
+      {/* <ErrorPage /> */}
       {/* </BackgroundGradient> */}
       {/* <DoneComponent /> */}
       {/* <ListItem item={'Atta'} /> */}

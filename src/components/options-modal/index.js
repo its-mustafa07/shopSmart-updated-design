@@ -6,7 +6,12 @@ import useStyles from './styles';
 import CustomButton from '../../utils/button';
 import {ThemeContext} from '../themes/theme';
 
-const OptionsModal = () => {
+const OptionsModal = ({
+  isVisible,
+  onBackButtonPress,
+  confirmationVisible,
+  isNotVisible,
+}) => {
   const {theme} = useContext(ThemeContext);
   const buttonStyles = {
     Width: '90%',
@@ -18,19 +23,21 @@ const OptionsModal = () => {
   const textStyles = {
     color: theme.white,
   };
-  const [show, setShow] = useState(true);
   const styles = useStyles();
   return (
     <ReactNativeModal
-      onBackdropPress={() => setShow(false)}
-      isVisible={show}
-      onBackButtonPress={() => setShow(false)}
+      onBackdropPress={isNotVisible}
+      onBackButtonPress={isNotVisible}
+      isVisible={isVisible}
       style={[styles.modalContainer, theme.boxShadow]}>
       <BackgroundGradient style={{borderRadius: 10}}>
         <View style={styles.modalContentContainer}>
           <Text style={styles.modalHeading}>Choose an option</Text>
           <View style={styles.modalButtons}>
-            <CustomButton buttonStyle={buttonStyles} textStyle={textStyles}>
+            <CustomButton
+              onPress={confirmationVisible}
+              buttonStyle={buttonStyles}
+              textStyle={textStyles}>
               Delete
             </CustomButton>
             <CustomButton buttonStyle={buttonStyles} textStyle={textStyles}>
