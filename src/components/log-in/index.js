@@ -1,22 +1,11 @@
 import React, {useContext, useState} from 'react';
-import {
-  Image,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  ScrollView,
-  KeyboardAvoidingView,
-} from 'react-native';
+import {Text, View, TouchableOpacity, KeyboardAvoidingView} from 'react-native';
 import {Svg, Path, G} from 'react-native-svg';
-// import BackgroundColor from '../utils/background-color/backgroundColor';
-// import LinearGradient from 'react-native-linear-gradient';
 import {Formik} from 'formik';
 import {object, string} from 'yup';
 import CustomInput from '../../utils/custom-input';
 import CustomButton from '../../utils/button';
 import BackgroundGradient from '../background-gradient';
-import {styles} from './styles';
 import {ThemeContext} from '../themes/theme';
 import {
   FacebookIcon,
@@ -33,6 +22,7 @@ const LogIn = ({toggleAnimation}) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const [checkboxState, setCheckboxState] = useState(false);
+
   const {theme} = useContext(ThemeContext);
   const styles = useStyle();
 
@@ -57,7 +47,7 @@ const LogIn = ({toggleAnimation}) => {
       validationSchema={loginSchema}
       onSubmit={values => console.log(values)}>
       {({handleChange, handleBlur, handleSubmit, values, errors, touched}) => (
-        <BackgroundGradient style={{flex: 1}}>
+        <BackgroundGradient style={{height: '100%', width: '100%'}}>
           <KeyboardAvoidingView
             behavior="height"
             style={styles.loginMainWrapper}>
@@ -66,7 +56,7 @@ const LogIn = ({toggleAnimation}) => {
             </View>
             <View style={styles.container}>
               <Text style={styles.heading}>Welcome to ShopSmart!</Text>
-              <View style={[styles.inputBox]}>
+              <View style={styles.inputBox}>
                 {errors.email && touched.email && (
                   <View style={styles.errorbox}>
                     <Text style={styles.errorMassage}>{errors.email}</Text>

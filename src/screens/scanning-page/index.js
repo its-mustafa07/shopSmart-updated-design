@@ -20,6 +20,7 @@ import ErrorPage from '../error';
 import BackgroundGradient from '../../components/background-gradient';
 import {RESULTS} from 'react-native-permissions';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import ObjectDetection from '../../components/object-detection';
 
 const ScanningPage = () => {
   const {theme} = useContext(ThemeContext);
@@ -58,7 +59,7 @@ const ScanningPage = () => {
           </CustomButton>
         </View>
         {objectDeduction ? (
-          <ErrorPage handleToggle={handleToggle} />
+          <ObjectDetection />
         ) : (
           <>
             <Image
@@ -93,6 +94,7 @@ const ScanningPage = () => {
                   Edit
                 </CustomButton>
                 <CustomButton
+                  textStyle={{color: theme.white}}
                   buttonStyle={[styles.saveButton, theme.boxShadow]}>
                   Save
                 </CustomButton>

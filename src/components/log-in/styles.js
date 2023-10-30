@@ -34,7 +34,6 @@ const useStyle = () => {
       width: '100%',
       justifyContent: 'center',
       alignItems: 'center',
-      // gap: 50,
     },
     heading: {
       fontSize: 28,
@@ -55,6 +54,7 @@ const useStyle = () => {
       borderWidth: 2,
       borderColor: theme.primary,
     },
+
     container: {
       marginTop: 100,
       gap: 20,
@@ -95,6 +95,7 @@ const useStyle = () => {
     buttonText: {
       fontSize: 18,
       fontFamily: 'SourceSansPro-SemiBold',
+      color: theme.white,
     },
     socialIcons: {
       width: 120,
