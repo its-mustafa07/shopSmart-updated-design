@@ -41,7 +41,10 @@ const App = () => {
       {/* <FAQList /> */}
       {/* <FAQ /> */}
       {/* <ScanningPage /> */}
-      {/* <ErrorPage /> */}
+
+      {/* <BasicInfo /> */}
+      {/* <BackgroundGradient style={{flex: 1}}> */}
+      <ErrorPage />
       {/* </BackgroundGradient> */}
       {/* <DoneComponent /> */}
       {/* <ListItem item={'Atta'} /> */}
