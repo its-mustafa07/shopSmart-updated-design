@@ -95,6 +95,7 @@ const useStyle = () => {
     buttonText: {
       fontSize: 18,
       fontFamily: 'SourceSansPro-SemiBold',
+      color: theme.white,
     },
     socialIcons: {
       width: 120,

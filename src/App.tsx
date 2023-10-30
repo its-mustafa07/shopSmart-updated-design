@@ -25,6 +25,7 @@ import OptionsModal from './components/options-modal';
 import DoneComponent from './screens/done';
 import FAQList from './components/faq-component';
 import FAQ from './screens/faq';
+import HomeScreen from './screens/home';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(lightBlue);
@@ -32,14 +33,14 @@ const App = () => {
   return (
     <ThemeContext.Provider
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
-      <HomeScreen />
+      {/* <HomeScreen /> */}
       {/* <ListTitleBar /> */}
       {/* <ThemeSwitcher /> */}
 
       {/* <GradientComponent /> */}
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
-      {/* <LoginSignup /> */}
+      <LoginSignup />
       {/* <GridViewItems /> */}
       {/* <FAQList /> */}
       {/* <FAQ /> */}

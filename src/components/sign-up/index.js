@@ -1,11 +1,4 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  SafeAreaView,
-  KeyboardAvoidingView,
-} from 'react-native';
+import {View, Text, TouchableOpacity, KeyboardAvoidingView} from 'react-native';
 import {useContext, useState} from 'react';
 import {G, Path, Svg} from 'react-native-svg';
 import {Formik} from 'formik';
@@ -62,7 +55,7 @@ const SignUp = ({toggleAnimation}) => {
       validationSchema={signupSchema}
       onSubmit={values => console.log(values)}>
       {({handleChange, handleBlur, errors, handleSubmit, touched, values}) => (
-        <BackgroundGradient style={{flex: 1}}>
+        <BackgroundGradient style={{height: '100%', width: '100%'}}>
           <KeyboardAvoidingView style={styles.signupMainWrapper}>
             <View style={styles.logo}>
               <LogoIcon />
@@ -257,7 +250,7 @@ const SignUp = ({toggleAnimation}) => {
                     color: theme.textAccent,
                   },
                 ]}>
-                Already have an account?
+                Already have an account? &nbsp;
                 <Text
                   onPress={toggleAnimation}
                   style={{

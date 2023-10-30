@@ -57,7 +57,7 @@ const LogIn = ({toggleAnimation}) => {
       validationSchema={loginSchema}
       onSubmit={values => console.log(values)}>
       {({handleChange, handleBlur, handleSubmit, values, errors, touched}) => (
-        <BackgroundGradient style={{flex: 1}}>
+        <BackgroundGradient style={{height: '100%', width: '100%'}}>
           <KeyboardAvoidingView
             behavior="height"
             style={styles.loginMainWrapper}>
