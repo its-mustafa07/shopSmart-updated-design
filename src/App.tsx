@@ -13,6 +13,7 @@ const App = () => {
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
       <ThemeSwitcher />
       {/* <GradientComponent /> */}
+<
       <ProfileHeader />
       <HomeItem />
     </ThemeContext.Provider>
