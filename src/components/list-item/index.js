@@ -43,7 +43,9 @@ const ListItem = ({style, title, quantity, counter, tag}) => {
                 <UpIcon />
               </TouchableOpacity>
               <View style={styles.quantityContainer}>
-                <Text style={styles.quantity}>{Math.random() * 10}</Text>
+                <Text style={styles.quantity}>
+                  {Math.ceil(Math.random() * 10)}
+                </Text>
               </View>
               <TouchableOpacity>
                 <DownIcon />

@@ -6,15 +6,13 @@ import useStyles from './styles';
 import BackgroundGradient from '../../components/background-gradient';
 import ListView from '../../components/list-view';
 import ListItem from '../../components/list-item';
+import toRefillData from '../../data/TO_REFILL_DATA';
 
 const CartScreen = () => {
   const styles = useStyles();
   const numberOfItems = 20;
 
   const itemsArray = Array.from({length: numberOfItems}, (v, i) => i);
-  const randomIndex = Math.floor(Math.random() * itemsArray.length);
-
-  const randomElement = itemsArray[randomIndex];
 
   return (
     <BackgroundGradient style={{flex: 1}}>
@@ -32,13 +30,14 @@ const CartScreen = () => {
             paddingVertical: 20,
             paddingBottom: 10,
           }}
-          data={itemsArray}
-          keyExtractor={item => item.toString()}
+          data={toRefillData}
+          // keyExtractor={item => item.toString()}
           renderItem={({item, index}) => (
             <ListItem
+              title={item.title}
               counter={true}
               tag={index % 2 !== 0 ? true : false}
-              key={item}
+              // key={item}
             />
           )}
         />

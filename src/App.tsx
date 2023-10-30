@@ -40,7 +40,7 @@ const App = () => {
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
       {/* <LoginSignup /> */}
-      <GridViewItems />
+      {/* <GridViewItems /> */}
       {/* <FAQList /> */}
       {/* <FAQ /> */}
       {/* <ScanningPage /> */}
@@ -48,7 +48,7 @@ const App = () => {
       {/* <ListItem item={'Atta'} /> */}
       {/* <DoneComponent /> */}
       {/* <ListItem /> */}
-      {/* <CartScreen /> */}
+      <CartScreen />
       {/* <HomeStockScreen /> */}
       {/* <HomeStockListScreen /> */}
       {/* <OptionsModal /> */}
