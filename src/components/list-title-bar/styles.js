@@ -16,7 +16,7 @@ const useStyles = () => {
     title: {
       fontFamily: 'SourceSansPro-SemiBold',
       color: theme.textPrimary,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       // fontWeight: 'bold',
       fontSize: 16,
     },

@@ -8,6 +8,7 @@ import {
 } from './components/themes/theme';
 import ThemeSwitcher from './components/themes/themeSwitcher';
 import GradientComponent from './components/Gradient';
+import FeedBack from './screens/feedback';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(darkBlue);
@@ -15,13 +16,12 @@ const App = () => {
   return (
     <ThemeContext.Provider
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
-
       {/* <ThemeSwitcher /> */}
       {/* <GradientComponent /> */}
       {/* <LoginSignup /> */}
       {/* <DoneComponent /> */}
       {/* <CustomButton /> */}
-      {/* <FeedBack /> */}
+      <FeedBack />
       {/* <Settings /> */}
       {/* <PrivacyPolicy /> */}
       {/* <ErrorPage /> */}
