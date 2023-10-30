@@ -1,4 +1,10 @@
-import {View, Text, TouchableOpacity, KeyboardAvoidingView} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  SafeAreaView,
+} from 'react-native';
 import {useContext, useState} from 'react';
 import {G, Path, Svg} from 'react-native-svg';
 import {Formik} from 'formik';
@@ -247,26 +253,6 @@ const SignUp = ({toggleAnimation}) => {
                     Sign Up
                   </CustomButton>
                 </View>
-
-                {/* <<<<<<< HEAD
-                <CustomButton
-                  buttonStyle={styles.buttons}
-                  textStyle={styles.buttonsText}
-                  onPress={handleSubmit}>
-                  Sign Up
-                </CustomButton>
-              </View>
-
-              <Text
-                style={[
-                  styles.SemiBoldTexts,
-                  {
-                    color: theme.textAccent,
-                  },
-                ]}>
-                Already have an account? &nbsp;
-=======
->>>>>>> 14b6497077cbd239aae4c5d2ae48783a64b09a77 */}
                 <Text
                   style={[
                     styles.SemiBoldTexts,
@@ -274,7 +260,7 @@ const SignUp = ({toggleAnimation}) => {
                       color: theme.textAccent,
                     },
                   ]}>
-                  Already have an account?
+                  Already have an account? &nbsp;
                   <Text
                     onPress={toggleAnimation}
                     style={{

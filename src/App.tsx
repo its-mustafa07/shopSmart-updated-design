@@ -76,7 +76,7 @@ const App = () => {
       {/* <HomeStockScreen /> */}
       {/* <HomeStockListScreen /> */}
       {/* <OptionsModal /> */}
-      <ConfirmationModal />
+      {/* <ConfirmationModal /> */}
       {/* <ToFillStockListScreen /> */}
     </ThemeContext.Provider>
   );
