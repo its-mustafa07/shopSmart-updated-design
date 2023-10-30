@@ -48,8 +48,8 @@ const App = () => {
       {/* <FeedBack /> */}
       {/* <Settings /> */}
       {/* <PrivacyPolicy /> */}
-      <ErrorPage />
-      {/* <HomeScreen /> */}
+      {/* <ErrorPage /> */}
+      <HomeScreen />
       {/* <ListTitleBar /> */}
       {/* <ThemeSwitcher /> */}
       {/* <ListItem /> */}
