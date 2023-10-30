@@ -42,14 +42,14 @@ const App = () => {
       {/* <GradientComponent /> */}
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
-      <LoginSignup />
+      {/* <LoginSignup /> */}
       {/* <GridViewItems /> */}
       {/* <FAQList /> */}
       {/* <FAQ /> */}
       {/* <ScanningPage /> */}
       {/* <BasicInfo /> */}
       {/* <BackgroundGradient style={{flex: 1}}> */}
-      {/* <ErrorPage /> */}
+      <ErrorPage />
       {/* </BackgroundGradient> */}
       {/* <DoneComponent /> */}
       {/* <ListItem item={'Atta'} /> */}
