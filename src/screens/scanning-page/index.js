@@ -41,7 +41,9 @@ const ScanningPage = () => {
               objectDeduction ? styles.conditionalButton : styles.button,
             ]}
             onPress={() => setObjectDeduction(false)}
-            textStyle={styles.buttonTexts}>
+            textStyle={[
+              !objectDeduction ? styles.buttonTexts : styles.buttonText,
+            ]}>
             QR Scan
           </CustomButton>
           <CustomButton
@@ -49,7 +51,9 @@ const ScanningPage = () => {
               !objectDeduction ? styles.conditionalButton : styles.button,
             ]}
             onPress={() => setObjectDeduction(true)}
-            textStyle={styles.buttonText}>
+            textStyle={[
+              objectDeduction ? styles.buttonTexts : styles.buttonText,
+            ]}>
             Object Detection
           </CustomButton>
         </View>

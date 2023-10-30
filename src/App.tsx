@@ -27,7 +27,7 @@ import FAQList from './components/faq-component';
 import FAQ from './screens/faq';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(lightPink);
+  const [currentTheme, setCurrentTheme] = useState(lightBlue);
 
   return (
     <ThemeContext.Provider
@@ -40,10 +40,10 @@ const App = () => {
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
       {/* <LoginSignup /> */}
-      <GridViewItems />
+      {/* <GridViewItems /> */}
       {/* <FAQList /> */}
       {/* <FAQ /> */}
-      {/* <ScanningPage /> */}
+      <ScanningPage />
       {/* <ErrorPage /> */}
       {/* <ListItem item={'Atta'} /> */}
       {/* <DoneComponent /> */}
