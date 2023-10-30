@@ -9,11 +9,12 @@ import {
 import useStyles from './styles';
 import {ThemeContext} from '../themes/theme';
 
-const ListItem = () => {
+const ListItem = ({style, title, quantity, counter, tag}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyles();
+
   return (
-    <View style={[styles.mainContainer, theme.boxShadow]}>
+    <View style={[styles.mainContainer, theme.boxShadow, style]}>
       <View style={styles.contentContainer}>
         <View style={{flexDirection: 'row'}}>
           <View style={styles.iconContainer}>
@@ -21,10 +22,14 @@ const ListItem = () => {
           </View>
           <View style={styles.textContainer}>
             <View style={styles.titleWithQuantity}>
-              <Text style={styles.itemTitle}>Cart Item</Text>
-              <View style={[styles.quantityContainer, theme.boxShadow]}>
-                <Text style={styles.quantity}>7</Text>
-              </View>
+              <Text style={styles.itemTitle}>{title}</Text>
+              {quantity && (
+                <View style={[styles.quantityContainer, theme.boxShadow]}>
+                  <Text style={styles.quantity}>
+                    {Math.ceil(Math.random() * 20)}
+                  </Text>
+                </View>
+              )}
             </View>
             <Text style={styles.itemDate}>
               Added: {new Date().toLocaleDateString()}
@@ -32,25 +37,29 @@ const ListItem = () => {
           </View>
         </View>
         <View style={styles.counterAndIcon}>
-          <View style={styles.counter}>
-            <TouchableOpacity>
-              <UpIcon />
-            </TouchableOpacity>
-            <View style={styles.quantityContainer}>
-              <Text style={styles.quantity}>7</Text>
+          {counter && (
+            <View style={styles.counter}>
+              <TouchableOpacity>
+                <UpIcon />
+              </TouchableOpacity>
+              <View style={styles.quantityContainer}>
+                <Text style={styles.quantity}>{Math.random() * 10}</Text>
+              </View>
+              <TouchableOpacity>
+                <DownIcon />
+              </TouchableOpacity>
             </View>
-            <TouchableOpacity>
-              <DownIcon />
-            </TouchableOpacity>
-          </View>
+          )}
           <TouchableOpacity>
             <ThreeDotsIcon />
           </TouchableOpacity>
         </View>
       </View>
-      <View style={styles.tagContainer}>
-        <Text style={styles.tagTitle}>Home stock</Text>
-      </View>
+      {tag && (
+        <View style={styles.tagContainer}>
+          <Text style={styles.tagTitle}>Home Stock</Text>
+        </View>
+      )}
     </View>
   );
 };

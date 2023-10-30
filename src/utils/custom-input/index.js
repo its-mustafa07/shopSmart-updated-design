@@ -10,11 +10,12 @@ const CustomInput = ({
   inputStyle,
   keyboardType,
   secureTextEntry,
+  placeholderTextColor,
   style,
   placeholderStyle,
   multiline,
   numberOfLines,
-  placeholderTextColor,
+  // placeholderTextColor,
 }) => {
   return (
     <TextInput
@@ -24,12 +25,13 @@ const CustomInput = ({
       multiline={multiline}
       placeholderTextColor={placeholderTextColor}
       numberOfLines={numberOfLines}
-      // style={inputStyle}
       keyboardType={keyboardType}
       placeholderStyle={placeholderStyle}
       secureTextEntry={secureTextEntry}
       onBlur={onBlur}
       onFocus={onFocus}
+      // style={inputStyle}
+      // placeholderTextColor={placeholderTextColor}
       style={style}
     />
   );

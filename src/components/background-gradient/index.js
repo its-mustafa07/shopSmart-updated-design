@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import {ThemeContext} from '../themes/theme';
 
-const BackgroundGradient = ({children}) => {
+const BackgroundGradient = ({children, style}) => {
   const {theme} = useContext(ThemeContext);
   return (
     <LinearGradient
@@ -10,7 +10,7 @@ const BackgroundGradient = ({children}) => {
       start={theme.gradient.start}
       end={theme.gradient.end}
       locations={theme.gradient.locations}
-      style={{width: '100%', height: '100%'}}>
+      style={style}>
       {children}
     </LinearGradient>
   );

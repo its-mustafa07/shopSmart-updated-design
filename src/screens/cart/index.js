@@ -1,31 +1,47 @@
 import React from 'react';
-import {SafeAreaView, ScrollView} from 'react-native';
+import {FlatList, SafeAreaView, Text, ScrollView} from 'react-native';
 import ProfileHeader from '../../components/profile-header';
 import ListTitleBar from '../../components/list-title-bar';
-import styles from './styles';
+import useStyles from './styles';
 import BackgroundGradient from '../../components/background-gradient';
 import ListView from '../../components/list-view';
 import ListItem from '../../components/list-item';
 
 const CartScreen = () => {
-  const numberOfItems = 10;
+  const styles = useStyles();
+  const numberOfItems = 20;
 
   const itemsArray = Array.from({length: numberOfItems}, (v, i) => i);
+  const randomIndex = Math.floor(Math.random() * itemsArray.length);
+
+  const randomElement = itemsArray[randomIndex];
+
   return (
-    <BackgroundGradient>
-      <SafeAreaView>
+    <BackgroundGradient style={{flex: 1}}>
+      <SafeAreaView style={{flex: 1}}>
         <ProfileHeader style={styles.cartHeader} />
+        <Text style={styles.pageTitle}>Cart</Text>
         <ListTitleBar
           title="Items added to cart:"
           style={styles.cartTitleBar}
         />
-        <ListView>
-          {/* <ScrollView style={{flex: 1}}> */}
-          {itemsArray.map(index => (
-            <ListItem key={index} />
-          ))}
-          {/* </ScrollView> */}
-        </ListView>
+
+        <FlatList
+          contentContainerStyle={{
+            rowGap: 20,
+            paddingVertical: 20,
+            paddingBottom: 10,
+          }}
+          data={itemsArray}
+          keyExtractor={item => item.toString()}
+          renderItem={({item, index}) => (
+            <ListItem
+              counter={true}
+              tag={index % 2 !== 0 ? true : false}
+              key={item}
+            />
+          )}
+        />
       </SafeAreaView>
     </BackgroundGradient>
   );
