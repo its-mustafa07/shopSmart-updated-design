@@ -14,7 +14,7 @@ import {styles} from './style';
 
 const LoginSignup = () => {
   const [isSignUpVisible, setIsSignUpVisible] = useState(false);
-  console.log(isSignUpVisible);
+  // console.log(isSignUpVisible);
   const translateX = useRef(new Animated.Value(0)).current;
 
   const toggleAnimation = () => {

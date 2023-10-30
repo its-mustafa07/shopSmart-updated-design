@@ -31,10 +31,11 @@ import OptionsModal from './components/options-modal';
 import DoneComponent from './screens/done';
 import FAQList from './components/faq-component';
 import FAQ from './screens/faq';
-import ConfirmationModal from './components/confirmation-modal';
+import BasicInfo from './screens/basic-info';
+import BackgroundGradient from './components/background-gradient';
 
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState(lightBlue);
+  const [currentTheme, setCurrentTheme] = useState(darkBlue);
 
   return (
     <ThemeContext.Provider
@@ -59,12 +60,15 @@ const App = () => {
       {/* <GradientComponent /> */}
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
-      {/* <LoginSignup /> */}
+      <LoginSignup />
       {/* <GridViewItems /> */}
       {/* <FAQList /> */}
       {/* <FAQ /> */}
       {/* <ScanningPage /> */}
+
       {/* <ErrorPage /> */}
+      {/* </BackgroundGradient> */}
+      {/* <DoneComponent /> */}
       {/* <ListItem item={'Atta'} /> */}
       {/* <DoneComponent /> */}
       {/* <ListItem /> */}
