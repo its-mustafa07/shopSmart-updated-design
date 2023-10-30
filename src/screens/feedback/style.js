@@ -13,7 +13,7 @@ export const UseStyles = () => {
       fontSize: 25,
       // fontFamily: 'SourceSansPro',
       color: theme.textAccent,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       padding: 48,
     },
     inputStyle: {
@@ -42,7 +42,7 @@ export const UseStyles = () => {
     },
     inputMain: {
       gap: 14,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       paddingLeft: 12,
       color: theme.text,
       width: 376,

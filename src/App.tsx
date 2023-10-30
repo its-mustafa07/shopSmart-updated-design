@@ -24,7 +24,7 @@ const App = () => {
       <ThemeSwitcher />
       <Navigation />
       {/* <GradientComponent /> */}
-      <ProfileHeader />
+
       {/* <HomeItem /> */}
       {/* <LogoLoader/> */}
 

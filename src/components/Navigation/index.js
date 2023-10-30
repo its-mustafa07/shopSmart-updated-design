@@ -5,7 +5,6 @@ import Ionicns from 'react-native-vector-icons/Ionicons';
 import HomeScreen from '../../screens/home';
 import Settings from '../../screens/setting';
 
-
 const Tab = createBottomTabNavigator();
 
 const Navigation = () => {
@@ -13,16 +12,13 @@ const Navigation = () => {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
+          headerBackground: false,
           tabBarShowLabel: false,
           tabBarActiveTintColor: '#FF8C71',
           tabBarInactiveTintColor: 'white',
           tabBarStyle: {
-            width: '90%',
             height: 67,
             backgroundColor: '#040325',
-            borderRadius: 7,
-            marginBottom: 23,
-            marginLeft: 17,
           },
         }}>
         <Tab.Screen

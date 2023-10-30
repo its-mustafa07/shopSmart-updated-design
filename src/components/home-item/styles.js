@@ -16,7 +16,7 @@ const useStyles = () => {
       marginTop: 30,
     },
     itemText: {
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       fontSize: 18,
       color: theme.textPrimary,
     },

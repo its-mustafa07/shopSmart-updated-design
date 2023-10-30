@@ -17,7 +17,7 @@ export const UseStyles = () => {
     },
     userName: {
       color: theme.textPrimary,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       fontSize: 18,
       fontfamily: 'SourceSansPro',
     },

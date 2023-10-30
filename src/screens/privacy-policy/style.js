@@ -9,7 +9,7 @@ export const UseStyles = () => {
       fontSize: 25,
       fontFamily: 'SourceSansPro',
       color: theme.textSecondary,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       paddingTop: 48,
     },
     termsWrapper: {
@@ -18,7 +18,7 @@ export const UseStyles = () => {
     },
     terms: {
       fontSize: 22,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       fontFamily: 'SourceSansPro',
       color: theme.textSecondary,
     },
@@ -37,7 +37,7 @@ export const UseStyles = () => {
       color: theme.textSecondary,
       fontFamily: 'SourceSansPro',
       fontSize: 19,
-      fontWeight: 'normal',
+      // fontWeight: 'normal',
     },
   });
 };

@@ -20,7 +20,7 @@ const logoStyles = () => {
     Text1: {
       // fontFamily: 'SourceSans3-ExtraBold',
       fontSize: 60,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       color: theme.textPrimary,
       marginTop: 45,
     },
@@ -28,7 +28,7 @@ const logoStyles = () => {
     Text2: {
       fontFamily: 'SourceSans3-ExtraBold',
       fontSize: 60,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       color: theme.textPrimary,
       marginTop: 45,
       right: 15,

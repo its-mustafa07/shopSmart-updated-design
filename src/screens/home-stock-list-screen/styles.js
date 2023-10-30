@@ -13,12 +13,12 @@ const useStyles = () => {
       marginLeft: 40,
       fontSize: 30,
       color: theme.textPrimary,
-      fontWeight: '500',
+      // fontWeight: '500',
     },
     sectionHeaderText: {
       color: theme.textSecondary,
       fontSize: 18,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       marginLeft: 20,
     },
   });

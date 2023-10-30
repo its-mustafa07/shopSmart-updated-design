@@ -16,7 +16,7 @@ const useStyles = () => {
     modalHeading: {
       fontSize: 16,
       color: theme.textPrimary,
-      fontWeight: '400',
+      // fontWeight: '400',
     },
   });
 };

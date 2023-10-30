@@ -15,6 +15,7 @@ import {
   UpdatesIcon,
   WarnIcon,
 } from '../../../assets/svg-icons/svgIcons';
+import LogoLoader from '../../components/logo-loader';
 const Settings = () => {
   const styles = UseStyles();
   return (

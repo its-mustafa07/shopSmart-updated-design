@@ -9,7 +9,7 @@ export const UseStyles = () => {
       fontSize: 25,
       fontFamily: 'SourceSansPro',
       color: theme.textAccent,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       paddingTop: 48,
     },
     profileWrapper: {
@@ -32,7 +32,7 @@ export const UseStyles = () => {
     textstyle: {
       color: theme.textSecondary,
       fontSize: 18,
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
     },
   });
 };
