@@ -1,53 +1,52 @@
 import {createContext} from 'react';
 import {Platform} from 'react-native';
 
-type ThemeType = {
-  background: string;
+// type ThemeType = {
+//   background: string;
 
-  bgcolor1: string;
-  bgcolor2: string;
-  primary: string;
-  secondary: string;
-  textPrimary: string;
-  textSecondary: string;
-  textAccent: string;
-  textPrimaryReverse: string;
-  textSecondaryReverse: string;
-  textAccentReverse: string;
-  accent: string;
-  list: string;
-  input: string;
-  text: string;
-  gradientStart: string;
-  gradientEnd: string;
-  gradient: GradientType;
-  errorPrimary: string;
-  white: string;
-  listSecondary: string;
-  disabledButton: string;
-  boxShadow: boxShadowType;
-};
+//   bgcolor1: string;
+//   bgcolor2: string;
+//   primary: string;
+//   secondary: string;
+//   textPrimary: string;
+//   textSecondary: string;
+//   textAccent: string;
+//   textPrimaryReverse: string;
+//   textSecondaryReverse: string;
+//   textAccentReverse: string;
+//   accent: string;
+//   list: string;
+//   input: string;
+//   text: string;
+//   gradientStart: string;
+//   gradientEnd: string;
+//   gradient: GradientType;
+//   errorPrimary: string;
+//   white: string;
+//   listSecondary: string;
+//   disabledButton: string;
+//   boxShadow: boxShadowType;
+// };
 
-type boxShadowType = {
-  shadowColor?: string;
-  shadowOffset?: {width: number; height: number};
-  shadowOpacity?: number;
-  shadowRadius?: number;
-  elevation?: number;
-};
+// type boxShadowType = {
+//   shadowColor?: string;
+//   shadowOffset?: {width: number; height: number};
+//   shadowOpacity?: number;
+//   shadowRadius?: number;
+//   elevation?: number;
+// };
 
-type GradientType = {
-  start: {x: number; y: number};
-  end: {x: number; y: number};
-  locations: number[];
-  colors: string[];
-};
+// type GradientType = {
+//   start: {x: number; y: number};
+//   end: {x: number; y: number};
+//   locations: number[];
+//   colors: string[];
+// };
 
-export const lightPink: ThemeType = {
+export const lightPink = {
   background: 'radial-gradient(50% 139.77% at 100% 50%, #FFEDE3 0%, #FFF 100%)',
   gradientStart: '#FFEDE3',
   gradientEnd: '#FFFFFF',
-
   bgcolor1: '#FFEDE3',
   bgcolor2: '#FFFFFF',
   primary: '#FF8A71',
@@ -79,7 +78,6 @@ export const lightPink: ThemeType = {
       },
     }),
   },
-
   gradient: {
     start: {x: 0.5, y: 0},
     end: {x: 0.5, y: 1},
@@ -88,12 +86,11 @@ export const lightPink: ThemeType = {
   },
 };
 
-export const lightBlue: ThemeType = {
+export const lightBlue = {
   gradientStart: '#FFEDE3',
   gradientEnd: '#FFFFFF',
   background: 'green',
   bgcolor1: '#FFEDE3',
-
   bgcolor2: '#FFFFFF',
   primary: '#55ACEE',
   secondary: '#C2E2FF',
@@ -132,7 +129,7 @@ export const lightBlue: ThemeType = {
   },
 };
 
-export const darkPink: ThemeType = {
+export const darkPink = {
   gradientStart: '#00294F',
   gradientEnd: '#333333',
   background: 'radial-gradient(circle, #401800, #333333)',
@@ -175,11 +172,10 @@ export const darkPink: ThemeType = {
   },
 };
 
-export const darkBlue: ThemeType = {
+export const darkBlue = {
   gradientStart: '#00294F',
   gradientEnd: '#333333',
   background: 'radial-gradient(circle, #00294F, #333333)',
-
   bgcolor1: '#00294F',
   bgcolor2: '#333333',
   primary: '#55ACEE',
@@ -219,13 +215,16 @@ export const darkBlue: ThemeType = {
   },
 };
 
-type ThemeContextType = {
-  theme: ThemeType;
-  setTheme: (theme: ThemeType) => void;
-};
+// type ThemeContextType = {
+//   theme: ThemeType,
+//   setTheme: (theme: ThemeType) => void,
+// };
 
-export const ThemeContext = createContext<ThemeContextType>({
-  theme: lightBlue, // default value
-
-  setTheme: () => {},
-});
+export const ThemeContext = createContext(
+  //  <
+  // ThemeContextType >
+  {
+    theme: lightBlue,
+    setTheme: () => {},
+  },
+);
