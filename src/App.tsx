@@ -44,9 +44,7 @@ const App = () => {
     <NavigationContainer>
       <ThemeContext.Provider
         value={{theme: currentTheme, setTheme: setCurrentTheme}}>
-        {/* <GridViewItems /> */}
-        <HomeStockScreen />
-        {/* <Stack.Navigator
+        <Stack.Navigator
           initialRouteName="LoginSignUp"
           screenOptions={{headerShown: false}}>
           <Stack.Screen name="LoginSignUp" component={LoginSignup} />
@@ -61,7 +59,7 @@ const App = () => {
             name="HomeStockListScreen"
             component={HomeStockListScreen}
           />
-        </Stack.Navigator> */}
+        </Stack.Navigator>
       </ThemeContext.Provider>
     </NavigationContainer>
   );
