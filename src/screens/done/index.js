@@ -8,7 +8,7 @@ import BackgroundGradient from '../../components/background-gradient';
 import {ThemeContext} from '../../components/themes/theme';
 import {DoneSvgIcon} from '../../../assets/svg-icons/svgIcons';
 
-const DoneComponent = () => {
+const DoneComponent = ({navigation}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyle();
   return (
@@ -36,7 +36,8 @@ const DoneComponent = () => {
         </Text>
         <CustomButton
           buttonStyle={styles.button}
-          textStyle={{color: theme.white}}>
+          textStyle={{color: theme.white}}
+          onPress={() => navigation.navigate('Home')}>
           Done
         </CustomButton>
       </View>

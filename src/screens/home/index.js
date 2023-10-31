@@ -14,14 +14,24 @@ import {
 import HomeItem from '../../components/home-item';
 import GridView from '../../components/grid-view';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   const homeData = [
-    {key: 1, icon: <MyListIcon />, heading: 'My List'},
-    {key: 2, icon: <ScanItemsIcon />, heading: 'Scan Items'},
+    {key: 1, icon: <MyListIcon />, heading: 'My List', path: 'GridViewItems'},
+    {
+      key: 2,
+      icon: <ScanItemsIcon />,
+      heading: 'Scan Items',
+      path: 'ScanningPage',
+    },
     {key: 3, icon: <MyStoresIcon />, heading: 'My Stores'},
     {key: 4, icon: <SearchProductIcon />, heading: 'Search Product'},
     {key: 5, icon: <StoresNearbyIcon />, heading: 'Stores Nearby'},
-    {key: 6, icon: <HomeScreenSettingsIcon />, heading: 'Settings'},
+    {
+      key: 6,
+      icon: <HomeScreenSettingsIcon />,
+      heading: 'Settings',
+      path: 'Settings',
+    },
   ];
   const styles = useStyles();
   return (
@@ -33,6 +43,7 @@ const HomeScreen = () => {
           <GridView>
             {homeData.map(item => (
               <HomeItem
+                onPress={() => navigation.navigate(item.path)}
                 key={item.key}
                 icon={item.icon}
                 heading={item.heading}

@@ -22,7 +22,7 @@ import {RESULTS} from 'react-native-permissions';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import ObjectDetection from '../../components/object-detection';
 
-const ScanningPage = () => {
+const ScanningPage = ({navigation}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyles();
   const [objectDeduction, setObjectDeduction] = useState(false);
@@ -51,7 +51,10 @@ const ScanningPage = () => {
             buttonStyle={[
               !objectDeduction ? styles.conditionalButton : styles.button,
             ]}
-            onPress={() => setObjectDeduction(true)}
+            onPress={() => {
+              setObjectDeduction(true);
+              navigation.navigate('ErrorPage');
+            }}
             textStyle={[
               objectDeduction ? styles.buttonTexts : styles.buttonText,
             ]}>

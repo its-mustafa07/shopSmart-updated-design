@@ -8,7 +8,7 @@ import {ThemeContext} from '../../components/themes/theme';
 import ThemeSwitcher from '../../components/themes/themeSwitcher';
 import {ErrorPageIcon} from '../../../assets/svg-icons/svgIcons';
 
-const ErrorPage = ({handleToggle}) => {
+const ErrorPage = ({handleToggle, navigation}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyles();
   return (
@@ -91,6 +91,7 @@ const ErrorPage = ({handleToggle}) => {
             Cancel
           </CustomButton>
           <CustomButton
+            onPress={() => navigation.navigate('ScanningPage')}
             buttonStyle={[{backgroundColor: theme.accent}, styles.button]}
             textStyle={{color: theme.white}}>
             Try Again

@@ -11,8 +11,13 @@ import {
 import LogIn from '../../components/log-in';
 import SignUp from '../../components/sign-up';
 import {styles} from './style';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-const LoginSignup = () => {
+const LoginSignup = ({navigation}) => {
+  // const navigationHandler =()=>{
+  //   return
+  // }
   const [isSignUpVisible, setIsSignUpVisible] = useState(false);
   // console.log(isSignUpVisible);
   const translateX = useRef(new Animated.Value(0)).current;
@@ -35,8 +40,14 @@ const LoginSignup = () => {
         <View style={{width: '200%', overflow: 'hidden'}}>
           <Animated.View
             style={[styles.animationContainer, {transform: [{translateX}]}]}>
-            <LogIn toggleAnimation={toggleAnimation} />
-            <SignUp toggleAnimation={toggleAnimation} />
+            <LogIn
+              toggleAnimation={toggleAnimation}
+              handleNavigation={() => navigation.navigate('Home')}
+            />
+            <SignUp
+              toggleAnimation={toggleAnimation}
+              handleNavigation={() => navigation.navigate('DoneComponent')}
+            />
           </Animated.View>
         </View>
       </View>

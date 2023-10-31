@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React, {useState} from 'react';
 import {
   ThemeContext,
@@ -27,57 +28,42 @@ import HomeStockScreen from './screens/home-stock';
 import HomeStockListScreen from './screens/home-stock-list-screen';
 import ToFillStockListScreen from './screens/toFill-stock-list-screen';
 import OptionsModal from './components/options-modal';
-
 import DoneComponent from './screens/done';
 import FAQList from './components/faq-component';
 import FAQ from './screens/faq';
 import BasicInfo from './screens/basic-info';
 import BackgroundGradient from './components/background-gradient';
-
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import SignUp from './components/sign-up';
+const Stack = createStackNavigator();
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(darkBlue);
 
   return (
-    <ThemeContext.Provider
-      value={{theme: currentTheme, setTheme: setCurrentTheme}}>
-      {/* <ThemeSwitcher /> */}
-      {/* <GradientComponent /> */}
-      {/* <LoginSignup /> */}
-      {/* <DoneComponent /> */}
-      {/* <CustomButton /> */}
-      {/* <FeedBack /> */}
-      {/* <Settings /> */}
-      {/* <PrivacyPolicy /> */}
-      {/* <ErrorPage /> */}
-      {/* <HomeScreen /> */}
-      {/* <ListTitleBar /> */}
-      {/* <ThemeSwitcher /> */}
-      {/* <ListItem /> */}
-      {/* <HomeScreen /> */}
-      {/* <ListTitleBar /> */}
-      {/* <ThemeSwitcher /> */}
-
-      {/* <GradientComponent /> */}
-      {/* <ProfileHeader /> */}
-      {/* <HomeItem /> */}
-      <LoginSignup />
-      {/* <GridViewItems /> */}
-      {/* <FAQList /> */}
-      {/* <FAQ /> */}
-      {/* <ScanningPage /> */}
-      {/* <ErrorPage /> */}
-      {/* </BackgroundGradient> */}
-      {/* <DoneComponent /> */}
-      {/* <ListItem item={'Atta'} /> */}
-      {/* <DoneComponent /> */}
-      {/* <ListItem /> */}
-      {/* <CartScreen /> */}
-      {/* <HomeStockScreen /> */}
-      {/* <HomeStockListScreen /> */}
-      {/* <OptionsModal /> */}
-      {/* <ConfirmationModal /> */}
-      {/* <ToFillStockListScreen /> */}
-    </ThemeContext.Provider>
+    <NavigationContainer>
+      <ThemeContext.Provider
+        value={{theme: currentTheme, setTheme: setCurrentTheme}}>
+        {/* <GridViewItems /> */}
+        <HomeStockScreen />
+        {/* <Stack.Navigator
+          initialRouteName="LoginSignUp"
+          screenOptions={{headerShown: false}}>
+          <Stack.Screen name="LoginSignUp" component={LoginSignup} />
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="SignUp" component={SignUp} />
+          <Stack.Screen name="DoneComponent" component={DoneComponent} />
+          <Stack.Screen name="GridViewItems" component={GridViewItems} />
+          <Stack.Screen name="ScanningPage" component={ScanningPage} />
+          <Stack.Screen name="ErrorPage" component={ErrorPage} />
+          <Stack.Screen name="Settings" component={Settings} />
+          <Stack.Screen
+            name="HomeStockListScreen"
+            component={HomeStockListScreen}
+          />
+        </Stack.Navigator> */}
+      </ThemeContext.Provider>
+    </NavigationContainer>
   );
 };
 

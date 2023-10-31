@@ -24,7 +24,7 @@ import {
   TwitterIcon,
 } from '../../../assets/svg-icons/svgIcons';
 
-const SignUp = ({toggleAnimation}) => {
+const SignUp = ({toggleAnimation, handleNavigation}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyle();
   const [showPassword, setShowPassword] = useState(false);
@@ -249,7 +249,10 @@ const SignUp = ({toggleAnimation}) => {
                   <CustomButton
                     buttonStyle={styles.buttons}
                     textStyle={styles.buttonsText}
-                    onPress={handleSubmit}>
+                    // onPress={handleSubmit}
+                    onPress={() => {
+                      handleSubmit, handleNavigation();
+                    }}>
                     Sign Up
                   </CustomButton>
                 </View>

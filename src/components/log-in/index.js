@@ -7,6 +7,7 @@ import CustomInput from '../../utils/custom-input';
 import CustomButton from '../../utils/button';
 import BackgroundGradient from '../background-gradient';
 import {ThemeContext} from '../themes/theme';
+
 import {
   FacebookIcon,
   FillChecbox,
@@ -18,7 +19,7 @@ import {
 } from '../../../assets/svg-icons/svgIcons';
 import useStyle from './styles';
 
-const LogIn = ({toggleAnimation}) => {
+const LogIn = ({toggleAnimation, handleNavigation}) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const [checkboxState, setCheckboxState] = useState(false);
@@ -171,10 +172,16 @@ const LogIn = ({toggleAnimation}) => {
                   Lost your password?
                 </Text>
               </View>
+
+              {/* onPress={() => navigation.navigate('Details')} */}
               <CustomButton
                 buttonStyle={styles.button}
                 textStyle={styles.buttonText}
-                onPress={handleSubmit}>
+                // onPress={handleNavigation}
+                // onPress={handleSubmit}
+                onPress={() => {
+                  handleNavigation(), handleSubmit;
+                }}>
                 Sign In
               </CustomButton>
               <View style={{flexDirection: 'row', gap: 5}}>
