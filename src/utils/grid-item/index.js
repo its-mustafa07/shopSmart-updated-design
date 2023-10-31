@@ -10,22 +10,25 @@ import {
 import useStyle from './styles';
 import {ThemeContext} from '../../components/themes/theme';
 import {SafeAreaView} from 'react-native-safe-area-context';
-const GridItem = ({id, title}) => {
+
+const GridItem = ({id, title, style, counter, tag, quantity}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyle();
 
   return (
-    <SafeAreaView style={[styles.GridItem, theme.boxShadow]} key={id}>
-      <View style={[styles.tagContainer, theme.boxShadow]}>
-        <Text
-          style={{
-            fontSize: 12,
-            fontFamily: 'SourceSansPro-Regular',
-            color: theme.text,
-          }}>
-          Home Stock
-        </Text>
-      </View>
+    <SafeAreaView style={[styles.GridItem, theme.boxShadow, style]} key={id}>
+      {tag && (
+        <View style={[styles.tagContainer, theme.boxShadow]}>
+          <Text
+            style={{
+              fontSize: 12,
+              fontFamily: 'SourceSansPro-Regular',
+              color: theme.text,
+            }}>
+            Home Stock
+          </Text>
+        </View>
+      )}
       <View style={styles.gridImage}>
         <PlusIcon />
       </View>
@@ -36,15 +39,21 @@ const GridItem = ({id, title}) => {
         </Text>
       </View>
       <View style={styles.counterContainer}>
-        <TouchableOpacity>
-          <RightIcon />
-        </TouchableOpacity>
-        <View style={styles.counterNo}>
-          <Text style={styles.counterText}>3</Text>
-        </View>
-        <TouchableOpacity>
-          <LeftIcon />
-        </TouchableOpacity>
+        {counter && (
+          <TouchableOpacity>
+            <RightIcon />
+          </TouchableOpacity>
+        )}
+        {quantity && (
+          <View style={styles.counterNo}>
+            <Text style={styles.counterText}>3</Text>
+          </View>
+        )}
+        {counter && (
+          <TouchableOpacity>
+            <LeftIcon />
+          </TouchableOpacity>
+        )}
       </View>
     </SafeAreaView>
   );

@@ -64,7 +64,7 @@ const App = () => {
       {/* <GridViewItems /> */}
       {/* <FAQList /> */}
       {/* <FAQ /> */}
-      <ScanningPage />
+      {/* <ScanningPage /> */}
 
       {/* <BasicInfo /> */}
       {/* <BackgroundGradient style={{flex: 1}}> */}
@@ -76,7 +76,7 @@ const App = () => {
       {/* <ListItem /> */}
       {/* <CartScreen /> */}
       {/* <HomeStockScreen /> */}
-      {/* <HomeStockListScreen /> */}
+      <HomeStockListScreen />
       {/* <OptionsModal /> */}
       {/* <ConfirmationModal /> */}
       {/* <ToFillStockListScreen /> */}

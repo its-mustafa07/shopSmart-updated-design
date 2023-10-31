@@ -6,6 +6,7 @@ import useStyles from './styles';
 import homeStockData from '../../data/HOME_STOCK-DATA';
 import ListItem from '../../components/list-item';
 import ListTitleBar from '../../components/list-title-bar';
+import CropString from '../../utils/crop-string';
 
 const HomeStockListScreen = () => {
   const styles = useStyles();
@@ -20,7 +21,7 @@ const HomeStockListScreen = () => {
           data={homeStockData}
           renderItem={({item}) => (
             <ListItem
-              title={item.title}
+              title={CropString(item.title, 20)}
               style={{marginBottom: 20}}
               quantity={true}
             />

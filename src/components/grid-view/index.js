@@ -1,53 +1,31 @@
 import React from 'react';
-import {View, ScrollView} from 'react-native';
+import {View, FlatList, StyleSheet, Dimensions} from 'react-native';
+import GridItem from '../../utils/grid-item';
+import CropString from '../../utils/crop-string';
 
-const GridView = ({children}) => {
+const GridView = ({data}) => {
+  const screenWidth = Dimensions.get('window').width;
+  const gapSize = screenWidth * 0.13;
+
   return (
-    // <ScrollView
-    //   // style={{flex: 1}}
-    //   style={{
-    //     // flex: 1,
-    //     flexDirection: 'row',
-    //     flexWrap: 'wrap',
-    //     alignSelf: 'center',
-    //     width: '100%',
-    //     paddingHorizontal: 25,
-    //     marginTop: 15,
-    //     rowGap: 25,
-    //     width: '100%',
-    //   }}
-    //   contentContainerStyle={
-    //     {
-    //       // flex: 1,
-    //       // justifyContent: 'space-between',
-    //       // flexDirection: 'row',
-    //       // flexWrap: 'wrap',
-    //       // alignSelf: 'center',
-    //       // width: '100%',
-    //       // paddingHorizontal: 25,
-    //       // marginTop: 15,
-    //       // rowGap: 25,
-    //       // width: '100%',
-    //     }
-    //   }>
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'space-between',
-        flexDirection: 'row',
-        flexWrap: 'wrap',
+    // <View style={styles.gridContainer}>
+    <FlatList
+      data={data}
+      style={{flex: 1}}
+      numColumns={2}
+      keyExtractor={item => item.key}
+      renderItem={({item}) => (
+        <GridItem quantity={true} title={CropString(item.title, 20)} />
+      )}
+      columnWrapperStyle={{gap: gapSize}}
+      contentContainerStyle={{
+        paddingVertical: 15,
+        paddingHorizontal: 10,
         alignSelf: 'center',
-        width: '100%',
-        paddingHorizontal: 25,
-        marginTop: 15,
-        rowGap: 25,
-        width: '100%',
-        // marginBottom: 40,
-        // height: '100vh',
-      }}>
-      {children}
-    </View>
-    // </ScrollView>
+        rowGap: 20,
+      }}
+    />
+    // </View>
   );
 };
 
