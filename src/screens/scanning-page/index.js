@@ -81,7 +81,6 @@ const ScanningPage = () => {
   };
 
   const handleDeleteScannedItem = itemIndex => {
-    // Handle the item deletion in the state
     const updatedScanResults = [...scanResults];
     updatedScanResults.splice(itemIndex, 1);
     setScanResults(updatedScanResults);
