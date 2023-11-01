@@ -10,33 +10,21 @@ const useStyle = () => {
     },
     errorMassage: {
       color: theme.errorPrimary,
-      fontSize: 8,
+      fontSize: 12,
+      alignSelf: 'flex-end',
     },
-    errorbox: {
-      width: 'auto',
-      height: 15,
-      borderColor: theme.primary,
-      backgroundColor: theme.input,
-      borderWidth: 1,
-      borderRadius: 5,
-      position: 'absolute',
-      top: -8,
-      left: 20,
-      paddingVertical: 2,
-      paddingLeft: 12,
-      paddingRight: 12,
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: theme.errorPrimary,
-    },
+
     signupMainWrapper: {
-      height: '100%',
+      // height: '100%',
       width: '100%',
       flexDirection: 'column',
       alignItems: 'center',
     },
     logo: {
       paddingTop: 50,
+      width: '100%',
+      justifyContent: 'center',
+      alignItems: 'center',
     },
     inputText: {
       color: theme.text,
@@ -63,7 +51,7 @@ const useStyle = () => {
       borderColor: theme.primary,
     },
     container: {
-      paddingTop: 100,
+      paddingTop: 70,
       gap: 30,
     },
     iconBoxx: {

@@ -1,13 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Animated,
-  StyleSheet,
-  ScrollView,
-  SafeAreaView,
-} from 'react-native';
+import {View, Animated} from 'react-native';
 import LogIn from '../../components/log-in';
 import SignUp from '../../components/sign-up';
 import {styles} from './style';

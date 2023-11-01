@@ -42,7 +42,7 @@ const App = () => {
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
       {/* <ThemeSwitcher /> */}
       {/* <GradientComponent /> */}
-      {/* <LoginSignup /> */}
+      <LoginSignup />
       {/* <DoneComponent /> */}
       {/* <CustomButton /> */}
       {/* <FeedBack /> */}
@@ -76,7 +76,7 @@ const App = () => {
       {/* <ListItem /> */}
       {/* <CartScreen /> */}
       {/* <HomeStockScreen /> */}
-      <HomeStockListScreen />
+      {/* <HomeStockListScreen /> */}
       {/* <OptionsModal /> */}
       {/* <ConfirmationModal /> */}
       {/* <ToFillStockListScreen /> */}
