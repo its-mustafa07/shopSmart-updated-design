@@ -1,4 +1,4 @@
-import {View, Text, ScrollView} from 'react-native';
+import {View, Text, ScrollView, KeyboardAvoidingView} from 'react-native';
 import {useContext, useState} from 'react';
 import React from 'react';
 import BackgroundGradient from '../../components/background-gradient';
@@ -57,6 +57,7 @@ export default function FeedBack() {
                     <View style={styles.editIconWrapper}>
                       <EditIcon />
                     </View>
+
                     <CustomInput
                       placeholder={'Title'}
                       style={[styles.inputStyle]}
@@ -92,6 +93,7 @@ export default function FeedBack() {
                 value={values.message}
               />
             </View>
+
             {errors.message && touched.message && (
               <Text style={{color: '#FF8C71'}}>{errors.message}</Text>
             )}

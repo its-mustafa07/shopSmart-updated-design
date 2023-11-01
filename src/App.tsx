@@ -9,6 +9,8 @@ import {
 import ThemeSwitcher from './components/themes/themeSwitcher';
 import GradientComponent from './components/Gradient';
 import FeedBack from './screens/feedback';
+import Navigation from './components/Navigation';
+import ColorSwitcher from './components/Color-Switcher';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(darkBlue);
@@ -16,12 +18,13 @@ const App = () => {
   return (
     <ThemeContext.Provider
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
+      <Navigation />
       {/* <ThemeSwitcher /> */}
       {/* <GradientComponent /> */}
       {/* <LoginSignup /> */}
       {/* <DoneComponent /> */}
       {/* <CustomButton /> */}
-      <FeedBack />
+      {/* <FeedBack /> */}
       {/* <Settings /> */}
       {/* <PrivacyPolicy /> */}
       {/* <ErrorPage /> */}
@@ -32,7 +35,7 @@ const App = () => {
       {/* <HomeScreen /> */}
       {/* <ListTitleBar /> */}
       {/* <ThemeSwitcher /> */}
-
+      {/* <ColorSwitcher /> */}
       {/* <GradientComponent /> */}
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
@@ -44,7 +47,7 @@ const App = () => {
 
       {/* <BasicInfo /> */}
       {/* <BackgroundGradient style={{flex: 1}}> */}
-      <ErrorPage />
+      {/* <ErrorPage /> */}
       {/* </BackgroundGradient> */}
       {/* <DoneComponent /> */}
       {/* <ListItem item={'Atta'} /> */}
