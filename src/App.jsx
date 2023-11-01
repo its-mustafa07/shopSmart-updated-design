@@ -75,8 +75,8 @@ const App = () => {
       {/* <DoneComponent /> */}
       {/* <ListItem /> */}
       {/* <CartScreen /> */}
-      <HomeStockScreen />
-      {/* <HomeStockListScreen /> */}
+      {/* <HomeStockScreen /> */}
+      <HomeStockListScreen />
       {/* <OptionsModal /> */}
       {/* <ConfirmationModal /> */}
       {/* <ToFillStockListScreen /> */}

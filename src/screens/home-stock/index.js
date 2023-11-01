@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {SafeAreaView, View, Text, TouchableOpacity} from 'react-native';
 import useStyles from './styles';
 import BackgroundGradient from '../../components/background-gradient';
@@ -7,9 +7,11 @@ import ListItem from '../../components/list-item';
 import homeStockData from '../../data/HOME_STOCK-DATA';
 import toRefillData from '../../data/TO_REFILL_DATA';
 import {NextIcon, PreviousIcon} from '../../../assets/svg-icons/svgIcons';
+import {ThemeContext} from '../../components/themes/theme';
 
 const HomeStockScreen = () => {
   const styles = useStyles();
+  const {theme} = useContext(ThemeContext);
 
   //PAGINATION FOR 'YOU HOME STOCK LIST' LOGIC
   const [stockData, setStockData] = useState(homeStockData);
@@ -113,7 +115,9 @@ const HomeStockScreen = () => {
                 disabled={currentPage === 1}
                 onPress={handlePreviousPage}
                 style={
-                  currentPage === 1 ? styles.disabledButton : styles.button
+                  currentPage === 1
+                    ? [styles.disabledButton, theme.boxShadow]
+                    : [styles.button, theme.boxShadow]
                 }>
                 <PreviousIcon />
               </TouchableOpacity>
@@ -131,14 +135,14 @@ const HomeStockScreen = () => {
                   }
                   style={
                     currentPage === pageNumber
-                      ? styles.activePage
-                      : styles.button
+                      ? [styles.activePage, theme.boxShadow]
+                      : [styles.button, theme.boxShadow]
                   }>
                   <Text
                     style={
                       currentPage === pageNumber
-                        ? styles.activeText
-                        : styles.inactiveText
+                        ? [styles.activeText, theme.boxShadow]
+                        : [styles.inactiveText, theme.boxShadow]
                     }>
                     {pageNumber}
                   </Text>
@@ -149,8 +153,8 @@ const HomeStockScreen = () => {
                 onPress={handleNextPage}
                 style={
                   currentPage === totalPages
-                    ? styles.disabledButton
-                    : styles.button
+                    ? [styles.disabledButton, theme.boxShadow]
+                    : [styles.button, theme.boxShadow]
                 }>
                 <NextIcon />
               </TouchableOpacity>
@@ -180,7 +184,9 @@ const HomeStockScreen = () => {
                 disabled={currentPage2 === 1}
                 onPress={handlePreviousPage2}
                 style={
-                  currentPage2 === 1 ? styles.disabledButton : styles.button
+                  currentPage2 === 1
+                    ? [styles.disabledButton, theme.boxShadow]
+                    : [styles.button, theme.boxShadow]
                 }>
                 <PreviousIcon />
               </TouchableOpacity>
@@ -198,14 +204,14 @@ const HomeStockScreen = () => {
                   }
                   style={
                     currentPage2 === pageNumber
-                      ? styles.activePage
-                      : styles.button
+                      ? [styles.activePage, theme.boxShadow]
+                      : [styles.button, theme.boxShadow]
                   }>
                   <Text
                     style={
                       currentPage2 === pageNumber
-                        ? styles.activeText
-                        : styles.inactiveText
+                        ? [styles.activeText, theme.boxShadow]
+                        : [styles.inactiveText, theme.boxShadow]
                     }>
                     {pageNumber}
                   </Text>
@@ -216,8 +222,8 @@ const HomeStockScreen = () => {
                 onPress={handleNextPage2}
                 style={
                   currentPage2 === totalPages2
-                    ? styles.disabledButton
-                    : styles.button
+                    ? [styles.disabledButton, theme.boxShadow]
+                    : [styles.button, theme.boxShadow]
                 }>
                 <NextIcon />
               </TouchableOpacity>
