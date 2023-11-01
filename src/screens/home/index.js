@@ -33,11 +33,12 @@ const HomeScreen = ({navigation}) => {
       path: 'Settings',
     },
   ];
+
   const styles = useStyles();
   return (
     <BackgroundGradient style={{flex: 1}}>
       <SafeAreaView style={{flex: 1}}>
-        <ProfileHeader style={styles.profileHeader} />
+        <ProfileHeader style={styles.profileHeader} navigation={navigation} />
         <Text style={styles.homeText}>Home</Text>
         <View style={styles.flatList}>
           <GridView>

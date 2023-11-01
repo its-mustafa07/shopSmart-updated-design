@@ -15,7 +15,7 @@ import {
   UpdatesIcon,
   WarnIcon,
 } from '../../../assets/svg-icons/svgIcons';
-const Settings = () => {
+const Settings = ({navigation}) => {
   const styles = UseStyles();
   return (
     <BackgroundGradient style={{flex: 1}}>
@@ -91,7 +91,11 @@ const Settings = () => {
             <View style={styles.iconWrapper}>
               <PolicyIcon />
             </View>
-            <Text style={styles.textstyle}>Privacy Policy</Text>
+            <Text
+              onPress={() => navigation.navigate('PrivacyPolicy')}
+              style={styles.textstyle}>
+              Privacy Policy
+            </Text>
           </View>
 
           <View
@@ -116,7 +120,11 @@ const Settings = () => {
             <View style={styles.iconWrapper}>
               <FeedbackIcon />
             </View>
-            <Text style={styles.textstyle}>Feedback</Text>
+            <Text
+              onPress={() => navigation.navigate('FeedBack')}
+              style={styles.textstyle}>
+              Feedback
+            </Text>
           </View>
           <View
             style={{

@@ -7,7 +7,7 @@ import {
   HeaderCartIcon,
 } from '../../../assets/svg-icons/svgIcons';
 
-const ProfileHeader = ({style}) => {
+const ProfileHeader = ({style, navigation, onPress}) => {
   const styles = useStyles();
   return (
     <View style={[styles.mainContainer, style]}>
@@ -19,8 +19,8 @@ const ProfileHeader = ({style}) => {
         <Text style={styles.userName}>John Doe</Text>
       </View>
       <View style={styles.svgsContainer}>
-        <TouchableOpacity>
-          <HeaderQRScanIcon />
+        <TouchableOpacity onPress={() => navigation.navigate('ScanningPage')}>
+          <HeaderQRScanIcon navigation={navigation} />
         </TouchableOpacity>
         <TouchableOpacity>
           <HeaderCartIcon />

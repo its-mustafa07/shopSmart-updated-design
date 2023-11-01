@@ -63,9 +63,9 @@ export default function FeedBack() {
                       placeholderTextColor={theme.textAccent}
                       onFocus={() => setInputFocus(true)}
                       onChangeText={handleChange('title')}
-                      // onBlur={() => setInputFocus(false)}
-                      // onBlur={handleBlur('title')}
-                      onBlur={handleBlur}
+                      onBlur={() => {
+                        setInputFocus(false), handleBlur('title');
+                      }}
                       value={values.title}
                     />
                   </View>
@@ -82,9 +82,7 @@ export default function FeedBack() {
                 ]}
                 placeholderTextColor={theme.textAccent}
                 onFocus={() => setTextAreaFocus(true)}
-                // onBlur={() => setTextAreaFocus(false)}
                 onChangeText={handleChange('message')}
-                // onBlur={handleBlur('message')}
                 onBlur={() => {
                   setTextAreaFocus(false);
                   handleBlur('message');
@@ -96,7 +94,11 @@ export default function FeedBack() {
               <Text style={{color: '#FF8C71'}}>{errors.message}</Text>
             )}
             <View style={styles.buttonWrapper}>
-              <CustomButton buttonStyle={styles.button}>send</CustomButton>
+              <CustomButton
+                textStyle={styles.buttonsText}
+                buttonStyle={styles.button}>
+                send
+              </CustomButton>
             </View>
           </ScrollView>
         </BackgroundGradient>

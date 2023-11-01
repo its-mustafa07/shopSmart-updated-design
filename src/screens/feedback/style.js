@@ -96,5 +96,10 @@ export const UseStyles = () => {
       justifyContent: 'flex-end',
       bottom: 49,
     },
+    buttonsText: {
+      fontSize: 18,
+      fontFamily: 'SourceSansPro-SemiBold',
+      color: theme.white,
+    },
   });
 };

@@ -4,7 +4,7 @@ import CustomButton from '../../utils/button';
 import {ThemeContext} from '../themes/theme';
 import {useContext} from 'react';
 import {useStyles} from './styles';
-const ObjectDetection = () => {
+const ObjectDetection = ({navigation}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyles();
   return (
@@ -29,7 +29,9 @@ const ObjectDetection = () => {
       <View style={styles.buttons}>
         <CustomButton
           buttonStyle={[{backgroundColor: theme.secondary}, styles.button]}
-          textStyle={{color: theme.accent}}>
+          textStyle={{color: theme.accent}}
+          // onPress={() => navigation.navigate('ScanningPage')}
+        >
           Cancel
         </CustomButton>
         <CustomButton

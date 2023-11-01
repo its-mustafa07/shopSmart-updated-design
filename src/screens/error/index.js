@@ -31,7 +31,7 @@ const ErrorPage = ({handleToggle, navigation}) => {
             </View>
           </View>
           <View style={styles.buttons}>
-            <CustomButton
+            {/* <CustomButton
               buttonStyle={[{backgroundColor: theme.secondary}, styles.button]}
               textStyle={{color: theme.accent}}>
               Cancel
@@ -39,8 +39,8 @@ const ErrorPage = ({handleToggle, navigation}) => {
             <CustomButton
               buttonStyle={[{backgroundColor: theme.accent}, styles.button]}>
               Try Again
-            </CustomButton>
-            <View style={styles.errorIcon}>
+            </CustomButton> */}
+            {/* <View style={styles.errorIcon}>
               <Svg
                 width="109"
                 height="109"
@@ -70,9 +70,9 @@ const ErrorPage = ({handleToggle, navigation}) => {
                   stroke-linejoin="round"
                 />
               </Svg>
-            </View>
+            </View> */}
 
-            <View style={styles.errorText}>
+            {/* <View style={styles.errorText}>
               <Text style={[styles.errorHeading, {color: theme.primary}]}>
                 Oops! Something went wrong
               </Text>
@@ -80,7 +80,7 @@ const ErrorPage = ({handleToggle, navigation}) => {
               <Text style={styles.errorpara}>
                 This screen is under development
               </Text>
-            </View>
+            </View> */}
           </View>
         </View>
         <View style={styles.buttons}>
