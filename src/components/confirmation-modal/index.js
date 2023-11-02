@@ -6,7 +6,7 @@ import CustomButton from '../../utils/button';
 import useStyles from './styles';
 import {ThemeContext} from '../themes/theme';
 
-const ConfirmationModal = () => {
+const ConfirmationModal = ({isVisible, isNotVisible, handleDeleteItem}) => {
   const {theme} = useContext(ThemeContext);
   const buttonStyles = {
     height: 40,
@@ -16,7 +16,11 @@ const ConfirmationModal = () => {
   };
   const styles = useStyles();
   return (
-    <ReactNativeModal style={styles.modalContainer} isVisible={true}>
+    <ReactNativeModal
+      style={styles.modalContainer}
+      isVisible={isVisible}
+      onBackButtonPress={isNotVisible}
+      onBackdropPress={isNotVisible}>
       <BackgroundGradient style={{borderRadius: 10}}>
         <View style={styles.modalContenContainer}>
           <Text style={styles.confirmationText}>
@@ -24,11 +28,13 @@ const ConfirmationModal = () => {
           </Text>
           <View style={styles.modalButtons}>
             <CustomButton
+              onPress={isNotVisible}
               buttonStyle={{backgroundColor: theme.secondary, ...buttonStyles}}
               textStyle={{color: theme.textPrimary}}>
               Cancel
             </CustomButton>
             <CustomButton
+              onPress={handleDeleteItem}
               buttonStyle={{backgroundColor: theme.accent, ...buttonStyles}}
               textStyle={{color: theme.white}}>
               Delete

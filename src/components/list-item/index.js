@@ -9,9 +9,20 @@ import {
 import useStyles from './styles';
 import {ThemeContext} from '../themes/theme';
 
-const ListItem = ({style, title, quantity, counter, tag}) => {
+const ListItem = ({
+  style,
+  title,
+  quantity,
+  counter,
+  tag,
+  setOptionsVisible,
+}) => {
   const {theme} = useContext(ThemeContext);
   const styles = useStyles();
+
+  const showOptions = () => {
+    setOptionsVisible(true);
+  };
 
   return (
     <View style={[styles.mainContainer, theme.boxShadow, style]}>
@@ -52,7 +63,7 @@ const ListItem = ({style, title, quantity, counter, tag}) => {
               </TouchableOpacity>
             </View>
           )}
-          <TouchableOpacity>
+          <TouchableOpacity onPress={showOptions}>
             <ThreeDotsIcon />
           </TouchableOpacity>
         </View>

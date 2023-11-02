@@ -6,8 +6,8 @@ const useStyle = () => {
   const {theme} = useContext(ThemeContext);
   return StyleSheet.create({
     GridItem: {
-      width: '45%',
-      height: 150,
+      width: 150,
+      height: 147,
       backgroundColor: theme.list,
       borderRadius: 10,
       justifyContent: 'center',

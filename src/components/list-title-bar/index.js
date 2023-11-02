@@ -7,16 +7,16 @@ import {
 } from '../../../assets/svg-icons/svgIcons';
 import useStyles from './styles';
 
-const ListTitleBar = ({title, style}) => {
+const ListTitleBar = ({title, style, handleListPress, handleGridPress}) => {
   const styles = useStyles();
   return (
     <View style={[styles.container, style]}>
       <Text style={styles.title}>{title}</Text>
       <View style={styles.iconsContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleGridPress}>
           <GridViewIcon />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleListPress}>
           <ListViewIcon />
         </TouchableOpacity>
         <TouchableOpacity>
