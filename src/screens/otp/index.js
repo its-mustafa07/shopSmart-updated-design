@@ -1,5 +1,11 @@
 import React, {useState, useRef, useContext} from 'react';
-import {View, TextInput, SafeAreaView, Text} from 'react-native';
+import {
+  View,
+  TextInput,
+  SafeAreaView,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import BackgroundGradient from '../../components/background-gradient';
 import {useStyles} from './styles';
 import {ThemeContext} from '../../components/themes/theme';
@@ -35,7 +41,14 @@ const OTPVerification = () => {
               return (
                 <TextInput
                   ref={input => (otpInputRefs.current[index] = input)}
-                  style={[styles.inputView, theme.boxShadow]}
+                  style={[
+                    styles.inputView,
+                    theme.boxShadow,
+                    {
+                      borderColor:
+                        otp[index].length >= 1 ? theme.primary : '#fff',
+                    },
+                  ]}
                   key={index}
                   maxLength={1}
                   keyboardType="number-pad"
@@ -52,7 +65,6 @@ const OTPVerification = () => {
                 fontFamily: 'SourceSansPro-Regular',
                 fontSize: 18,
               }}>
-              {' '}
               Resend.
             </Text>
           </Text>
