@@ -29,6 +29,7 @@ import BasicInfo from './screens/basic-info';
 import BackgroundGradient from './components/background-gradient';
 import HomeScreen from './screens/home';
 import DraggableFlatList from 'react-native-draggable-flatlist';
+import OTPVerification from './screens/otp';
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(lightBlue);
@@ -60,6 +61,7 @@ const App = () => {
       {/* <HomeStockScreen /> */}
       {/* <HomeStockListScreen /> */}
       {/* <ToFillStockListScreen /> */}
+      <OTPVerification />
     </ThemeContext.Provider>
   );
 };

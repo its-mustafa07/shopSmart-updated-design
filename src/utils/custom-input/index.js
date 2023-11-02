@@ -15,6 +15,8 @@ const CustomInput = ({
   placeholderStyle,
   multiline,
   numberOfLines,
+  ref,
+  maxLength,
   // placeholderTextColor,
 }) => {
   return (
@@ -33,6 +35,8 @@ const CustomInput = ({
       // style={inputStyle}
       // placeholderTextColor={placeholderTextColor}
       style={style}
+      ref={ref}
+      maxLength={maxLength}
     />
   );
 };
