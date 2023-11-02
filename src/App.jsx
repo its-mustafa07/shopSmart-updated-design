@@ -33,7 +33,7 @@ import FAQList from './components/faq-component';
 import FAQ from './screens/faq';
 import BasicInfo from './screens/basic-info';
 import BackgroundGradient from './components/background-gradient';
-
+import Updates from './components/updates/index';
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState(lightBlue);
 
@@ -56,7 +56,8 @@ const App = () => {
       {/* <HomeScreen /> */}
       {/* <ListTitleBar /> */}
       {/* <ThemeSwitcher /> */}
-      <OTPVerification />
+      {/* <OTPVerification /> */}
+      <Updates />
       {/* <GradientComponent /> */}
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}
