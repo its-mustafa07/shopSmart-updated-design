@@ -17,7 +17,7 @@ import PrivacyPolicy from './screens/privacy-policy';
 import HomeScreen from './screens/home';
 import ProfileHeader from './components/profile-header';
 import HomeItem from './components/home-item';
-import LoginSignup from './screens/login-signup';
+// import LoginSignup from './screens/login-signup';
 import GridItem from './utils/grid-item';
 import GridViewItems from './components/grid-view-items';
 import ScanningPage from './screens/scanning-page';
@@ -27,7 +27,7 @@ import HomeStockScreen from './screens/home-stock';
 import HomeStockListScreen from './screens/home-stock-list-screen';
 import ToFillStockListScreen from './screens/toFill-stock-list-screen';
 import OptionsModal from './components/options-modal';
-
+import OTPVerification from './screens/otp/index';
 import DoneComponent from './screens/done';
 import FAQList from './components/faq-component';
 import FAQ from './screens/faq';
@@ -42,7 +42,7 @@ const App = () => {
       value={{theme: currentTheme, setTheme: setCurrentTheme}}>
       {/* <ThemeSwitcher /> */}
       {/* <GradientComponent /> */}
-      <LoginSignup />
+      {/* <LoginSignup /> */}
       {/* <DoneComponent /> */}
       {/* <CustomButton /> */}
       {/* <FeedBack /> */}
@@ -56,7 +56,7 @@ const App = () => {
       {/* <HomeScreen /> */}
       {/* <ListTitleBar /> */}
       {/* <ThemeSwitcher /> */}
-
+      <OTPVerification />
       {/* <GradientComponent /> */}
       {/* <ProfileHeader /> */}
       {/* <HomeItem /> */}

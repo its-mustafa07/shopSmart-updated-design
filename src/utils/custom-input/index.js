@@ -17,6 +17,7 @@ const CustomInput = ({
   numberOfLines,
   ref,
   maxLength,
+
   // placeholderTextColor,
 }) => {
   return (

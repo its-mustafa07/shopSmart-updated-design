@@ -33,8 +33,8 @@ export const useStyles = () => {
       //   gap: 12,
     },
     inputView: {
-      width: 53,
-      height: 53,
+      width: 45,
+      height: 45,
       //   borderColor: '#000',
       //   borderWidth: 1,
       borderRadius: 10,
